@@ -521,7 +521,8 @@
     });
   }
 
-  function enter() {
+  function enter(tentativo) {
+    tentativo = tentativo || 1;
     app.innerHTML = '<div class="boot">Un attimo, sto aprendo il tuo percorso</div>';
     return api.me(S.token).then(function (j) {
       S.client = j.client;
@@ -529,9 +530,16 @@
       prepare();
       render();
     }).catch(function (err) {
-      store("dp_token", null);
-      S.token = null;
-      renderLogin(err && err.code === "scaduto" ? { type: "err", text: "Il link è scaduto: scrivi la tua email e te ne mandiamo uno nuovo" } : null);
+      // link scaduto o non valido: si torna al login
+      if (err && err.code === "scaduto") {
+        store("dp_token", null);
+        S.token = null;
+        renderLogin({ type: "err", text: "Il link è scaduto: scrivi la tua email e te ne mandiamo uno nuovo" });
+        return;
+      }
+      // problema di rete o del server: il link resta buono, si riprova
+      if (tentativo < 3) { setTimeout(function () { enter(tentativo + 1); }, 1500 * tentativo); return; }
+      app.innerHTML = '<div class="boot">Non riesco ad aprire il percorso adesso: ricarica la pagina tra un attimo</div>';
     });
   }
 
