@@ -483,6 +483,8 @@
   }
 
   function queueSave(fieldId) {
+    S.edited = true;
+    saveCache();
     clearTimeout(S.saveTimer);
     S.saveTimer = setTimeout(function () { S.saveTimer = null; save(fieldId); }, 700);
   }
@@ -521,25 +523,54 @@
     });
   }
 
+  // Copia locale dell'ultimo percorso aperto: la pagina si apre subito, il server aggiorna dietro
+  function saveCache() {
+    if (!DEMO && S.client) store("dp_cache", { token: S.token, client: S.client, progress: S.progress });
+  }
+
   function enter(tentativo) {
     tentativo = tentativo || 1;
-    app.innerHTML = '<div class="boot">Un attimo, sto aprendo il tuo percorso</div>';
+    var cache = !DEMO && tentativo === 1 ? store("dp_cache") : null;
+    var daCache = false;
+    if (cache && cache.token === S.token && cache.client) {
+      try {
+        S.client = cache.client;
+        S.progress = cache.progress;
+        prepare();
+        render();
+        daCache = true;
+      } catch (e) { S.client = null; }
+    }
+    if (tentativo === 1) {
+      S.edited = false;
+      if (!daCache) app.innerHTML = '<div class="boot">Un attimo, sto aprendo il tuo percorso</div>';
+    }
     return api.me(S.token).then(function (j) {
+      var prima = JSON.stringify([S.client, S.progress]);
       S.client = j.client;
-      S.progress = j.progress;
+      // se nel frattempo la cliente ha spuntato o scritto qualcosa, vince quello che ha sul telefono
+      if (!S.edited) S.progress = j.progress;
       prepare();
-      render();
+      saveCache();
+      if (!daCache || JSON.stringify([S.client, S.progress]) !== prima) {
+        var y = window.scrollY;
+        S.lastRoute = null;
+        render();
+        window.scrollTo(0, y);
+      }
     }).catch(function (err) {
       // link scaduto o non valido: si torna al login
       if (err && err.code === "scaduto") {
         store("dp_token", null);
+        store("dp_cache", null);
         S.token = null;
+        S.client = null;
         renderLogin({ type: "err", text: "Il link è scaduto: scrivi la tua email e te ne mandiamo uno nuovo" });
         return;
       }
       // problema di rete o del server: il link resta buono, si riprova
       if (tentativo < 3) { setTimeout(function () { enter(tentativo + 1); }, 1500 * tentativo); return; }
-      app.innerHTML = '<div class="boot">Non riesco ad aprire il percorso adesso: ricarica la pagina tra un attimo</div>';
+      if (!S.client) app.innerHTML = '<div class="boot">Non riesco ad aprire il percorso adesso: ricarica la pagina tra un attimo</div>';
     });
   }
 
@@ -554,6 +585,7 @@
   function logout() {
     flush();
     store("dp_token", null);
+    store("dp_cache", null);
     S.token = null;
     S.client = null;
     S.open = {};
