@@ -85,15 +85,25 @@
   var api = DEMO ? demoApi() : realApi();
 
   function realApi() {
-    function call(action, payload, keepalive) {
+    // Apps Script a volte resta appeso 30 secondi e poi fallisce: dopo 12 secondi si lascia perdere e si riprova
+    function call(action, payload, keepalive, tentativo) {
+      tentativo = tentativo || 1;
+      var ctrl = !keepalive && window.AbortController ? new AbortController() : null;
+      var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 12000) : null;
       return fetch(CFG.apiUrl, {
         method: "POST",
         headers: { "Content-Type": "text/plain;charset=utf-8" },
         body: JSON.stringify(Object.assign({ action: action }, payload || {})),
-        keepalive: !!keepalive
+        keepalive: !!keepalive,
+        signal: ctrl ? ctrl.signal : undefined
       }).then(function (r) { return r.json(); }).then(function (j) {
-        if (!j || !j.ok) { var e = new Error((j && j.error) || "errore"); e.code = j && j.code; throw e; }
+        clearTimeout(timer);
+        if (!j || !j.ok) { var e = new Error((j && j.error) || "errore"); e.code = j && j.code; e.server = true; throw e; }
         return j;
+      }, function (err) {
+        clearTimeout(timer);
+        if (!keepalive && tentativo < 4) return call(action, payload, keepalive, tentativo + 1);
+        throw err;
       });
     }
     return {
@@ -576,7 +586,7 @@
         return;
       }
       // problema di rete o del server: il link resta buono, si riprova
-      if (tentativo < 3) { setTimeout(function () { enter(tentativo + 1); }, 1500 * tentativo); return; }
+      if (tentativo < 2) { setTimeout(function () { enter(tentativo + 1); }, 2000); return; }
       if (!S.client) app.innerHTML = '<div class="boot">Non riesco ad aprire il percorso adesso: ricarica la pagina tra un attimo</div>';
     });
   }
