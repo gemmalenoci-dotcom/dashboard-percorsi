@@ -1,0 +1,4684 @@
+{
+ "versione": "2026-10-05",
+ "fonte": "Unlike · percorsi da novembre 2026",
+ "formato": "come MODULES del portale percorso-rfr.vercel.app, con tre campi in più: gate (le attività da spuntare prima che il bottone della call si accenda), prenota (elena = la call la fissa Elena, niente bottone), notifica_completamento (a chi va l'avviso quando il modulo è completo)",
+ "percorsi": {
+  "professionista": {
+   "nome": "Da competente a punto di riferimento",
+   "tipologia": "Professionista",
+   "mesi": 5,
+   "per_chi": "Professioniste, coach, brand e attività locali che sanno fare il loro lavoro ma non lo sanno comunicare",
+   "modules": [
+    {
+     "id": "start",
+     "label": "★",
+     "title": "Inizia da qui · la settimana di attivazione",
+     "nextId": "step1",
+     "callouts": [
+      {
+       "style": "arrow",
+       "icon": "👋🏻",
+       "body": "<strong>Benvenuta nel tuo percorso</strong><br>Hai 7 giorni dalla call di benvenuto per completare tutto quello che trovi qui sotto<br><br>Quando hai spuntato tutto, Elena apre il tuo gruppo chat e il tuo portale e prenota la tua prima call con Gemma · il percorso parte il primo lunedì del mese"
+      }
+     ],
+     "resources": [
+      {
+       "key": "r0_benvenuto",
+       "name": "Call di benvenuto con Elena",
+       "type": "Meeting",
+       "chi": "Elena",
+       "durata": "20-30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Prenota la call di benvenuto con Elena</strong>, la tua customer success, entro 3 giorni lavorativi dal pagamento<br><br>In 20-30 minuti vediamo:<br>• chi siamo e chi ti segue<br>• le tappe del tuo percorso<br>• come funzionano chat e revisioni<br>• cosa fare in questa settimana"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Elena",
+         "url": "{{cal_elena}}"
+        }
+       ],
+       "feedback": true,
+       "gate": []
+      },
+      {
+       "key": "r0_regole",
+       "name": "Leggi le regole del percorso",
+       "type": "Risorsa",
+       "callout": {
+        "icon": "📋",
+        "body": "<strong>Le regole che ci fanno lavorare bene insieme</strong><br>Le leggiamo insieme nella call di benvenuto con Elena<br><br><strong>💬 La chat: per le domande</strong><br>• Il tuo gruppo Google Chat è l'unico canale: niente WhatsApp, niente messaggi privati<br>• Ti rispondiamo dal lunedì al venerdì, dalle 9 alle 18, entro 24 ore lavorative · a volte la prima risposta serve solo a dirti chi ti risponde e quando<br>• Il weekend siamo chiusi: quello che arriva fuori orario lo leggiamo il giorno lavorativo dopo<br>• Ti risponde Elena: per le domande tecniche coinvolge Sofia e, se serve, Gemma<br>• Urgente vale solo se pubblichi o hai una call entro 24 ore<br><br><strong>✍🏻 Le revisioni: solo su Notion</strong><br>• Ogni contenuto è una scheda in Da revisionare: + Nuovo, titolo, video o file in Video e file, tipo e data di pubblicazione · Sofia risponde entro 24 ore lavorative<br>• Caricalo almeno 2 giorni lavorativi prima di pubblicarlo, e se è un'idea o uno script prima di girarlo · fino a 3 contenuti a settimana, il controllo della versione corretta non conta<br>• Ogni contenuto ha due giri: una revisione completa e un controllo veloce della versione corretta, poi si pubblica · dal terzo invio lo vediamo in live o in call<br>• Negli script scrivi solo il testo · idee, ganci e piano li prepari con Stratego quando la roadmap lo prevede, il primo piano lo prepariamo noi<br><br><strong>🔴 Le live di revisione con Sofia</strong><br>• Il lunedì dalle 14 alle 18 e il venerdì dalle 9 alle 13, nel tuo gruppo chat<br>• È l'unico momento in cui mandi i contenuti direttamente in chat, al massimo 2 · caricali prima su Notion<br><br><strong>📞 Le call e le date</strong><br>• Le call si prenotano dopo aver fatto lezioni e attività della tappa: servono per correggere e decidere, non per iniziare da zero<br>• Le call non fatte nel mese non si recuperano · c'è una call jolly per tutto il percorso<br>• Il percorso ha date fisse · se salti una settimana la recuperi nella settimana 4 · una pausa al massimo di 2 settimane, chiesta per iscritto"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri le regole complete",
+         "url": "{{regole}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r0_questionario",
+       "name": "Compila il questionario iniziale",
+       "type": "Attività",
+       "callout": {
+        "icon": "📝",
+        "body": "<strong>Raccontaci da dove parti</strong><br>Ci serve per preparare la tua prima call e la tua strategia"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il questionario",
+         "url": "{{questionario_iniziale}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r0_club",
+       "name": "Entra nel Club Unlike Academy",
+       "type": "Risorsa",
+       "callout": {
+        "icon": "🎓",
+        "body": "<strong>Il tuo accesso All-Access è attivo</strong><br>Le lezioni di ogni tappa sono nel Club: da qui trovi sempre il link diretto"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Vai al Club",
+         "url": "{{club}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r0_lez_introduzione_ai_social",
+       "name": "Lezione · Introduzione ai social (16')",
+       "type": "Video",
+       "minuti": 16,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063322/lessons/4046603"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r0_lez_algoritmo_social_generale",
+       "name": "Lezione · Algoritmo social (generale) (26')",
+       "type": "Video",
+       "minuti": 26,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063324/lessons/4046664"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r0_lez_la_differenza_tra_acquisizio",
+       "name": "Lezione · La differenza tra acquisizione e viralità (34')",
+       "type": "Video",
+       "minuti": 34,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063325/lessons/4046605"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r0_lez_posizionamento_e_brand_ident",
+       "name": "Lezione · Posizionamento e brand identity (36')",
+       "type": "Video",
+       "minuti": 36,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063326/lessons/4046611"
+        }
+       ],
+       "feedback": true
+      }
+     ],
+     "notifica_completamento": "elena"
+    },
+    {
+     "id": "step1",
+     "label": "01",
+     "title": "Tappa 1 · Algoritmi, acquisizione e branding",
+     "nextId": "step2",
+     "mese": 1,
+     "callouts": [
+      {
+       "style": "info",
+       "icon": "ℹ️",
+       "body": "<strong>Obiettivo</strong>: capisci come funzionano le piattaforme, mentre noi costruiamo la tua strategia, il tuo primo piano e la tua identità visiva<br><br>Settimana 1 lezioni, esercizi e prima call con Gemma · settimana 2 leggi e approvi strategia e piano · settimana 3 profilo e contenuti obbligatori · settimana 4 pubblichi"
+      }
+     ],
+     "resources": [
+      {
+       "key": "r1_chat",
+       "name": "Entra nel tuo gruppo Google Chat",
+       "type": "Attività",
+       "callout": {
+        "icon": "💬",
+        "body": "<strong>Qui fai le domande</strong><br>Dal lunedì al venerdì dalle 9 alle 18 · rispondiamo entro 24 ore lavorative · è l'unico canale, niente WhatsApp né messaggi privati<br>I contenuti da rivedere vanno su Notion, tranne nelle live con Sofia: il lunedì dalle 14 alle 18 e il venerdì dalle 9 alle 13"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il gruppo",
+         "url": "{{chat}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_portale",
+       "name": "Apri il tuo portale Notion",
+       "type": "Risorsa",
+       "callout": {
+        "icon": "🗂️",
+        "body": "<strong>Il tuo banco di lavoro</strong><br>Strategia, piano editoriale e lo spazio Da revisionare"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il portale",
+         "url": "{{portale}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_visual",
+       "name": "Compila il questionario della visual identity",
+       "type": "Attività",
+       "callout": {
+        "icon": "🎨",
+        "body": "<strong>Compilalo entro questa settimana, al massimo entro metà della prossima</strong><br>Emilia ti consegna la visual identity base con i template Canva entro la settimana 3"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il questionario",
+         "url": "{{questionario_visual}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_lez_strategia_di_acquisizione",
+       "name": "Lezione · Strategia di acquisizione (34')",
+       "type": "Video",
+       "minuti": 34,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063325/lessons/4046645"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_lez_profili_professionali_vs_inf",
+       "name": "Lezione · Profili professionali vs influencer (24')",
+       "type": "Video",
+       "minuti": 24,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063325/lessons/4046626"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_lez_brand_tipo",
+       "name": "Lezione · Il brand del tuo tipo",
+       "type": "Video",
+       "minuti": 61,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda solo quella del tuo tipo di brand</strong><br>Personal se il brand sei tu · Local se hai un'attività sul territorio · Product se vendi un prodotto: in questi due casi guarda anche Tone of voice"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Personal brand (61')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063326/lessons/4046648"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Local brand (37')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063326/lessons/4046652"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Product brand (30')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063326/lessons/4046661"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Tone of voice (20'), con Local o Product",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063326/lessons/4046665"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_es_canali",
+       "name": "Esercizio · la mappa dei tuoi 3 canali",
+       "type": "Attività",
+       "callout": {
+        "icon": "📝",
+        "body": "<strong>Dove ti trovano oggi i clienti, e dove li vuoi tra 6 mesi</strong><br>Ricerca, social, AI · scrivilo nella pagina Esercizi del portale"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Esercizi",
+         "url": "{{esercizi}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_es_audit",
+       "name": "Esercizio · l'audit degli ultimi 9 post",
+       "type": "Attività",
+       "callout": {
+        "icon": "📝",
+        "body": "<strong>Per ognuno: acquisizione o viralità?</strong><br>Scrivilo nella pagina Esercizi del portale"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Esercizi",
+         "url": "{{esercizi}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_call_gemma",
+       "name": "Prima call strategica con Gemma",
+       "type": "Meeting",
+       "chi": "Gemma",
+       "durata": "60'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>La prenota Elena per te</strong>: trovi data e ora nel gruppo chat · arrivaci con lezioni ed esercizi fatti · in call c'è anche Sofia<br><br>Obiettivi:<br>• il tuo punto di partenza<br>• target e posizionamento<br>• la direzione della strategia"
+       },
+       "actions": [],
+       "feedback": true,
+       "gate": [
+        "r1_lez_strategia_di_acquisizione",
+        "r1_lez_profili_professionali_vs_inf",
+        "r1_lez_brand_tipo",
+        "r1_es_canali",
+        "r1_es_audit"
+       ],
+       "prenota": "elena"
+      },
+      {
+       "key": "r1_strategia",
+       "name": "Leggi e approva la tua strategia",
+       "type": "Attività",
+       "callout": {
+        "icon": "📄",
+        "body": "<strong>Settimana 2</strong><br>La trovi nel portale: leggila tutta e segnati 3 cose che non ti tornano, le vediamo nella call con Sofia"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri la strategia",
+         "url": "{{strategia}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_call_sofia_1",
+       "name": "Call di consegna con Sofia",
+       "type": "Meeting",
+       "chi": "Sofia",
+       "durata": "30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Strategia e primo piano letti insieme</strong><br>E i contenuti obbligatori da fare questo mese"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Sofia",
+         "url": "{{cal_sofia}}"
+        }
+       ],
+       "feedback": true,
+       "gate": [
+        "r1_strategia"
+       ]
+      },
+      {
+       "key": "r1_piano",
+       "name": "Il tuo primo piano editoriale",
+       "type": "Risorsa",
+       "callout": {
+        "icon": "🗓️",
+        "body": "<strong>12 contenuti, 3 a settimana, con le reference</strong><br>Questo mese fai i contenuti obbligatori · il mese prossimo pubblichi tutto il piano"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il piano editoriale",
+         "url": "{{piano_editoriale}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_profilo",
+       "name": "Sistema bio e profilo",
+       "type": "Attività",
+       "callout": {
+        "icon": "📝",
+        "body": "<strong>Settimana 3</strong><br>Segui le indicazioni di Ottimizzazione profili nella tua strategia"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Ottimizzazione profili",
+         "url": "{{ottimizzazione_profili}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_palette",
+       "name": "Scegli palette e font",
+       "type": "Attività",
+       "callout": {
+        "icon": "🎨",
+        "body": "<strong>Settimana 3</strong><br>Dalla tua visual identity, poi parti coi template Canva"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri la visual identity",
+         "url": "{{visual_identity}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_cartelle",
+       "name": "Riordina le tue cartelle",
+       "type": "Attività",
+       "callout": {
+        "icon": "🗂️",
+        "body": "<strong>Col metodo che ti ha mostrato Gemma</strong><br>Così ritrovi in un attimo foto, video e materiali"
+       },
+       "actions": [],
+       "feedback": true
+      },
+      {
+       "key": "r1_obbligatori",
+       "name": "Registra i contenuti obbligatori e mandali in revisione",
+       "type": "Attività",
+       "callout": {
+        "icon": "🎬",
+        "body": "<strong>Settimana 3</strong><br>Una scheda del piano editoriale per contenuto, con tipo e data di pubblicazione, poi Revisione team su Da revisionare, almeno 2 giorni lavorativi prima di pubblicare · Sofia risponde entro 24 ore lavorative · i primi portali alla live con Sofia, il lunedì dalle 14 alle 18 o il venerdì dalle 9 alle 13"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Da revisionare",
+         "url": "{{da_revisionare}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_pubblica",
+       "name": "Pubblica i tuoi primi contenuti",
+       "type": "Attività",
+       "callout": {
+        "icon": "🚀",
+        "body": "<strong>Settimana 4</strong><br>Quelli approvati da Sofia"
+       },
+       "actions": [],
+       "feedback": true
+      },
+      {
+       "key": "r1_call_sofia_2",
+       "name": "Call di fine mese con Sofia",
+       "type": "Meeting",
+       "chi": "Sofia",
+       "durata": "30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Dati, compiti e apertura della tappa 2</strong>"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Sofia",
+         "url": "{{cal_sofia}}"
+        }
+       ],
+       "feedback": true,
+       "gate": [
+        "r1_obbligatori"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "step2",
+     "label": "02",
+     "title": "Tappa 2 · Strategia, piano editoriale e creazione contenuti",
+     "nextId": "step3",
+     "mese": 2,
+     "callouts": [
+      {
+       "style": "info",
+       "icon": "ℹ️",
+       "body": "<strong>Obiettivo</strong>: impari a fare i contenuti, e noi li correggiamo prima che escano<br><br>Settimana 1 call di editing con Mickel · per tutto il mese 3 contenuti a settimana in Da revisionare · settimana 4 piano del mese 3 con Stratego · fine mese seconda call con Gemma"
+      }
+     ],
+     "resources": [
+      {
+       "key": "r2_lez_target_leggere_la_mente_del_",
+       "name": "Lezione · Target: leggere la mente del tuo utente (33')",
+       "type": "Video",
+       "minuti": 33,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063327/lessons/4046608"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_le_5_anime_dei_contenuti",
+       "name": "Lezione · Le 5 anime dei contenuti (33')",
+       "type": "Video",
+       "minuti": 33,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046620"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_i_formati_short_e_long_form",
+       "name": "Lezione · I formati: short e long form (27')",
+       "type": "Video",
+       "minuti": 27,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046606"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_ideazione_e_struttura",
+       "name": "Lezione · Ideazione e struttura (10')",
+       "type": "Video",
+       "minuti": 10,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046653"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_gancio",
+       "name": "Lezione · Gancio (15')",
+       "type": "Video",
+       "minuti": 15,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046659"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_obiettivi_smart",
+       "name": "Lezione · Obiettivi SMART (22')",
+       "type": "Video",
+       "minuti": 22,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063327/lessons/4046642"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_la_tua_dichiarazione_strateg",
+       "name": "Lezione · La tua dichiarazione strategica (21')",
+       "type": "Video",
+       "minuti": 21,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063327/lessons/4046663"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_creazione_del_piano_editoria",
+       "name": "Lezione · Creazione del piano editoriale (29')",
+       "type": "Video",
+       "minuti": 29,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046682"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_metriche_e_analitiche",
+       "name": "Lezione · Metriche e analitiche (24')",
+       "type": "Video",
+       "minuti": 24,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong><br><br><em>Prima della call di fine mese</em>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046685"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_capcut_nozioni_di_base",
+       "name": "Lezione · CapCut: nozioni di base (12')",
+       "type": "Video",
+       "minuti": 12,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong><br><br><em>Prima della call con Mickel</em>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/bonus-canva-capcut/sections/993195/lessons/3767979"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_call_mickel",
+       "name": "Call di editing con Mickel",
+       "type": "Meeting",
+       "chi": "Mickel",
+       "durata": "60'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Settimana 1 · girare e montare</strong><br>B-roll, green screen, luce, audio e ritmo · prenotala dopo la lezione CapCut"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Mickel",
+         "url": "{{cal_mickel}}"
+        }
+       ],
+       "feedback": true,
+       "gate": [
+        "r2_lez_capcut_nozioni_di_base"
+       ]
+      },
+      {
+       "key": "r2_facoltative",
+       "name": "Lezioni consigliate, se vuoi approfondire",
+       "type": "Risorsa",
+       "facoltativa": true,
+       "callout": {
+        "icon": "📚",
+        "body": "<strong>Non sono obbligatorie</strong><br>Guardale se ti serve approfondire un punto o se in call te le consigliamo"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Live: dai voce ai tuoi contenuti (73')",
+         "url": "https://club.unlikeacademy.it/c/dirette/dai-voce-ai-tuoi-contenuti-1062bab3-5990-480d-b05c-06c0e13b9717"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Sviluppo centrale (15')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046667"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Call to action (6')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046671"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Composizione grafica per post e caroselli (25')",
+         "url": "https://club.unlikeacademy.it/c/bonus-canva-capcut/sections/993204/lessons/3768034"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Esempio di piano editoriale (4')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046684"
+        }
+       ],
+       "feedback": false
+      },
+      {
+       "key": "r2_target",
+       "name": "Esercizio · studia il tuo target",
+       "type": "Attività",
+       "callout": {
+        "icon": "👥",
+        "body": "<strong>Dopo la lezione sul target</strong><br>Compila la scheda: chi è, cosa la tiene sveglia, cosa desidera, come parla · da qui nascono le tue idee di contenuto"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri la scheda",
+         "url": "{{target}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_pubblica",
+       "name": "Pubblica il tuo primo piano: 3 contenuti a settimana",
+       "type": "Attività",
+       "callout": {
+        "icon": "🎬",
+        "body": "<strong>Ogni contenuto passa da Da revisionare prima di uscire</strong><br>Almeno 2 giorni lavorativi prima di pubblicare · 2 giri di revisione, poi si pubblica e si migliora col prossimo"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Da revisionare",
+         "url": "{{da_revisionare}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_girare",
+       "name": "Gira e monta da sola",
+       "type": "Attività",
+       "callout": {
+        "icon": "🎥",
+        "body": "<strong>B-roll, green screen, luce, audio</strong><br>Metti in pratica la call con Mickel sui contenuti del piano"
+       },
+       "actions": [],
+       "feedback": true
+      },
+      {
+       "key": "r2_stratego",
+       "name": "Prepara con Stratego il piano del mese 3",
+       "type": "Attività",
+       "callout": {
+        "icon": "🧭",
+        "body": "<strong>Settimana 4</strong><br>Entra in Stratego (il tuo dossier è già caricato), crea il piano del mese 3 e portalo su Notion entro il mercoledì · Sofia lo rivede entro venerdì"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Stratego",
+         "url": "{{stratego}}"
+        },
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il piano editoriale",
+         "url": "{{piano_editoriale}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_call_gemma",
+       "name": "Seconda call con Gemma",
+       "type": "Meeting",
+       "chi": "Gemma",
+       "durata": "60'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Fine mese · la strategia dopo il primo mese di contenuti</strong><br>Cosa ha funzionato e cosa correggere"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Gemma",
+         "url": "{{cal_gemma}}"
+        }
+       ],
+       "feedback": true,
+       "gate": [
+        "r2_pubblica"
+       ]
+      },
+      {
+       "key": "r2_call_sofia_fine",
+       "name": "Call di fine mese con Sofia",
+       "type": "Meeting",
+       "chi": "Sofia",
+       "durata": "30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Dati del mese e piano del mese 3</strong><br>Si apre la tappa successiva"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Sofia",
+         "url": "{{cal_sofia}}"
+        }
+       ],
+       "feedback": true,
+       "gate": [
+        "r2_stratego",
+        "r2_lez_metriche_e_analitiche"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "step3",
+     "label": "03",
+     "title": "Tappa 3 · Storie e reel",
+     "nextId": "step4",
+     "mese": 3,
+     "callouts": [
+      {
+       "style": "info",
+       "icon": "ℹ️",
+       "body": "<strong>Obiettivo</strong>: storie ogni giorno, e il piano lo fai tu con Stratego"
+      }
+     ],
+     "resources": [
+      {
+       "key": "r3_call_sofia_avvio",
+       "name": "Call di avvio con Sofia",
+       "type": "Meeting",
+       "chi": "Sofia",
+       "durata": "30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Settimana 1 · il piano del mese</strong>"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Sofia",
+         "url": "{{cal_sofia}}"
+        }
+       ],
+       "feedback": true,
+       "gate": []
+      },
+      {
+       "key": "r3_lez_formati_tecnici",
+       "name": "Lezione · Formati tecnici (15')",
+       "type": "Video",
+       "minuti": 15,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046680"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_lez_format_di_contenuto",
+       "name": "Lezione · Format di contenuto (38')",
+       "type": "Video",
+       "minuti": 38,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046681"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_lez_script_e_caption",
+       "name": "Lezione · Script e caption (36')",
+       "type": "Video",
+       "minuti": 36,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046677"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_lez_come_utilizzare_lo_storytell",
+       "name": "Lezione · Come utilizzare lo storytelling (38')",
+       "type": "Video",
+       "minuti": 38,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063313/lessons/4046555"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_lez_vendere_tramite_le_storie",
+       "name": "Lezione · Vendere tramite le storie (10')",
+       "type": "Video",
+       "minuti": 10,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063313/lessons/4046556"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_lez_storie_in_evidenza",
+       "name": "Lezione · Storie in evidenza (4')",
+       "type": "Video",
+       "minuti": 4,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063313/lessons/4046557"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_lez_reels_segnali_watch_time_e_r",
+       "name": "Lezione · Reels: segnali, watch time e reel di prova (21')",
+       "type": "Video",
+       "minuti": 21,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063312/lessons/4046542"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_lez_strategia_di_viralita",
+       "name": "Lezione · Strategia di viralità (38')",
+       "type": "Video",
+       "minuti": 38,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063325/lessons/4046654"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_facoltative",
+       "name": "Lezioni consigliate, se vuoi approfondire",
+       "type": "Risorsa",
+       "facoltativa": true,
+       "callout": {
+        "icon": "📚",
+        "body": "<strong>Non sono obbligatorie</strong><br>Guardale se ti serve approfondire un punto o se in call te le consigliamo"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Algoritmo Instagram (20')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063324/lessons/4046668"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Algoritmo TikTok (28')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063314/lessons/4046558"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Caroselli Instagram (20')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063312/lessons/4046541"
+        }
+       ],
+       "feedback": false
+      },
+      {
+       "key": "r3_storie",
+       "name": "Stories-telling: il tuo inventario e i primi set di storie",
+       "type": "Attività",
+       "callout": {
+        "icon": "📱",
+        "body": "<strong>Storie ogni giorno, con un filo</strong><br>Compila l'inventario delle tue storie e pianifica almeno 2 set a settimana nel piano"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri la guida",
+         "url": "{{stories_telling}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_reel",
+       "name": "Un reel di prova a settimana, letto con i dati",
+       "type": "Attività",
+       "callout": {
+        "icon": "🎞️",
+        "body": "<strong>Pubblica, guarda i numeri, decidi</strong><br>Segna nel piano cosa è andato e perché"
+       },
+       "actions": [],
+       "feedback": true
+      },
+      {
+       "key": "r3_piano",
+       "name": "Pubblica il tuo primo piano fatto con Stratego",
+       "type": "Attività",
+       "callout": {
+        "icon": "🗓️",
+        "body": "<strong>E in settimana 4 prepara quello del mese 4</strong>, su Notion entro il mercoledì"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il piano editoriale",
+         "url": "{{piano_editoriale}}"
+        },
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Stratego",
+         "url": "{{stratego}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_call_gemma",
+       "name": "Terza call con Gemma",
+       "type": "Meeting",
+       "chi": "Gemma",
+       "durata": "60'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Storie, reel e target</strong><br>Prenotala dopo lezioni e inventario delle storie"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Gemma",
+         "url": "{{cal_gemma}}"
+        }
+       ],
+       "feedback": true,
+       "gate": [
+        "r3_lez_formati_tecnici",
+        "r3_lez_format_di_contenuto",
+        "r3_lez_script_e_caption",
+        "r3_lez_come_utilizzare_lo_storytell",
+        "r3_lez_vendere_tramite_le_storie",
+        "r3_lez_storie_in_evidenza",
+        "r3_lez_reels_segnali_watch_time_e_r",
+        "r3_lez_strategia_di_viralita",
+        "r3_storie"
+       ]
+      },
+      {
+       "key": "r3_call_sofia_fine",
+       "name": "Call di fine mese con Sofia",
+       "type": "Meeting",
+       "chi": "Sofia",
+       "durata": "30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Dati del mese e apertura della tappa 4</strong>"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Sofia",
+         "url": "{{cal_sofia}}"
+        }
+       ],
+       "feedback": true,
+       "gate": [
+        "r3_piano"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "step4",
+     "label": "04",
+     "title": "Tappa 4 · Profilo, funnel e offerta",
+     "nextId": "step5",
+     "mese": 4,
+     "callouts": [
+      {
+       "style": "info",
+       "icon": "ℹ️",
+       "body": "<strong>Obiettivo</strong>: il mese che converte, dai contenuti alle richieste"
+      }
+     ],
+     "resources": [
+      {
+       "key": "r4_call_sofia_avvio",
+       "name": "Call di avvio con Sofia",
+       "type": "Meeting",
+       "chi": "Sofia",
+       "durata": "30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Settimana 1 · il piano del mese</strong>"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Sofia",
+         "url": "{{cal_sofia}}"
+        }
+       ],
+       "feedback": true,
+       "gate": []
+      },
+      {
+       "key": "r4_lez_la_psicologia_dell_acquisto",
+       "name": "Lezione · La psicologia dell'acquisto (30')",
+       "type": "Video",
+       "minuti": 30,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063327/lessons/4046628"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r4_lez_il_social_media_funnel",
+       "name": "Lezione · Il Social Media Funnel (13')",
+       "type": "Video",
+       "minuti": 13,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063329/lessons/4046597"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r4_lez_da_traffico_controllato_a_po",
+       "name": "Lezione · Da traffico controllato a posseduto (24')",
+       "type": "Video",
+       "minuti": 24,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063325/lessons/4046662"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r4_lez_ottimizzazione_profilo",
+       "name": "Lezione · Ottimizzazione profilo (12')",
+       "type": "Video",
+       "minuti": 12,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063329/lessons/4046610"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r4_lez_profilo_e_bio_instagram",
+       "name": "Lezione · Profilo e bio Instagram (17')",
+       "type": "Video",
+       "minuti": 17,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063312/lessons/4046538"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r4_lez_profilo_tiktok",
+       "name": "Lezione · Profilo TikTok (20')",
+       "type": "Video",
+       "minuti": 20,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063314/lessons/4046561"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r4_lez_touch_point_e_lead_magnet",
+       "name": "Lezione · Touch point e lead magnet (14')",
+       "type": "Video",
+       "minuti": 14,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063329/lessons/4046615"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r4_lez_link_in_bio",
+       "name": "Lezione · Link in bio (9')",
+       "type": "Video",
+       "minuti": 9,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063329/lessons/4046639"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r4_lez_dalla_chat_alla_consulenza",
+       "name": "Lezione · Dalla chat alla consulenza (8')",
+       "type": "Video",
+       "minuti": 8,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063329/lessons/4046633"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r4_facoltative",
+       "name": "Lezioni consigliate, se vuoi approfondire",
+       "type": "Risorsa",
+       "facoltativa": true,
+       "callout": {
+        "icon": "📚",
+        "body": "<strong>Non sono obbligatorie</strong><br>Guardale se ti serve approfondire un punto o se in call te le consigliamo"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "SEO per i social (11')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063329/lessons/4046600"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Automazioni e ManyChat (13')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063329/lessons/4046624"
+        }
+       ],
+       "feedback": false
+      },
+      {
+       "key": "r4_offerta",
+       "name": "Compila il form della tua offerta",
+       "type": "Attività",
+       "callout": {
+        "icon": "💡",
+        "body": "<strong>Prima della call con Gemma</strong><br>Per chi è, cosa promette, cosa comprende, quanto costa"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Offerta e funnel",
+         "url": "{{offerta_funnel}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r4_call_gemma",
+       "name": "Quarta call con Gemma: offerta e funnel",
+       "type": "Meeting",
+       "chi": "Gemma",
+       "durata": "60'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Offerta, funnel, lead magnet e acquisizione</strong><br>Prenotala dopo lezioni e form dell'offerta"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Gemma",
+         "url": "{{cal_gemma}}"
+        }
+       ],
+       "feedback": true,
+       "gate": [
+        "r4_lez_la_psicologia_dell_acquisto",
+        "r4_lez_il_social_media_funnel",
+        "r4_lez_da_traffico_controllato_a_po",
+        "r4_lez_ottimizzazione_profilo",
+        "r4_lez_profilo_e_bio_instagram",
+        "r4_lez_profilo_tiktok",
+        "r4_lez_touch_point_e_lead_magnet",
+        "r4_lez_link_in_bio",
+        "r4_lez_dalla_chat_alla_consulenza",
+        "r4_offerta"
+       ]
+      },
+      {
+       "key": "r4_funnel",
+       "name": "Lead magnet, ManyChat e messaggio di primo contatto",
+       "type": "Attività",
+       "callout": {
+        "icon": "🧲",
+        "body": "<strong>Il percorso che porta dalle storie alla richiesta</strong><br>Trovi le indicazioni in Offerta e funnel"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Offerta e funnel",
+         "url": "{{offerta_funnel}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r4_piano",
+       "name": "Piano del mese con Stratego, con il 20% di contenuti di vendita",
+       "type": "Attività",
+       "callout": {
+        "icon": "🗓️",
+        "body": "<strong>E in settimana 4 prepara quello del mese 5</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il piano editoriale",
+         "url": "{{piano_editoriale}}"
+        },
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Stratego",
+         "url": "{{stratego}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r4_offerta_pubblicata",
+       "name": "Pubblica la tua offerta",
+       "type": "Attività",
+       "callout": {
+        "icon": "🚀",
+        "body": "<strong>Post fissato e link in bio</strong><br>E misura le prime richieste"
+       },
+       "actions": [],
+       "feedback": true
+      },
+      {
+       "key": "r4_call_sofia_fine",
+       "name": "Call di fine mese con Sofia",
+       "type": "Meeting",
+       "chi": "Sofia",
+       "durata": "30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Richieste, dati e apertura della tappa 5</strong>"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Sofia",
+         "url": "{{cal_sofia}}"
+        }
+       ],
+       "feedback": true,
+       "gate": [
+        "r4_piano"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "step5",
+     "label": "05",
+     "title": "Tappa 5 · AI e autonomia",
+     "nextId": "fine",
+     "mese": 5,
+     "callouts": [
+      {
+       "style": "info",
+       "icon": "ℹ️",
+       "body": "<strong>Obiettivo</strong>: da qui vai avanti da sola, con il metodo, i dati e Stratego"
+      }
+     ],
+     "resources": [
+      {
+       "key": "r5_call_sofia_avvio",
+       "name": "Call di avvio con Sofia",
+       "type": "Meeting",
+       "chi": "Sofia",
+       "durata": "30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Settimana 1 · l'ultimo mese</strong>"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Sofia",
+         "url": "{{cal_sofia}}"
+        }
+       ],
+       "feedback": true,
+       "gate": []
+      },
+      {
+       "key": "r5_lez_mercato_digitale_l_intellige",
+       "name": "Lezione · Mercato digitale: l'intelligenza artificiale (15')",
+       "type": "Video",
+       "minuti": 15,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063324/lessons/4046643"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r5_lez_mindset_ai",
+       "name": "Lezione · Mindset AI (14')",
+       "type": "Video",
+       "minuti": 14,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/corso-ai/sections/1051057/lessons/3997695"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r5_lez_l_ai_che_non_si_vede",
+       "name": "Lezione · L'AI che non si vede (18')",
+       "type": "Video",
+       "minuti": 18,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/corso-ai/sections/1051057/lessons/3997696"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r5_lez_prompting_pratico",
+       "name": "Lezione · Prompting pratico (11')",
+       "type": "Video",
+       "minuti": 11,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/corso-ai/sections/1051058/lessons/3997697"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r5_lez_script_che_non_sembrano_scri",
+       "name": "Lezione · Script che non sembrano script (13')",
+       "type": "Video",
+       "minuti": 13,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/corso-ai/sections/1051058/lessons/3997698"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r5_lez_ai_per_i_dati",
+       "name": "Lezione · AI per i dati (9')",
+       "type": "Video",
+       "minuti": 9,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/corso-ai/sections/1051059/lessons/3997700"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r5_lez_esercitazione_analisi_dati",
+       "name": "Lezione · Esercitazione: analisi dati (8')",
+       "type": "Video",
+       "minuti": 8,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/corso-ai/sections/1051059/lessons/4025944"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r5_lez_come_leggere_gli_aggiornamen",
+       "name": "Lezione · Come leggere gli aggiornamenti (17')",
+       "type": "Video",
+       "minuti": 17,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063324/lessons/4046675"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r5_facoltative",
+       "name": "Lezioni consigliate, se vuoi approfondire",
+       "type": "Risorsa",
+       "facoltativa": true,
+       "callout": {
+        "icon": "📚",
+        "body": "<strong>Non sono obbligatorie</strong><br>Guardale se ti serve approfondire un punto o se in call te le consigliamo"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "La tua cassetta degli attrezzi AI (11')",
+         "url": "https://club.unlikeacademy.it/c/corso-ai/sections/1051060/lessons/3997702"
+        }
+       ],
+       "feedback": false
+      },
+      {
+       "key": "r5_piano",
+       "name": "Il tuo ultimo piano, da sola",
+       "type": "Attività",
+       "callout": {
+        "icon": "🗓️",
+        "body": "<strong>Con Stratego e il metodo</strong><br>Sofia lo guarda velocemente"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il piano editoriale",
+         "url": "{{piano_editoriale}}"
+        },
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Stratego",
+         "url": "{{stratego}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r5_prima_dopo",
+       "name": "Prima e dopo",
+       "type": "Attività",
+       "callout": {
+        "icon": "📸",
+        "body": "<strong>Elena ha salvato gli screenshot dei tuoi profili all'inizio e alla fine</strong><br>Guardali in Fine percorso e segnati cosa è cambiato"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Fine percorso",
+         "url": "{{fine_percorso}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r5_piano_3_mesi",
+       "name": "Il tuo piano dei prossimi 3 mesi",
+       "type": "Attività",
+       "callout": {
+        "icon": "🧭",
+        "body": "<strong>Cosa tieni, cosa migliori, cosa provi</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Fine percorso",
+         "url": "{{fine_percorso}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r5_call_sofia_fine",
+       "name": "Bilancio finale con Sofia",
+       "type": "Meeting",
+       "chi": "Sofia",
+       "durata": "30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Numeri del mese 1 contro quelli di oggi</strong><br>E come vai avanti da sola"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Sofia",
+         "url": "{{cal_sofia}}"
+        }
+       ],
+       "feedback": true,
+       "gate": [
+        "r5_prima_dopo"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "fine",
+     "label": "✓",
+     "title": "Fine percorso",
+     "nextId": null,
+     "callouts": [
+      {
+       "style": "arrow",
+       "icon": "🎉",
+       "body": "<strong>Hai chiuso il percorso</strong><br>Qui trovi il tuo recap e la call per decidere come continuare"
+      }
+     ],
+     "resources": [
+      {
+       "key": "f_recap",
+       "name": "Il tuo recap finale",
+       "type": "Risorsa",
+       "callout": {
+        "icon": "📄",
+        "body": "<strong>Lo prepara Elena</strong>: obiettivi raggiunti, cosa resta da fare, prossimi passi"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il recap",
+         "url": "{{fine_percorso}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "f_call_katia",
+       "name": "Call di fine percorso con Katia",
+       "type": "Meeting",
+       "chi": "Katia",
+       "durata": "30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Entro 7 giorni dalla fine</strong><br>I tuoi risultati, il tuo feedback e come continuare se vuoi"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Katia",
+         "url": "{{cal_katia}}"
+        }
+       ],
+       "feedback": true,
+       "gate": []
+      },
+      {
+       "key": "f_feedback",
+       "name": "Lasciaci il tuo feedback",
+       "type": "Attività",
+       "callout": {
+        "icon": "💬",
+        "body": "<strong>Cosa ha funzionato e cosa miglioreresti</strong><br>Ci aiuta a fare meglio con chi viene dopo di te"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Scrivi il feedback",
+         "url": "{{feedback}}"
+        }
+       ],
+       "feedback": true
+      }
+     ]
+    }
+   ]
+  },
+  "smm": {
+   "nome": "Da SMM tuttofare a specialista di nicchia",
+   "tipologia": "Social media manager",
+   "mesi": 3,
+   "per_chi": "Social media manager che vendono servizi social e si sentono una delle tante",
+   "modules": [
+    {
+     "id": "start",
+     "label": "★",
+     "title": "Inizia da qui · la settimana di attivazione",
+     "nextId": "step1",
+     "callouts": [
+      {
+       "style": "arrow",
+       "icon": "👋🏻",
+       "body": "<strong>Benvenuta nel tuo percorso</strong><br>Hai 7 giorni dalla call di benvenuto per completare tutto quello che trovi qui sotto<br><br>Quando hai spuntato tutto, Elena apre il tuo gruppo chat e il tuo portale e prenota la tua prima call con Gemma · il percorso parte il primo lunedì del mese"
+      }
+     ],
+     "resources": [
+      {
+       "key": "r0_benvenuto",
+       "name": "Call di benvenuto con Elena",
+       "type": "Meeting",
+       "chi": "Elena",
+       "durata": "20-30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Prenota la call di benvenuto con Elena</strong>, la tua customer success, entro 3 giorni lavorativi dal pagamento<br><br>In 20-30 minuti vediamo:<br>• chi siamo e chi ti segue<br>• le tappe del tuo percorso<br>• come funzionano chat e revisioni<br>• cosa fare in questa settimana"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Elena",
+         "url": "{{cal_elena}}"
+        }
+       ],
+       "feedback": true,
+       "gate": []
+      },
+      {
+       "key": "r0_regole",
+       "name": "Leggi le regole del percorso",
+       "type": "Risorsa",
+       "callout": {
+        "icon": "📋",
+        "body": "<strong>Le regole che ci fanno lavorare bene insieme</strong><br>Le leggiamo insieme nella call di benvenuto con Elena<br><br><strong>💬 La chat: per le domande</strong><br>• Il tuo gruppo Google Chat è l'unico canale: niente WhatsApp, niente messaggi privati<br>• Ti rispondiamo dal lunedì al venerdì, dalle 9 alle 18, entro 24 ore lavorative · a volte la prima risposta serve solo a dirti chi ti risponde e quando<br>• Il weekend siamo chiusi: quello che arriva fuori orario lo leggiamo il giorno lavorativo dopo<br>• Ti risponde Elena: per le domande tecniche coinvolge Sofia e, se serve, Gemma<br>• Urgente vale solo se pubblichi o hai una call entro 24 ore<br><br><strong>✍🏻 Le revisioni: solo su Notion</strong><br>• Ogni contenuto è una scheda in Da revisionare: + Nuovo, titolo, video o file in Video e file, tipo e data di pubblicazione · Sofia risponde entro 24 ore lavorative<br>• Caricalo almeno 2 giorni lavorativi prima di pubblicarlo, e se è un'idea o uno script prima di girarlo · fino a 3 contenuti a settimana, il controllo della versione corretta non conta<br>• Ogni contenuto ha due giri: una revisione completa e un controllo veloce della versione corretta, poi si pubblica · dal terzo invio lo vediamo in live o in call<br>• Negli script scrivi solo il testo · idee, ganci e piano li prepari con Stratego quando la roadmap lo prevede, il primo piano lo prepariamo noi<br><br><strong>🔴 Le live di revisione con Sofia</strong><br>• Il lunedì dalle 14 alle 18 e il venerdì dalle 9 alle 13, nel tuo gruppo chat<br>• È l'unico momento in cui mandi i contenuti direttamente in chat, al massimo 2 · caricali prima su Notion<br><br><strong>📞 Le call e le date</strong><br>• Le call si prenotano dopo aver fatto lezioni e attività della tappa: servono per correggere e decidere, non per iniziare da zero<br>• Le call non fatte nel mese non si recuperano · c'è una call jolly per tutto il percorso<br>• Il percorso ha date fisse · se salti una settimana la recuperi nella settimana 4 · una pausa al massimo di 2 settimane, chiesta per iscritto"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri le regole complete",
+         "url": "{{regole}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r0_questionario",
+       "name": "Compila il questionario iniziale",
+       "type": "Attività",
+       "callout": {
+        "icon": "📝",
+        "body": "<strong>Raccontaci da dove parti</strong><br>Ci serve per preparare la tua prima call e la tua strategia"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il questionario",
+         "url": "{{questionario_iniziale}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r0_club",
+       "name": "Entra nel Club Unlike Academy",
+       "type": "Risorsa",
+       "callout": {
+        "icon": "🎓",
+        "body": "<strong>Il tuo accesso All-Access è attivo</strong><br>Le lezioni di ogni tappa sono nel Club: da qui trovi sempre il link diretto"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Vai al Club",
+         "url": "{{club}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r0_lez_introduzione_ai_social",
+       "name": "Lezione · Introduzione ai social (16')",
+       "type": "Video",
+       "minuti": 16,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063322/lessons/4046603"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r0_lez_algoritmo_social_generale",
+       "name": "Lezione · Algoritmo social (generale) (26')",
+       "type": "Video",
+       "minuti": 26,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063324/lessons/4046664"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r0_lez_la_differenza_tra_acquisizio",
+       "name": "Lezione · La differenza tra acquisizione e viralità (34')",
+       "type": "Video",
+       "minuti": 34,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063325/lessons/4046605"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r0_lez_posizionamento_e_brand_ident",
+       "name": "Lezione · Posizionamento e brand identity (36')",
+       "type": "Video",
+       "minuti": 36,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063326/lessons/4046611"
+        }
+       ],
+       "feedback": true
+      }
+     ],
+     "notifica_completamento": "elena"
+    },
+    {
+     "id": "step1",
+     "label": "01",
+     "title": "Tappa 1 · Algoritmi, acquisizione e branding",
+     "nextId": "step2",
+     "mese": 1,
+     "callouts": [
+      {
+       "style": "info",
+       "icon": "ℹ️",
+       "body": "<strong>Obiettivo</strong>: capisci come funzionano le piattaforme, mentre noi costruiamo la tua strategia, il tuo primo piano<br><br>Settimana 1 lezioni, esercizi e prima call con Gemma · settimana 2 leggi e approvi strategia e piano · settimana 3 profilo e contenuti obbligatori · settimana 4 pubblichi"
+      }
+     ],
+     "resources": [
+      {
+       "key": "r1_chat",
+       "name": "Entra nel tuo gruppo Google Chat",
+       "type": "Attività",
+       "callout": {
+        "icon": "💬",
+        "body": "<strong>Qui fai le domande</strong><br>Dal lunedì al venerdì dalle 9 alle 18 · rispondiamo entro 24 ore lavorative · è l'unico canale, niente WhatsApp né messaggi privati<br>I contenuti da rivedere vanno su Notion, tranne nelle live con Sofia: il lunedì dalle 14 alle 18 e il venerdì dalle 9 alle 13"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il gruppo",
+         "url": "{{chat}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_portale",
+       "name": "Apri il tuo portale Notion",
+       "type": "Risorsa",
+       "callout": {
+        "icon": "🗂️",
+        "body": "<strong>Il tuo banco di lavoro</strong><br>Strategia, piano editoriale e lo spazio Da revisionare"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il portale",
+         "url": "{{portale}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_lez_strategia_di_acquisizione",
+       "name": "Lezione · Strategia di acquisizione (34')",
+       "type": "Video",
+       "minuti": 34,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063325/lessons/4046645"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_lez_profili_professionali_vs_inf",
+       "name": "Lezione · Profili professionali vs influencer (24')",
+       "type": "Video",
+       "minuti": 24,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063325/lessons/4046626"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_lez_personal_brand",
+       "name": "Lezione · Personal brand (61')",
+       "type": "Video",
+       "minuti": 61,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063326/lessons/4046648"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_es_canali",
+       "name": "Esercizio · la mappa dei tuoi 3 canali",
+       "type": "Attività",
+       "callout": {
+        "icon": "📝",
+        "body": "<strong>Dove ti trovano oggi i clienti, e dove li vuoi tra 6 mesi</strong><br>Ricerca, social, AI · scrivilo nella pagina Esercizi del portale"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Esercizi",
+         "url": "{{esercizi}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_es_audit",
+       "name": "Esercizio · l'audit degli ultimi 9 post",
+       "type": "Attività",
+       "callout": {
+        "icon": "📝",
+        "body": "<strong>Per ognuno: acquisizione o viralità?</strong><br>Scrivilo nella pagina Esercizi del portale"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Esercizi",
+         "url": "{{esercizi}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_listino",
+       "name": "Esercizio · il tuo listino di oggi",
+       "type": "Attività",
+       "callout": {
+        "icon": "📝",
+        "body": "<strong>Servizi, prezzi e clienti che segui oggi</strong><br>Ci serve per la call di orientamento"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Esercizi",
+         "url": "{{esercizi}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_call_gemma",
+       "name": "Call di orientamento con Gemma",
+       "type": "Meeting",
+       "chi": "Gemma",
+       "durata": "60'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>La prenota Elena per te</strong>: trovi data e ora nel gruppo chat · arrivaci con lezioni ed esercizi fatti · in call c'è anche Sofia<br><br>Obiettivi:<br>• la tua nicchia<br>• il tuo posizionamento da SMM<br>• i servizi su cui puntare"
+       },
+       "actions": [],
+       "feedback": true,
+       "gate": [
+        "r1_lez_strategia_di_acquisizione",
+        "r1_lez_profili_professionali_vs_inf",
+        "r1_lez_personal_brand",
+        "r1_es_canali",
+        "r1_es_audit",
+        "r1_listino"
+       ],
+       "prenota": "elena"
+      },
+      {
+       "key": "r1_strategia",
+       "name": "Leggi e approva la tua strategia",
+       "type": "Attività",
+       "callout": {
+        "icon": "📄",
+        "body": "<strong>Settimana 2</strong><br>La trovi nel portale: leggila tutta e segnati 3 cose che non ti tornano, le vediamo nella call con Sofia"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri la strategia",
+         "url": "{{strategia}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_call_sofia_1",
+       "name": "Call di consegna con Sofia",
+       "type": "Meeting",
+       "chi": "Sofia",
+       "durata": "30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Strategia e primo piano letti insieme</strong><br>E i contenuti obbligatori da fare questo mese"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Sofia",
+         "url": "{{cal_sofia}}"
+        }
+       ],
+       "feedback": true,
+       "gate": [
+        "r1_strategia"
+       ]
+      },
+      {
+       "key": "r1_piano",
+       "name": "Il tuo primo piano editoriale",
+       "type": "Risorsa",
+       "callout": {
+        "icon": "🗓️",
+        "body": "<strong>12 contenuti, 3 a settimana, con le reference</strong><br>Questo mese fai i contenuti obbligatori · il mese prossimo pubblichi tutto il piano"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il piano editoriale",
+         "url": "{{piano_editoriale}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_profilo",
+       "name": "Sistema bio e profilo",
+       "type": "Attività",
+       "callout": {
+        "icon": "📝",
+        "body": "<strong>Settimana 3</strong><br>Segui le indicazioni di Ottimizzazione profili nella tua strategia"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Ottimizzazione profili",
+         "url": "{{ottimizzazione_profili}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_cartelle",
+       "name": "Riordina le tue cartelle",
+       "type": "Attività",
+       "callout": {
+        "icon": "🗂️",
+        "body": "<strong>Col metodo che ti ha mostrato Gemma</strong><br>Così ritrovi in un attimo foto, video e materiali"
+       },
+       "actions": [],
+       "feedback": true
+      },
+      {
+       "key": "r1_obbligatori",
+       "name": "Registra i contenuti obbligatori e mandali in revisione",
+       "type": "Attività",
+       "callout": {
+        "icon": "🎬",
+        "body": "<strong>Settimana 3</strong><br>Una scheda del piano editoriale per contenuto, con tipo e data di pubblicazione, poi Revisione team su Da revisionare, almeno 2 giorni lavorativi prima di pubblicare · Sofia risponde entro 24 ore lavorative · i primi portali alla live con Sofia, il lunedì dalle 14 alle 18 o il venerdì dalle 9 alle 13"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Da revisionare",
+         "url": "{{da_revisionare}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_pubblica",
+       "name": "Pubblica i tuoi primi contenuti",
+       "type": "Attività",
+       "callout": {
+        "icon": "🚀",
+        "body": "<strong>Settimana 4</strong><br>Quelli approvati da Sofia"
+       },
+       "actions": [],
+       "feedback": true
+      },
+      {
+       "key": "r1_call_sofia_2",
+       "name": "Call di fine mese con Sofia",
+       "type": "Meeting",
+       "chi": "Sofia",
+       "durata": "30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Dati, compiti e apertura della tappa 2</strong>"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Sofia",
+         "url": "{{cal_sofia}}"
+        }
+       ],
+       "feedback": true,
+       "gate": [
+        "r1_obbligatori"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "step2",
+     "label": "02",
+     "title": "Tappa 2 · Strategia, piano editoriale e creazione contenuti (con il metodo per i clienti)",
+     "nextId": "step3",
+     "mese": 2,
+     "callouts": [
+      {
+       "style": "info",
+       "icon": "ℹ️",
+       "body": "<strong>Obiettivo</strong>: impari a fare i contenuti, e noi li correggiamo prima che escano<br><br>Settimana 1 call di avvio con Sofia · la strategia di un tuo cliente con Stratego · 3 contenuti a settimana in Da revisionare · settimana 4 piano del mese 3 con Stratego"
+      }
+     ],
+     "resources": [
+      {
+       "key": "r2_lez_target_leggere_la_mente_del_",
+       "name": "Lezione · Target: leggere la mente del tuo utente (33')",
+       "type": "Video",
+       "minuti": 33,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063327/lessons/4046608"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_le_5_anime_dei_contenuti",
+       "name": "Lezione · Le 5 anime dei contenuti (33')",
+       "type": "Video",
+       "minuti": 33,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046620"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_i_formati_short_e_long_form",
+       "name": "Lezione · I formati: short e long form (27')",
+       "type": "Video",
+       "minuti": 27,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046606"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_ideazione_e_struttura",
+       "name": "Lezione · Ideazione e struttura (10')",
+       "type": "Video",
+       "minuti": 10,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046653"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_gancio",
+       "name": "Lezione · Gancio (15')",
+       "type": "Video",
+       "minuti": 15,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046659"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_obiettivi_smart",
+       "name": "Lezione · Obiettivi SMART (22')",
+       "type": "Video",
+       "minuti": 22,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063327/lessons/4046642"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_la_tua_dichiarazione_strateg",
+       "name": "Lezione · La tua dichiarazione strategica (21')",
+       "type": "Video",
+       "minuti": 21,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063327/lessons/4046663"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_creazione_del_piano_editoria",
+       "name": "Lezione · Creazione del piano editoriale (29')",
+       "type": "Video",
+       "minuti": 29,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046682"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_metriche_e_analitiche",
+       "name": "Lezione · Metriche e analitiche (24')",
+       "type": "Video",
+       "minuti": 24,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong><br><br><em>Prima della call di fine mese</em>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046685"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_ai_per_la_strategia_dal_targ",
+       "name": "Lezione · AI per la strategia: dal target allo script (12')",
+       "type": "Video",
+       "minuti": 12,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/corso-ai/sections/1051059/lessons/3997699"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_esercitazione_workflow_in_4_",
+       "name": "Lezione · Esercitazione: workflow in 4 step (17')",
+       "type": "Video",
+       "minuti": 17,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/corso-ai/sections/1051059/lessons/4025943"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_call_sofia_avvio",
+       "name": "Call di avvio con Sofia",
+       "type": "Meeting",
+       "chi": "Sofia",
+       "durata": "30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Settimana 1 · come si costruisce la strategia di un cliente col metodo Unlike</strong>"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Sofia",
+         "url": "{{cal_sofia}}"
+        }
+       ],
+       "feedback": true,
+       "gate": []
+      },
+      {
+       "key": "r2_cliente",
+       "name": "La strategia di un tuo cliente col metodo Unlike",
+       "type": "Attività",
+       "callout": {
+        "icon": "🧭",
+        "body": "<strong>Con Stratego, sull'account del tuo cliente</strong><br>Incollala nella pagina Kit SMM: Sofia la rivede"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Stratego",
+         "url": "{{stratego}}"
+        },
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il kit SMM",
+         "url": "{{kit}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_facoltative",
+       "name": "Lezioni consigliate, se vuoi approfondire",
+       "type": "Risorsa",
+       "facoltativa": true,
+       "callout": {
+        "icon": "📚",
+        "body": "<strong>Non sono obbligatorie</strong><br>Guardale se ti serve approfondire un punto o se in call te le consigliamo"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Live: dai voce ai tuoi contenuti (73')",
+         "url": "https://club.unlikeacademy.it/c/dirette/dai-voce-ai-tuoi-contenuti-1062bab3-5990-480d-b05c-06c0e13b9717"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Caroselli Instagram (20')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063312/lessons/4046541"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Aggiornamenti Canva per SMM (19')",
+         "url": "https://club.unlikeacademy.it/c/bonus-canva-capcut/sections/993204/lessons/3768042"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "CapCut: nozioni di base (12')",
+         "url": "https://club.unlikeacademy.it/c/bonus-canva-capcut/sections/993195/lessons/3767979"
+        }
+       ],
+       "feedback": false
+      },
+      {
+       "key": "r2_target",
+       "name": "Esercizio · studia il tuo target",
+       "type": "Attività",
+       "callout": {
+        "icon": "👥",
+        "body": "<strong>Dopo la lezione sul target</strong><br>Compila la scheda: chi è, cosa la tiene sveglia, cosa desidera, come parla · da qui nascono le tue idee di contenuto"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri la scheda",
+         "url": "{{target}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_pubblica",
+       "name": "Pubblica il tuo primo piano: 3 contenuti a settimana",
+       "type": "Attività",
+       "callout": {
+        "icon": "🎬",
+        "body": "<strong>Ogni contenuto passa da Da revisionare prima di uscire</strong><br>Almeno 2 giorni lavorativi prima di pubblicare · 2 giri di revisione, poi si pubblica e si migliora col prossimo"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Da revisionare",
+         "url": "{{da_revisionare}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_girare",
+       "name": "Gira e monta da sola",
+       "type": "Attività",
+       "callout": {
+        "icon": "🎥",
+        "body": "<strong>B-roll, green screen, luce, audio</strong><br>Metti in pratica le lezioni sui contenuti del piano"
+       },
+       "actions": [],
+       "feedback": true
+      },
+      {
+       "key": "r2_stratego",
+       "name": "Prepara con Stratego il piano del mese 3",
+       "type": "Attività",
+       "callout": {
+        "icon": "🧭",
+        "body": "<strong>Settimana 4</strong><br>Entra in Stratego (il tuo dossier è già caricato), crea il piano del mese 3 e portalo su Notion entro il mercoledì · Sofia lo rivede entro venerdì"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Stratego",
+         "url": "{{stratego}}"
+        },
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il piano editoriale",
+         "url": "{{piano_editoriale}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_call_sofia_fine",
+       "name": "Call di fine mese con Sofia",
+       "type": "Meeting",
+       "chi": "Sofia",
+       "durata": "30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Dati del mese e piano del mese 3</strong><br>Si apre la tappa successiva"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Sofia",
+         "url": "{{cal_sofia}}"
+        }
+       ],
+       "feedback": true,
+       "gate": [
+        "r2_stratego",
+        "r2_lez_metriche_e_analitiche"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "step3",
+     "label": "03",
+     "title": "Tappa 3 · Storie, reel, funnel e vendita dei tuoi servizi",
+     "nextId": "fine",
+     "mese": 3,
+     "callouts": [
+      {
+       "style": "info",
+       "icon": "ℹ️",
+       "body": "<strong>Obiettivo</strong>: ti vendi come specialista: storie, funnel e i tuoi servizi a listino"
+      }
+     ],
+     "resources": [
+      {
+       "key": "r3_call_odaljs",
+       "name": "Call con Odaljs: preventivi e vendita",
+       "type": "Meeting",
+       "chi": "Odaljs",
+       "durata": "60'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Settimana 1 · listino, preventivi, contratti, vendita ai clienti</strong><br>Prenotala dopo le lezioni su funnel e consulenza"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Odaljs",
+         "url": "{{cal_odaljs}}"
+        }
+       ],
+       "feedback": true,
+       "gate": [
+        "r3_lez_il_social_media_funnel",
+        "r3_lez_dalla_chat_alla_consulenza"
+       ]
+      },
+      {
+       "key": "r3_lez_come_utilizzare_lo_storytell",
+       "name": "Lezione · Come utilizzare lo storytelling (38')",
+       "type": "Video",
+       "minuti": 38,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063313/lessons/4046555"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_lez_vendere_tramite_le_storie",
+       "name": "Lezione · Vendere tramite le storie (10')",
+       "type": "Video",
+       "minuti": 10,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063313/lessons/4046556"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_lez_storie_in_evidenza",
+       "name": "Lezione · Storie in evidenza (4')",
+       "type": "Video",
+       "minuti": 4,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063313/lessons/4046557"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_lez_reels_segnali_watch_time_e_r",
+       "name": "Lezione · Reels: segnali, watch time e reel di prova (21')",
+       "type": "Video",
+       "minuti": 21,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063312/lessons/4046542"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_lez_la_psicologia_dell_acquisto",
+       "name": "Lezione · La psicologia dell'acquisto (30')",
+       "type": "Video",
+       "minuti": 30,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063327/lessons/4046628"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_lez_il_social_media_funnel",
+       "name": "Lezione · Il Social Media Funnel (13')",
+       "type": "Video",
+       "minuti": 13,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063329/lessons/4046597"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_lez_touch_point_e_lead_magnet",
+       "name": "Lezione · Touch point e lead magnet (14')",
+       "type": "Video",
+       "minuti": 14,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063329/lessons/4046615"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_lez_link_in_bio",
+       "name": "Lezione · Link in bio (9')",
+       "type": "Video",
+       "minuti": 9,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063329/lessons/4046639"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_lez_dalla_chat_alla_consulenza",
+       "name": "Lezione · Dalla chat alla consulenza (8')",
+       "type": "Video",
+       "minuti": 8,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063329/lessons/4046633"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_facoltative",
+       "name": "Lezioni consigliate, se vuoi approfondire",
+       "type": "Risorsa",
+       "facoltativa": true,
+       "callout": {
+        "icon": "📚",
+        "body": "<strong>Non sono obbligatorie</strong><br>Guardale se ti serve approfondire un punto o se in call te le consigliamo"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Metriche e analitiche (24')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046685"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "L'AI che non si vede (18')",
+         "url": "https://club.unlikeacademy.it/c/corso-ai/sections/1051057/lessons/3997696"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Script che non sembrano script (13')",
+         "url": "https://club.unlikeacademy.it/c/corso-ai/sections/1051058/lessons/3997698"
+        }
+       ],
+       "feedback": false
+      },
+      {
+       "key": "r3_storie",
+       "name": "Stories-telling: il tuo inventario e i primi set di storie",
+       "type": "Attività",
+       "callout": {
+        "icon": "📱",
+        "body": "<strong>Storie ogni giorno, con un filo</strong><br>Almeno 2 set a settimana nel piano"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri la guida",
+         "url": "{{stories_telling}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_piano",
+       "name": "Pubblica il tuo primo piano fatto con Stratego",
+       "type": "Attività",
+       "callout": {
+        "icon": "🗓️",
+        "body": "<strong>Il primo tutto tuo</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il piano editoriale",
+         "url": "{{piano_editoriale}}"
+        },
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Stratego",
+         "url": "{{stratego}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_kit",
+       "name": "Il tuo kit SMM",
+       "type": "Attività",
+       "callout": {
+        "icon": "🧰",
+        "body": "<strong>Listino, preventivo, contratto e report mensile per il cliente</strong><br>Lo prepari nella pagina Kit SMM: Sofia lo rivede"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il kit SMM",
+         "url": "{{kit}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_proposta",
+       "name": "Manda la prima proposta a un potenziale cliente",
+       "type": "Attività",
+       "callout": {
+        "icon": "📨",
+        "body": "<strong>Con il kit nuovo</strong><br>E segna le richieste che arrivano"
+       },
+       "actions": [],
+       "feedback": true
+      },
+      {
+       "key": "r3_prima_dopo",
+       "name": "Prima e dopo",
+       "type": "Attività",
+       "callout": {
+        "icon": "📸",
+        "body": "<strong>Elena ha salvato gli screenshot dei tuoi profili all'inizio e alla fine</strong><br>Guardali in Fine percorso e segnati cosa è cambiato"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Fine percorso",
+         "url": "{{fine_percorso}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_piano_3_mesi",
+       "name": "Il tuo piano dei prossimi 3 mesi",
+       "type": "Attività",
+       "callout": {
+        "icon": "🧭",
+        "body": "<strong>Cosa tieni, cosa migliori, cosa provi</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Fine percorso",
+         "url": "{{fine_percorso}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_call_sofia_fine",
+       "name": "Bilancio finale con Sofia",
+       "type": "Meeting",
+       "chi": "Sofia",
+       "durata": "30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Numeri dell'inizio contro quelli di oggi</strong><br>E come vai avanti da sola"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Sofia",
+         "url": "{{cal_sofia}}"
+        }
+       ],
+       "feedback": true,
+       "gate": [
+        "r3_prima_dopo"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "fine",
+     "label": "✓",
+     "title": "Fine percorso",
+     "nextId": null,
+     "callouts": [
+      {
+       "style": "arrow",
+       "icon": "🎉",
+       "body": "<strong>Hai chiuso il percorso</strong><br>Qui trovi il tuo recap e la call per decidere come continuare"
+      }
+     ],
+     "resources": [
+      {
+       "key": "f_recap",
+       "name": "Il tuo recap finale",
+       "type": "Risorsa",
+       "callout": {
+        "icon": "📄",
+        "body": "<strong>Lo prepara Elena</strong>: obiettivi raggiunti, cosa resta da fare, prossimi passi"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il recap",
+         "url": "{{fine_percorso}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "f_call_katia",
+       "name": "Call di fine percorso con Katia",
+       "type": "Meeting",
+       "chi": "Katia",
+       "durata": "30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Entro 7 giorni dalla fine</strong><br>I tuoi risultati, il tuo feedback e come continuare se vuoi"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Katia",
+         "url": "{{cal_katia}}"
+        }
+       ],
+       "feedback": true,
+       "gate": []
+      },
+      {
+       "key": "f_feedback",
+       "name": "Lasciaci il tuo feedback",
+       "type": "Attività",
+       "callout": {
+        "icon": "💬",
+        "body": "<strong>Cosa ha funzionato e cosa miglioreresti</strong><br>Ci aiuta a fare meglio con chi viene dopo di te"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Scrivi il feedback",
+         "url": "{{feedback}}"
+        }
+       ],
+       "feedback": true
+      }
+     ]
+    }
+   ]
+  },
+  "personal-brand": {
+   "nome": "Da contenuti a caso a una linea chiara",
+   "tipologia": "Personal brand",
+   "mesi": 3,
+   "per_chi": "Creator, UGC, personal brand, networker e chi ha un profilo che non si capisce",
+   "modules": [
+    {
+     "id": "start",
+     "label": "★",
+     "title": "Inizia da qui · la settimana di attivazione",
+     "nextId": "step1",
+     "callouts": [
+      {
+       "style": "arrow",
+       "icon": "👋🏻",
+       "body": "<strong>Benvenuta nel tuo percorso</strong><br>Hai 7 giorni dalla call di benvenuto per completare tutto quello che trovi qui sotto<br><br>Quando hai spuntato tutto, Elena apre il tuo gruppo chat e il tuo portale e prenota la tua prima call con Gemma · il percorso parte il primo lunedì del mese"
+      }
+     ],
+     "resources": [
+      {
+       "key": "r0_benvenuto",
+       "name": "Call di benvenuto con Elena",
+       "type": "Meeting",
+       "chi": "Elena",
+       "durata": "20-30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Prenota la call di benvenuto con Elena</strong>, la tua customer success, entro 3 giorni lavorativi dal pagamento<br><br>In 20-30 minuti vediamo:<br>• chi siamo e chi ti segue<br>• le tappe del tuo percorso<br>• come funzionano chat e revisioni<br>• cosa fare in questa settimana"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Elena",
+         "url": "{{cal_elena}}"
+        }
+       ],
+       "feedback": true,
+       "gate": []
+      },
+      {
+       "key": "r0_regole",
+       "name": "Leggi le regole del percorso",
+       "type": "Risorsa",
+       "callout": {
+        "icon": "📋",
+        "body": "<strong>Le regole che ci fanno lavorare bene insieme</strong><br>Le leggiamo insieme nella call di benvenuto con Elena<br><br><strong>💬 La chat: per le domande</strong><br>• Il tuo gruppo Google Chat è l'unico canale: niente WhatsApp, niente messaggi privati<br>• Ti rispondiamo dal lunedì al venerdì, dalle 9 alle 18, entro 24 ore lavorative · a volte la prima risposta serve solo a dirti chi ti risponde e quando<br>• Il weekend siamo chiusi: quello che arriva fuori orario lo leggiamo il giorno lavorativo dopo<br>• Ti risponde Elena: per le domande tecniche coinvolge Sofia e, se serve, Gemma<br>• Urgente vale solo se pubblichi o hai una call entro 24 ore<br><br><strong>✍🏻 Le revisioni: solo su Notion</strong><br>• Ogni contenuto è una scheda in Da revisionare: + Nuovo, titolo, video o file in Video e file, tipo e data di pubblicazione · Sofia risponde entro 24 ore lavorative<br>• Caricalo almeno 2 giorni lavorativi prima di pubblicarlo, e se è un'idea o uno script prima di girarlo · fino a 3 contenuti a settimana, il controllo della versione corretta non conta<br>• Ogni contenuto ha due giri: una revisione completa e un controllo veloce della versione corretta, poi si pubblica · dal terzo invio lo vediamo in live o in call<br>• Negli script scrivi solo il testo · idee, ganci e piano li prepari con Stratego quando la roadmap lo prevede, il primo piano lo prepariamo noi<br><br><strong>🔴 Le live di revisione con Sofia</strong><br>• Il lunedì dalle 14 alle 18 e il venerdì dalle 9 alle 13, nel tuo gruppo chat<br>• È l'unico momento in cui mandi i contenuti direttamente in chat, al massimo 2 · caricali prima su Notion<br><br><strong>📞 Le call e le date</strong><br>• Le call si prenotano dopo aver fatto lezioni e attività della tappa: servono per correggere e decidere, non per iniziare da zero<br>• Le call non fatte nel mese non si recuperano · c'è una call jolly per tutto il percorso<br>• Il percorso ha date fisse · se salti una settimana la recuperi nella settimana 4 · una pausa al massimo di 2 settimane, chiesta per iscritto"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri le regole complete",
+         "url": "{{regole}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r0_questionario",
+       "name": "Compila il questionario iniziale",
+       "type": "Attività",
+       "callout": {
+        "icon": "📝",
+        "body": "<strong>Raccontaci da dove parti</strong><br>Ci serve per preparare la tua prima call e la tua strategia"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il questionario",
+         "url": "{{questionario_iniziale}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r0_club",
+       "name": "Entra nel Club Unlike Academy",
+       "type": "Risorsa",
+       "callout": {
+        "icon": "🎓",
+        "body": "<strong>Il tuo accesso All-Access è attivo</strong><br>Le lezioni di ogni tappa sono nel Club: da qui trovi sempre il link diretto"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Vai al Club",
+         "url": "{{club}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r0_lez_introduzione_ai_social",
+       "name": "Lezione · Introduzione ai social (16')",
+       "type": "Video",
+       "minuti": 16,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063322/lessons/4046603"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r0_lez_algoritmo_social_generale",
+       "name": "Lezione · Algoritmo social (generale) (26')",
+       "type": "Video",
+       "minuti": 26,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063324/lessons/4046664"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r0_lez_la_differenza_tra_acquisizio",
+       "name": "Lezione · La differenza tra acquisizione e viralità (34')",
+       "type": "Video",
+       "minuti": 34,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063325/lessons/4046605"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r0_lez_posizionamento_e_brand_ident",
+       "name": "Lezione · Posizionamento e brand identity (36')",
+       "type": "Video",
+       "minuti": 36,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063326/lessons/4046611"
+        }
+       ],
+       "feedback": true
+      }
+     ],
+     "notifica_completamento": "elena"
+    },
+    {
+     "id": "step1",
+     "label": "01",
+     "title": "Tappa 1 · Algoritmi, acquisizione e branding",
+     "nextId": "step2",
+     "mese": 1,
+     "callouts": [
+      {
+       "style": "info",
+       "icon": "ℹ️",
+       "body": "<strong>Obiettivo</strong>: capisci come funzionano le piattaforme, mentre noi costruiamo la tua strategia, il tuo primo piano<br><br>Settimana 1 lezioni, esercizi e prima call con Gemma · settimana 2 leggi e approvi strategia e piano · settimana 3 profilo e contenuti obbligatori · settimana 4 pubblichi"
+      }
+     ],
+     "resources": [
+      {
+       "key": "r1_chat",
+       "name": "Entra nel tuo gruppo Google Chat",
+       "type": "Attività",
+       "callout": {
+        "icon": "💬",
+        "body": "<strong>Qui fai le domande</strong><br>Dal lunedì al venerdì dalle 9 alle 18 · rispondiamo entro 24 ore lavorative · è l'unico canale, niente WhatsApp né messaggi privati<br>I contenuti da rivedere vanno su Notion, tranne nelle live con Sofia: il lunedì dalle 14 alle 18 e il venerdì dalle 9 alle 13"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il gruppo",
+         "url": "{{chat}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_portale",
+       "name": "Apri il tuo portale Notion",
+       "type": "Risorsa",
+       "callout": {
+        "icon": "🗂️",
+        "body": "<strong>Il tuo banco di lavoro</strong><br>Strategia, piano editoriale e lo spazio Da revisionare"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il portale",
+         "url": "{{portale}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_lez_strategia_di_acquisizione",
+       "name": "Lezione · Strategia di acquisizione (34')",
+       "type": "Video",
+       "minuti": 34,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063325/lessons/4046645"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_lez_profili_professionali_vs_inf",
+       "name": "Lezione · Profili professionali vs influencer (24')",
+       "type": "Video",
+       "minuti": 24,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063325/lessons/4046626"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_lez_personal_brand",
+       "name": "Lezione · Personal brand (61')",
+       "type": "Video",
+       "minuti": 61,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063326/lessons/4046648"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_es_canali",
+       "name": "Esercizio · la mappa dei tuoi 3 canali",
+       "type": "Attività",
+       "callout": {
+        "icon": "📝",
+        "body": "<strong>Dove ti trovano oggi i clienti, e dove li vuoi tra 6 mesi</strong><br>Ricerca, social, AI · scrivilo nella pagina Esercizi del portale"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Esercizi",
+         "url": "{{esercizi}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_es_audit",
+       "name": "Esercizio · l'audit degli ultimi 9 post",
+       "type": "Attività",
+       "callout": {
+        "icon": "📝",
+        "body": "<strong>Per ognuno: acquisizione o viralità?</strong><br>Scrivilo nella pagina Esercizi del portale"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Esercizi",
+         "url": "{{esercizi}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_call_gemma",
+       "name": "Prima call con Gemma: chi sei",
+       "type": "Meeting",
+       "chi": "Gemma",
+       "durata": "60'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>La prenota Elena per te</strong>: trovi data e ora nel gruppo chat · arrivaci con lezioni ed esercizi fatti · in call c'è anche Sofia<br><br>Obiettivi:<br>• la tua storia<br>• per chi sei<br>• la linea e il format che ti rendono riconoscibile"
+       },
+       "actions": [],
+       "feedback": true,
+       "gate": [
+        "r1_lez_strategia_di_acquisizione",
+        "r1_lez_profili_professionali_vs_inf",
+        "r1_lez_personal_brand",
+        "r1_es_canali",
+        "r1_es_audit"
+       ],
+       "prenota": "elena"
+      },
+      {
+       "key": "r1_strategia",
+       "name": "Leggi e approva la tua strategia",
+       "type": "Attività",
+       "callout": {
+        "icon": "📄",
+        "body": "<strong>Settimana 2</strong><br>La trovi nel portale: leggila tutta e segnati 3 cose che non ti tornano, le vediamo nella call con Sofia"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri la strategia",
+         "url": "{{strategia}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_call_sofia_1",
+       "name": "Call di consegna con Sofia",
+       "type": "Meeting",
+       "chi": "Sofia",
+       "durata": "30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Strategia e primo piano letti insieme</strong><br>E i contenuti obbligatori da fare questo mese"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Sofia",
+         "url": "{{cal_sofia}}"
+        }
+       ],
+       "feedback": true,
+       "gate": [
+        "r1_strategia"
+       ]
+      },
+      {
+       "key": "r1_piano",
+       "name": "Il tuo primo piano editoriale",
+       "type": "Risorsa",
+       "callout": {
+        "icon": "🗓️",
+        "body": "<strong>12 contenuti, 3 a settimana, con le reference</strong><br>Questo mese fai i contenuti obbligatori · il mese prossimo pubblichi tutto il piano"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il piano editoriale",
+         "url": "{{piano_editoriale}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_profilo",
+       "name": "Sistema bio e profilo",
+       "type": "Attività",
+       "callout": {
+        "icon": "📝",
+        "body": "<strong>Settimana 3</strong><br>Segui le indicazioni di Ottimizzazione profili nella tua strategia"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Ottimizzazione profili",
+         "url": "{{ottimizzazione_profili}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_cartelle",
+       "name": "Riordina le tue cartelle",
+       "type": "Attività",
+       "callout": {
+        "icon": "🗂️",
+        "body": "<strong>Col metodo che ti ha mostrato Gemma</strong><br>Così ritrovi in un attimo foto, video e materiali"
+       },
+       "actions": [],
+       "feedback": true
+      },
+      {
+       "key": "r1_obbligatori",
+       "name": "Registra i contenuti obbligatori e mandali in revisione",
+       "type": "Attività",
+       "callout": {
+        "icon": "🎬",
+        "body": "<strong>Settimana 3</strong><br>Una scheda del piano editoriale per contenuto, con tipo e data di pubblicazione, poi Revisione team su Da revisionare, almeno 2 giorni lavorativi prima di pubblicare · Sofia risponde entro 24 ore lavorative · i primi portali alla live con Sofia, il lunedì dalle 14 alle 18 o il venerdì dalle 9 alle 13"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Da revisionare",
+         "url": "{{da_revisionare}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_pubblica",
+       "name": "Pubblica i tuoi primi contenuti",
+       "type": "Attività",
+       "callout": {
+        "icon": "🚀",
+        "body": "<strong>Settimana 4</strong><br>Quelli approvati da Sofia"
+       },
+       "actions": [],
+       "feedback": true
+      },
+      {
+       "key": "r1_call_sofia_2",
+       "name": "Call di fine mese con Sofia",
+       "type": "Meeting",
+       "chi": "Sofia",
+       "durata": "30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Dati, compiti e apertura della tappa 2</strong>"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Sofia",
+         "url": "{{cal_sofia}}"
+        }
+       ],
+       "feedback": true,
+       "gate": [
+        "r1_obbligatori"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "step2",
+     "label": "02",
+     "title": "Tappa 2 · Strategia, piano editoriale e creazione contenuti",
+     "nextId": "step3",
+     "mese": 2,
+     "callouts": [
+      {
+       "style": "info",
+       "icon": "ℹ️",
+       "body": "<strong>Obiettivo</strong>: impari a fare i contenuti, e noi li correggiamo prima che escano<br><br>Settimana 1 call di editing con Mickel · il tuo format · 3 contenuti a settimana in Da revisionare · settimana 4 piano del mese 3 con Stratego"
+      }
+     ],
+     "resources": [
+      {
+       "key": "r2_lez_target_leggere_la_mente_del_",
+       "name": "Lezione · Target: leggere la mente del tuo utente (33')",
+       "type": "Video",
+       "minuti": 33,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063327/lessons/4046608"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_le_5_anime_dei_contenuti",
+       "name": "Lezione · Le 5 anime dei contenuti (33')",
+       "type": "Video",
+       "minuti": 33,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046620"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_i_formati_short_e_long_form",
+       "name": "Lezione · I formati: short e long form (27')",
+       "type": "Video",
+       "minuti": 27,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046606"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_ideazione_e_struttura",
+       "name": "Lezione · Ideazione e struttura (10')",
+       "type": "Video",
+       "minuti": 10,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046653"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_gancio",
+       "name": "Lezione · Gancio (15')",
+       "type": "Video",
+       "minuti": 15,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046659"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_obiettivi_smart",
+       "name": "Lezione · Obiettivi SMART (22')",
+       "type": "Video",
+       "minuti": 22,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063327/lessons/4046642"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_la_tua_dichiarazione_strateg",
+       "name": "Lezione · La tua dichiarazione strategica (21')",
+       "type": "Video",
+       "minuti": 21,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063327/lessons/4046663"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_creazione_del_piano_editoria",
+       "name": "Lezione · Creazione del piano editoriale (29')",
+       "type": "Video",
+       "minuti": 29,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046682"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_metriche_e_analitiche",
+       "name": "Lezione · Metriche e analitiche (24')",
+       "type": "Video",
+       "minuti": 24,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong><br><br><em>Prima della call di fine mese</em>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046685"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_lez_capcut_nozioni_di_base",
+       "name": "Lezione · CapCut: nozioni di base (12')",
+       "type": "Video",
+       "minuti": 12,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong><br><br><em>Prima della call con Mickel</em>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/bonus-canva-capcut/sections/993195/lessons/3767979"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_call_mickel",
+       "name": "Call di editing con Mickel",
+       "type": "Meeting",
+       "chi": "Mickel",
+       "durata": "60'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Settimana 1 · girare e montare</strong><br>B-roll, green screen, luce, audio e ritmo · prenotala dopo la lezione CapCut"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Mickel",
+         "url": "{{cal_mickel}}"
+        }
+       ],
+       "feedback": true,
+       "gate": [
+        "r2_lez_capcut_nozioni_di_base"
+       ]
+      },
+      {
+       "key": "r2_facoltative",
+       "name": "Lezioni consigliate, se vuoi approfondire",
+       "type": "Risorsa",
+       "facoltativa": true,
+       "callout": {
+        "icon": "📚",
+        "body": "<strong>Non sono obbligatorie</strong><br>Guardale se ti serve approfondire un punto o se in call te le consigliamo"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Live: dai voce ai tuoi contenuti (73')",
+         "url": "https://club.unlikeacademy.it/c/dirette/dai-voce-ai-tuoi-contenuti-1062bab3-5990-480d-b05c-06c0e13b9717"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Sviluppo centrale (15')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046667"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Call to action (6')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046671"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Composizione grafica per post e caroselli (25')",
+         "url": "https://club.unlikeacademy.it/c/bonus-canva-capcut/sections/993204/lessons/3768034"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Esempio di piano editoriale (4')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046684"
+        }
+       ],
+       "feedback": false
+      },
+      {
+       "key": "r2_target",
+       "name": "Esercizio · studia il tuo target",
+       "type": "Attività",
+       "callout": {
+        "icon": "👥",
+        "body": "<strong>Dopo la lezione sul target</strong><br>Compila la scheda: chi è, cosa la tiene sveglia, cosa desidera, come parla · da qui nascono le tue idee di contenuto"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri la scheda",
+         "url": "{{target}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_format",
+       "name": "Esercizio · il tuo format",
+       "type": "Attività",
+       "callout": {
+        "icon": "🧩",
+        "body": "<strong>Provalo a costruire</strong>: un'idea che torna ogni settimana, sempre riconoscibile · scrivilo nella pagina Esercizi"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Esercizi",
+         "url": "{{esercizi}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_pubblica",
+       "name": "Pubblica il tuo primo piano: 3 contenuti a settimana",
+       "type": "Attività",
+       "callout": {
+        "icon": "🎬",
+        "body": "<strong>Ogni contenuto passa da Da revisionare prima di uscire</strong><br>Almeno 2 giorni lavorativi prima di pubblicare · 2 giri di revisione, poi si pubblica e si migliora col prossimo"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Da revisionare",
+         "url": "{{da_revisionare}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_girare",
+       "name": "Gira e monta da sola",
+       "type": "Attività",
+       "callout": {
+        "icon": "🎥",
+        "body": "<strong>B-roll, green screen, luce, audio</strong><br>Metti in pratica la call con Mickel sui contenuti del piano"
+       },
+       "actions": [],
+       "feedback": true
+      },
+      {
+       "key": "r2_stratego",
+       "name": "Prepara con Stratego il piano del mese 3",
+       "type": "Attività",
+       "callout": {
+        "icon": "🧭",
+        "body": "<strong>Settimana 4</strong><br>Entra in Stratego (il tuo dossier è già caricato), crea il piano del mese 3 e portalo su Notion entro il mercoledì · Sofia lo rivede entro venerdì"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Stratego",
+         "url": "{{stratego}}"
+        },
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il piano editoriale",
+         "url": "{{piano_editoriale}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_call_sofia_fine",
+       "name": "Call di fine mese con Sofia",
+       "type": "Meeting",
+       "chi": "Sofia",
+       "durata": "30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Dati del mese e piano del mese 3</strong><br>Si apre la tappa successiva"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Sofia",
+         "url": "{{cal_sofia}}"
+        }
+       ],
+       "feedback": true,
+       "gate": [
+        "r2_stratego",
+        "r2_lez_metriche_e_analitiche"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "step3",
+     "label": "03",
+     "title": "Tappa 3 · Storie, reel, funnel e monetizzazione",
+     "nextId": "fine",
+     "mese": 3,
+     "callouts": [
+      {
+       "style": "info",
+       "icon": "ℹ️",
+       "body": "<strong>Obiettivo</strong>: dai contenuti alle entrate: storie, funnel e monetizzazione"
+      }
+     ],
+     "resources": [
+      {
+       "key": "r3_call_sofia_avvio",
+       "name": "Call di avvio con Sofia",
+       "type": "Meeting",
+       "chi": "Sofia",
+       "durata": "30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Settimana 1 · il piano del mese</strong>"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Sofia",
+         "url": "{{cal_sofia}}"
+        }
+       ],
+       "feedback": true,
+       "gate": []
+      },
+      {
+       "key": "r3_lez_come_utilizzare_lo_storytell",
+       "name": "Lezione · Come utilizzare lo storytelling (38')",
+       "type": "Video",
+       "minuti": 38,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063313/lessons/4046555"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_lez_vendere_tramite_le_storie",
+       "name": "Lezione · Vendere tramite le storie (10')",
+       "type": "Video",
+       "minuti": 10,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063313/lessons/4046556"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_lez_storie_in_evidenza",
+       "name": "Lezione · Storie in evidenza (4')",
+       "type": "Video",
+       "minuti": 4,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063313/lessons/4046557"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_lez_reels_segnali_watch_time_e_r",
+       "name": "Lezione · Reels: segnali, watch time e reel di prova (21')",
+       "type": "Video",
+       "minuti": 21,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063312/lessons/4046542"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_lez_touch_point_e_lead_magnet",
+       "name": "Lezione · Touch point e lead magnet (14')",
+       "type": "Video",
+       "minuti": 14,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063329/lessons/4046615"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_lez_link_in_bio",
+       "name": "Lezione · Link in bio (9')",
+       "type": "Video",
+       "minuti": 9,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063329/lessons/4046639"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_lez_monetizzazione_tiktok",
+       "name": "Lezione · Monetizzazione TikTok (12')",
+       "type": "Video",
+       "minuti": 12,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063314/lessons/4046569"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_lez_analitiche_tiktok",
+       "name": "Lezione · Analitiche TikTok (13')",
+       "type": "Video",
+       "minuti": 13,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063314/lessons/4046570"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_lez_metriche_instagram",
+       "name": "Lezione · Metriche Instagram (9')",
+       "type": "Video",
+       "minuti": 9,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063312/lessons/4046543"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_facoltative",
+       "name": "Lezioni consigliate, se vuoi approfondire",
+       "type": "Risorsa",
+       "facoltativa": true,
+       "callout": {
+        "icon": "📚",
+        "body": "<strong>Non sono obbligatorie</strong><br>Guardale se ti serve approfondire un punto o se in call te le consigliamo"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Algoritmo Instagram (20')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063324/lessons/4046668"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Algoritmo TikTok (28')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063314/lessons/4046558"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Caroselli Instagram (20')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063312/lessons/4046541"
+        }
+       ],
+       "feedback": false
+      },
+      {
+       "key": "r3_storie",
+       "name": "Stories-telling: il tuo inventario e i primi set di storie",
+       "type": "Attività",
+       "callout": {
+        "icon": "📱",
+        "body": "<strong>Storie ogni giorno, con un filo</strong><br>Almeno 2 set a settimana nel piano"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri la guida",
+         "url": "{{stories_telling}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_piano",
+       "name": "Pubblica il tuo primo piano fatto con Stratego",
+       "type": "Attività",
+       "callout": {
+        "icon": "🗓️",
+        "body": "<strong>Il primo tutto tuo</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il piano editoriale",
+         "url": "{{piano_editoriale}}"
+        },
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Stratego",
+         "url": "{{stratego}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_mediakit",
+       "name": "Il tuo media kit o la tua offerta",
+       "type": "Attività",
+       "callout": {
+        "icon": "🧰",
+        "body": "<strong>In base a cosa vendi</strong>: collaborazioni o un servizio tuo · lo prepari nella pagina Media kit o offerta"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Media kit o offerta",
+         "url": "{{kit}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_call_gemma",
+       "name": "Seconda call con Gemma: monetizzazione e offerta",
+       "type": "Meeting",
+       "chi": "Gemma",
+       "durata": "60'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Collaborazioni, prodotti, offerta tua</strong><br>Prenotala dopo lezioni e media kit o bozza dell'offerta"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Gemma",
+         "url": "{{cal_gemma}}"
+        }
+       ],
+       "feedback": true,
+       "gate": [
+        "r3_lez_come_utilizzare_lo_storytell",
+        "r3_lez_vendere_tramite_le_storie",
+        "r3_lez_storie_in_evidenza",
+        "r3_lez_reels_segnali_watch_time_e_r",
+        "r3_lez_touch_point_e_lead_magnet",
+        "r3_lez_link_in_bio",
+        "r3_lez_monetizzazione_tiktok",
+        "r3_lez_analitiche_tiktok",
+        "r3_lez_metriche_instagram",
+        "r3_mediakit"
+       ]
+      },
+      {
+       "key": "r3_prima_dopo",
+       "name": "Prima e dopo",
+       "type": "Attività",
+       "callout": {
+        "icon": "📸",
+        "body": "<strong>Elena ha salvato gli screenshot dei tuoi profili all'inizio e alla fine</strong><br>Guardali in Fine percorso e segnati cosa è cambiato"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Fine percorso",
+         "url": "{{fine_percorso}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_piano_3_mesi",
+       "name": "Il tuo piano dei prossimi 3 mesi",
+       "type": "Attività",
+       "callout": {
+        "icon": "🧭",
+        "body": "<strong>Cosa tieni, cosa migliori, cosa provi</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Fine percorso",
+         "url": "{{fine_percorso}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_call_sofia_fine",
+       "name": "Bilancio finale con Sofia",
+       "type": "Meeting",
+       "chi": "Sofia",
+       "durata": "30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Numeri dell'inizio contro quelli di oggi</strong><br>E come vai avanti da sola"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Sofia",
+         "url": "{{cal_sofia}}"
+        }
+       ],
+       "feedback": true,
+       "gate": [
+        "r3_prima_dopo"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "fine",
+     "label": "✓",
+     "title": "Fine percorso",
+     "nextId": null,
+     "callouts": [
+      {
+       "style": "arrow",
+       "icon": "🎉",
+       "body": "<strong>Hai chiuso il percorso</strong><br>Qui trovi il tuo recap e la call per decidere come continuare"
+      }
+     ],
+     "resources": [
+      {
+       "key": "f_recap",
+       "name": "Il tuo recap finale",
+       "type": "Risorsa",
+       "callout": {
+        "icon": "📄",
+        "body": "<strong>Lo prepara Elena</strong>: obiettivi raggiunti, cosa resta da fare, prossimi passi"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il recap",
+         "url": "{{fine_percorso}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "f_call_katia",
+       "name": "Call di fine percorso con Katia",
+       "type": "Meeting",
+       "chi": "Katia",
+       "durata": "30'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Entro 7 giorni dalla fine</strong><br>I tuoi risultati, il tuo feedback e come continuare se vuoi"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Katia",
+         "url": "{{cal_katia}}"
+        }
+       ],
+       "feedback": true,
+       "gate": []
+      },
+      {
+       "key": "f_feedback",
+       "name": "Lasciaci il tuo feedback",
+       "type": "Attività",
+       "callout": {
+        "icon": "💬",
+        "body": "<strong>Cosa ha funzionato e cosa miglioreresti</strong><br>Ci aiuta a fare meglio con chi viene dopo di te"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Scrivi il feedback",
+         "url": "{{feedback}}"
+        }
+       ],
+       "feedback": true
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "link_per_cliente": {
+  "portale": "home del portale Notion della cliente",
+  "regole": "pagina REGOLE DEL PERCORSO del menù",
+  "strategia": "pagina STRATEGIA COMPLETA del menù (dentro anche Reference e correzioni)",
+  "ottimizzazione_profili": "database Profili ottimizzati dentro STRATEGIA COMPLETA",
+  "piano_editoriale": "database Piano Editoriale della cliente",
+  "da_revisionare": "pagina DA REVISIONARE del menù (il piano editoriale filtrato su Revisione team)",
+  "esercizi": "pagina ESERCIZI, dentro RISORSE ED ESERCIZI",
+  "target": "pagina Studia il tuo target, dentro ESERCIZI",
+  "stories_telling": "pagina STORIES-TELLING, dentro RISORSE ED ESERCIZI",
+  "visual_identity": "pagina VISUAL IDENTITY del menù (solo Professionista)",
+  "offerta_funnel": "pagina OFFERTA E FUNNEL del menù (solo Professionista)",
+  "kit": "pagina KIT SMM (SMM) o MEDIA KIT O OFFERTA (Personal brand) del menù",
+  "fine_percorso": "pagina FINE PERCORSO del menù (dentro anche il prima e dopo con gli screenshot salvati da Elena)",
+  "chat": "gruppo Google Chat della cliente",
+  "stratego": "accesso a Stratego (arriva dopo la consegna della strategia, non nella settimana di attivazione)"
+ },
+ "link_fissi": {
+  "club": "https://club.unlikeacademy.it",
+  "questionario_iniziale": "https://burly-flyaway-424.notion.site/31fae28c0a79801aa83bf10def4e9a9c?pvs=105",
+  "questionario_visual": "https://burly-flyaway-424.notion.site/2f6ae28c0a79802da61cf161e942ab9f?pvs=105",
+  "cal_elena": "https://calendar.app.google/b9rgioMdRRYidVNb9",
+  "cal_gemma": "https://calendar.app.google/HRqjFo1rRHJ3JSng9",
+  "cal_sofia": "https://calendar.app.google/kXgxfBFAEGqRKzrZ7",
+  "cal_mickel": "DA DARE (call di editing)",
+  "cal_odaljs": "https://calendar.app.google/TimNMgpRtzKsaeuU7",
+  "cal_katia": "https://calendar.app.google/WKDNeDGhzNAJZP5y8",
+  "feedback": "https://form.jotform.com/260245258986367"
+ }
+}
