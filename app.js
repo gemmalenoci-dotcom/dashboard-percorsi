@@ -516,6 +516,7 @@
     if (DEMO) { renderLogin({ type: "ok", text: "Nella versione di prova il link non parte: apri uno dei percorsi qui sotto" }); return; }
     var btn = form.querySelector("button");
     btn.disabled = true; btn.textContent = "Un attimo";
+    setTimeout(function () { if (btn.isConnected && btn.disabled) btn.textContent = "Ancora qualche secondo"; }, 6000);
     api.login(email).then(function () {
       renderLogin({ type: "ok", text: "Fatto: se l’email è quella dell’iscrizione tra poco ti arriva il link per entrare · guarda anche nello spam" });
     }).catch(function () {
@@ -543,7 +544,13 @@
     }
     if (tentativo === 1) {
       S.edited = false;
-      if (!daCache) app.innerHTML = '<div class="boot">Un attimo, sto aprendo il tuo percorso</div>';
+      if (!daCache) {
+        app.innerHTML = '<div class="boot">Un attimo, sto aprendo il tuo percorso</div>';
+        setTimeout(function () {
+          var b = app.querySelector(".boot");
+          if (b && !S.client) b.textContent = "Ci sta mettendo più del solito: ancora qualche secondo, la prossima volta si apre subito";
+        }, 6000);
+      }
     }
     return api.me(S.token).then(function (j) {
       var prima = JSON.stringify([S.client, S.progress]);
