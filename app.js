@@ -34,9 +34,9 @@
 
   // Link delle pagine dei tre template Notion, solo per la versione di prova
   var DEMO_LINKS = {
-    "professionista": { portale: "f04ae28c0a7983c89cfd01d8a3413994", regole: "3f0ae28c0a798130a365c42978b51503", strategia: "075ae28c0a798259abab817a1deaa615", da_revisionare: "003ae28c0a798227972601616eff1927", piano_editoriale: "a77ae28c0a7982c7a36081d539ef2c32", visual_identity: "3f0ae28c0a7981f19228fe62ed55a849", offerta_funnel: "3f0ae28c0a79818baa12ec7d648cd931", fine_percorso: "eb0ae28c0a7983129beb81aa42ccc3fe", esercizi: "3f0ae28c0a798184be6feec4a994bd39" },
-    "smm": { portale: "c25ae28c0a7982bbb40d01d664d4acaa", regole: "400ae28c0a7982a5aaa4014d91bbe381", strategia: "b85ae28c0a79822b821b01cedd231aa2", da_revisionare: "037ae28c0a79822fa78a8189d21bd7b4", piano_editoriale: "d83ae28c0a798241ba2e8167b8da4c7a", kit: "3f0ae28c0a79818c859ed730d00611cd", fine_percorso: "ec6ae28c0a798327abca81e3cdf3b499" },
-    "personal-brand": { portale: "96aae28c0a798276983901e497c51212", regole: "23cae28c0a7982ebad8c0199bf87e15b", strategia: "b8fae28c0a798362944d012ada05356c", da_revisionare: "ea9ae28c0a798370ab6481f9dfc9c910", piano_editoriale: "da5ae28c0a798281854e01755bf0d13d", kit: "3f0ae28c0a7981cfa15cf56f18eaeb5c", fine_percorso: "b48ae28c0a798230a84801da2e213f83" }
+    "professionista": { portale: "f04ae28c0a7983c89cfd01d8a3413994", regole: "3f0ae28c0a798130a365c42978b51503", strategia: "075ae28c0a798259abab817a1deaa615", da_revisionare: "003ae28c0a798227972601616eff1927", piano_editoriale: "a77ae28c0a7982c7a36081d539ef2c32", visual_identity: "3f0ae28c0a7981f19228fe62ed55a849", offerta_funnel: "3f0ae28c0a79818baa12ec7d648cd931", fine_percorso: "eb0ae28c0a7983129beb81aa42ccc3fe", esercizi: "3f0ae28c0a798184be6feec4a994bd39", ottimizzazione_profili: "ac4ae28c0a798258aa6301549affca8c", target: "b2dae28c0a79820d851201a502f9dc3a", stories_telling: "3d5ae28c0a798371a93e0143a73b2741" },
+    "smm": { portale: "c25ae28c0a7982bbb40d01d664d4acaa", regole: "400ae28c0a7982a5aaa4014d91bbe381", strategia: "b85ae28c0a79822b821b01cedd231aa2", da_revisionare: "037ae28c0a79822fa78a8189d21bd7b4", piano_editoriale: "d83ae28c0a798241ba2e8167b8da4c7a", kit: "3f0ae28c0a79818c859ed730d00611cd", fine_percorso: "ec6ae28c0a798327abca81e3cdf3b499", esercizi: "1e0ae28c0a79830d83368103371f774c", ottimizzazione_profili: "323ae28c0a7982d691be0117234b2de2", target: "7fbae28c0a7983579570010bed6d6336", stories_telling: "65aae28c0a7982f6abbb81a258ae371c" },
+    "personal-brand": { portale: "96aae28c0a798276983901e497c51212", regole: "23cae28c0a7982ebad8c0199bf87e15b", strategia: "b8fae28c0a798362944d012ada05356c", da_revisionare: "ea9ae28c0a798370ab6481f9dfc9c910", piano_editoriale: "da5ae28c0a798281854e01755bf0d13d", kit: "3f0ae28c0a7981cfa15cf56f18eaeb5c", fine_percorso: "b48ae28c0a798230a84801da2e213f83", esercizi: "ed0ae28c0a79824285d301e99d9fc597", ottimizzazione_profili: "bc6ae28c0a79837f8c4d01fe65c783b3", target: "8d7ae28c0a79825e9f9281261ef6e58d", stories_telling: "6afae28c0a7983009d94013052f62b4c" }
   };
 
   // ---------- utilità ----------
@@ -242,7 +242,8 @@
 
   // ---------- pezzi di pagina ----------
   function demoBanner() {
-    return DEMO ? '<div class="demo-banner">Versione di prova · i progressi restano in questo browser · <a href="#" data-act="logout">cambia percorso</a></div>' : "";
+    return DEMO ? '<div class="demo-banner">Versione di prova · i progressi restano in questo browser · <a href="#" data-act="logout">cambia percorso</a>' +
+      (CFG.appuntiUrl ? ' · <a href="' + esc(CFG.appuntiUrl) + '" target="_blank" rel="noopener">lascia un appunto</a>' : "") + '</div>' : "";
   }
 
   function topBar() {
