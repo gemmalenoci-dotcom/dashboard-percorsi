@@ -73,6 +73,12 @@
     return i > 0 ? [t.slice(0, i), t.slice(i + 1)] : [t, ""];
   }
   function cleanName(n) { return String(n || "").replace(/^Lezione · /, ""); }
+  // l'ultima parola diventa la parola perno (Playfair corsivo fucsia): il testo non cambia
+  function accent(t) {
+    t = String(t || "");
+    var i = t.lastIndexOf(" ");
+    return i > 0 ? esc(t.slice(0, i + 1)) + "<em>" + esc(t.slice(i + 1)) + "</em>" : "<em>" + esc(t) + "</em>";
+  }
 
   // ---------- dati ----------
   function loadPercorsi() {
@@ -242,14 +248,14 @@
 
   // ---------- pezzi di pagina ----------
   function demoBanner() {
-    return DEMO ? '<div class="demo-banner">Versione di prova · i progressi restano in questo browser · <a href="#" data-act="logout">cambia percorso</a>' +
-      (CFG.appuntiUrl ? ' · <a href="' + esc(CFG.appuntiUrl) + '" target="_blank" rel="noopener">lascia un appunto</a>' : "") + '</div>' : "";
+    return DEMO ? '<div class="demo-banner"><span class="demo-tag">Versione di prova</span><span class="sep" aria-hidden="true"> · </span><span>i progressi restano in questo browser</span><span class="sep" aria-hidden="true"> · </span><a href="#" data-act="logout">cambia percorso</a>' +
+      (CFG.appuntiUrl ? '<span class="sep" aria-hidden="true"> · </span><a href="' + esc(CFG.appuntiUrl) + '" target="_blank" rel="noopener">lascia un appunto</a>' : "") + '</div>' : "";
   }
 
   function topBar() {
     var portal = linkValue("portale");
     return '<header class="top"><div class="top-in">' +
-      '<a class="brand" href="#/"><img src="assets/logo-mark.png" alt=""><span>Il tuo percorso</span></a>' +
+      '<a class="brand" href="#/"><img src="assets/logo-unlike-academy.webp" alt="Unlike Academy" width="768" height="158"><span>Il tuo percorso</span></a>' +
       '<nav class="top-nav" aria-label="Menu">' +
       '<a class="chip is-rules" href="#/regole">' + ICON.rules + '<span>Regole</span></a>' +
       '<a class="chip" href="#/note" aria-label="Le tue note">' + ICON.note + '<span class="t-long">Note</span></a>' +
@@ -363,11 +369,11 @@
     var start = parseDate(S.client.data_inizio);
     return topBar() + '<main class="wrap">' +
       '<section class="hero">' +
+      '<p class="path-sub path-tag">' + esc(p.tipologia) + ' · ' + esc(p.mesi) + ' mesi' + (start ? ' · dal ' + fmtShort(start) : "") + '</p>' +
       '<p class="kicker">Ciao' + (nome ? " " + esc(nome) : "") + ' 👋🏻</p>' +
-      '<h1 class="path-title"><span class="da">' + esc(parts[0]) + '</span><span class="a">' + esc(parts[1]) + '</span></h1>' +
-      '<p class="path-sub">' + esc(p.tipologia) + ' · ' + esc(p.mesi) + ' mesi' + (start ? ' · dal ' + fmtShort(start) : "") + '</p>' +
+      '<h1 class="path-title">' + (parts[1] ? '<span class="da">' + esc(parts[0]) + '</span> <span class="a">' + accent(parts[1]) + '</span>' : '<span class="da">' + accent(parts[0]) + '</span>') + '</h1>' +
       progressBlock(tot.done, tot.total, true) +
-      '<a class="now" href="#/tappa/' + esc(cur.id) + '"><span class="now-dot"></span><span><small>' + (stc.key === "futura" ? "Prossima tappa · " + esc(stc.label.toLowerCase()) : "Adesso") + '</small>' +
+      '<a class="now' + (stc.key === "futura" ? " is-next" : "") + '" href="#/tappa/' + esc(cur.id) + '"><span class="now-dot"></span><span><small>' + (stc.key === "futura" ? "Prossima tappa · " + esc(stc.label.toLowerCase()) : "Adesso") + '</small>' +
       '<strong>' + esc(cur.title) + '</strong></span><span class="chev" aria-hidden="true">›</span></a>' +
       '</section>' +
       '<h2 class="sec-title">Le tappe del tuo percorso</h2>' +
@@ -388,7 +394,7 @@
       (st.locked ? '<p class="lock-note">Si apre ' + fmt(sc.opens) + ': intanto puoi vedere cosa ti aspetta</p>' : "") +
       (sc.prima ? '<p class="lock-note">Questa tappa l’hai già fatta nel percorso un mese</p>' : "") +
       progressBlock(c.done, c.total, false) +
-      '<ul class="res-list">' + m.resources.map(function (r) { return resHTML(r, locked); }).join("") + '</ul>' +
+      '<ul class="res-list' + (locked ? " is-locked" : "") + '">' + m.resources.map(function (r) { return resHTML(r, locked); }).join("") + '</ul>' +
       (locked ? "" : noteBox(m)) +
       (next ? '<div class="next-mod"><a class="btn btn-ghost" href="#/tappa/' + esc(next.id) + '">' + esc(next.title) + ' ›</a></div>' : "") +
       foot() + '</main>';
@@ -397,7 +403,7 @@
   function viewRules() {
     var rr = S.resIndex["r0_regole"], body = rr && rr.r.callout ? rr.r.callout.body : "", link = linkValue("regole");
     return topBar() + '<main class="wrap"><a class="back" href="#/">‹ Il tuo percorso</a>' +
-      '<h1 class="page-title">Le regole del percorso</h1>' +
+      '<h1 class="page-title">Le <em>regole</em> del percorso</h1>' +
       '<div class="rules">' + body + '</div>' +
       (link ? '<div class="res-actions" style="margin-top:14px"><a class="btn btn-dark" href="' + esc(link) + '" target="_blank" rel="noopener">' + ICON.ext + 'Apri le regole complete su Notion</a></div>' : "") +
       foot() + '</main>';
@@ -406,7 +412,7 @@
   function viewNotes() {
     var mods = S.percorso.modules.filter(function (m) { var st = state(m); return !st.locked && st.key !== "prima"; });
     return topBar() + '<main class="wrap"><a class="back" href="#/">‹ Il tuo percorso</a>' +
-      '<h1 class="page-title">Le tue note</h1>' +
+      '<h1 class="page-title">Le tue <em>note</em></h1>' +
       '<p class="path-sub">Si salvano da sole · le vede anche il team, così ti aiutiamo meglio</p>' +
       '<div class="notes-list">' + mods.map(noteBox).join("") + '</div>' + foot() + '</main>';
   }
@@ -421,7 +427,7 @@
         }).join("") + '</div></div>';
     }
     return '<main class="login"><div class="login-card">' +
-      '<img src="assets/logo-mark.png" alt="Unlike Academy">' +
+      '<img src="assets/logo-unlike-academy.webp" alt="Unlike Academy" width="768" height="158">' +
       '<h1>Il tuo <em>percorso</em> Unlike</h1>' +
       '<p>Scrivi la tua email, la stessa dell’iscrizione: ti mandiamo il link per entrare</p>' +
       '<form data-act="login" novalidate><div class="field"><label for="em">Email</label>' +
