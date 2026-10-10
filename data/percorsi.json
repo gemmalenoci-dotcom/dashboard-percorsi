@@ -18,7 +18,7 @@
       {
        "style": "arrow",
        "icon": "👋🏻",
-       "body": "<strong>Benvenuta nel tuo percorso</strong><br>Hai 7 giorni dalla call di benvenuto per completare tutto quello che trovi qui sotto · il tuo portale Notion e il tuo gruppo Google Chat sono già aperti<br><br>Quando hai spuntato tutto, Elena riceve l'avviso: entro 2 giorni lavorativi prenota la tua prima call con Gemma<br>Il percorso parte il primo lunedì del mese · se l'attivazione non è chiusa entro il giovedì prima, entri il primo lunedì del mese dopo"
+       "body": "<strong>Benvenuta nel tuo percorso</strong><br>Hai 7 giorni dalla call di benvenuto per completare tutto quello che trovi qui sotto · il tuo portale Notion e il tuo gruppo Google Chat sono già aperti<br><br>Quando hai spuntato tutto, Elena riceve l'avviso · nella tappa 1, appena hai fatto lezioni ed esercizi, prenoti tu la tua prima call con Gemma<br>Il percorso parte il primo lunedì del mese · se l'attivazione non è chiusa entro il giovedì prima, entri il primo lunedì del mese dopo"
       }
      ],
      "resources": [
@@ -67,7 +67,7 @@
        "type": "Risorsa",
        "callout": {
         "icon": "📋",
-        "body": "<strong>Le regole che ci fanno lavorare bene insieme</strong><br>Le leggiamo insieme nella call di benvenuto con Elena · le trovi anche nel tuo portale Notion e in cima al tuo gruppo chat<br><br><strong>💬 La chat: per le domande</strong><br>• Il tuo gruppo Google Chat è l'unico canale: niente WhatsApp, niente messaggi privati · è aperto dal primo giorno<br>• Ti rispondiamo dal lunedì al venerdì, dalle 9 alle 18, entro 24 ore lavorative · a volte la prima risposta serve solo a dirti chi ti risponde e quando<br>• Il weekend siamo chiusi: se scrivi sabato o domenica ti rispondiamo lunedì · quello che arriva fuori orario lo leggiamo il giorno lavorativo dopo<br>• Ti risponde Elena: per le domande tecniche coinvolge Sofia e, se serve, Gemma<br>• Urgente vale solo se pubblichi o hai una call entro 24 ore<br><br><strong>✍🏻 Le revisioni: solo su Notion</strong><br>• Ogni contenuto è una scheda in Da revisionare: + Nuovo, titolo, video o file in Video e file, tipo e data di pubblicazione · se è un'idea o uno script scrivi il testo dentro la scheda · Sofia risponde entro 24 ore lavorative<br>• Caricalo almeno 2 giorni lavorativi prima di pubblicarlo, e se è un'idea o uno script prima di girarlo: se oggi ci mandi le idee per i video che giri domani, non facciamo in tempo a rivederle bene · quello che arriva dopo lo guardiamo appena possiamo, senza garanzia sui tempi<br>• Fino a 3 contenuti a settimana: gli altri li guardiamo la settimana dopo o in live · il controllo della versione corretta non conta<br>• Ogni contenuto ha due giri: una revisione completa e un controllo veloce della versione corretta, poi si pubblica · dal terzo invio lo vediamo in live o in call<br>• Revisionato ✅ vuol dire che puoi pubblicare · Da correggere ⚠️ vuol dire che trovi il feedback nelle note: correggi e rimetti Da revisionare<br>• Negli script scrivi solo il testo, senza le indicazioni tecniche di ChatGPT · idee, ganci e piano li prepari con Stratego quando la roadmap lo prevede, il primo piano lo prepariamo noi<br><br><strong>🔴 Le live di revisione con Sofia</strong><br>• Il lunedì dalle 14 alle 18 e il venerdì dalle 9 alle 13, nel tuo gruppo chat<br>• È l'unico momento in cui mandi i contenuti direttamente in chat, al massimo 2 · caricali prima su Notion · i tuoi primi contenuti portali qui<br><br><strong>📞 Le call e le date</strong><br>• Le call si prenotano da qui dopo aver fatto lezioni e attività della tappa (la prima con Gemma la prenota Elena per te): servono per correggere e decidere, non per iniziare da zero<br>• Le call non fatte nel mese non si recuperano · c'è una call jolly per tutto il percorso<br>• Il percorso ha date fisse · se salti una settimana la recuperi nella settimana 4<br>• Una pausa per tutto il percorso, al massimo 2 settimane, per un motivo serio e chiesta per iscritto · la fine del percorso si sposta degli stessi giorni · in pausa la chat resta aperta solo per le domande, niente revisioni né call<br>• Se ti fermi più di 2 settimane rientri alla finestra del mese dopo, dalla tappa in cui eri: la prima volta è gratis, dalla seconda si paga<br><br><strong>🏁 A fine percorso</strong><br>• Ricevi il recap finale e fai la call di fine percorso con Katia<br>• La dashboard resta aperta 3 mesi dopo la fine, poi si spegne · strategia, piano e materiali restano nel tuo portale Notion · in quei 3 mesi dashboard e Notion restano da consultare: la chat e le revisioni continuano solo se scegli di proseguire con noi"
+        "body": "<strong>Le regole che ci fanno lavorare bene insieme</strong><br>Le leggiamo insieme nella call di benvenuto con Elena · le trovi anche nel tuo portale Notion e in cima al tuo gruppo chat<br><br><strong>💬 La chat: per le domande</strong><br>• Il tuo gruppo Google Chat è l'unico canale: niente WhatsApp, niente messaggi privati · è aperto dal primo giorno<br>• Ti rispondiamo dal lunedì al venerdì, dalle 9 alle 18, entro 24 ore lavorative · a volte la prima risposta serve solo a dirti chi ti risponde e quando<br>• Il weekend siamo chiusi: se scrivi sabato o domenica ti rispondiamo lunedì · quello che arriva fuori orario lo leggiamo il giorno lavorativo dopo<br>• Ti risponde Elena: per le domande tecniche coinvolge Sofia e, se serve, Gemma<br>• Urgente vale solo se pubblichi o hai una call entro 24 ore<br><br><strong>✍🏻 Le revisioni: solo su Notion</strong><br>• Ogni contenuto è una scheda in Da revisionare: + Nuovo, titolo, video o file in Video e file, tipo e data di pubblicazione · se è un'idea o uno script scrivi il testo dentro la scheda · Sofia risponde entro 24 ore lavorative<br>• Caricalo almeno 2 giorni lavorativi prima di pubblicarlo, e se è un'idea o uno script prima di girarlo: se oggi ci mandi le idee per i video che giri domani, non facciamo in tempo a rivederle bene · quello che arriva dopo lo guardiamo appena possiamo, senza garanzia sui tempi<br>• Fino a 3 contenuti a settimana: gli altri li guardiamo la settimana dopo o in live · il controllo della versione corretta non conta<br>• Ogni contenuto ha due giri: una revisione completa e un controllo veloce della versione corretta, poi si pubblica · dal terzo invio lo vediamo in live o in call<br>• Revisionato ✅ vuol dire che puoi pubblicare · Da correggere ⚠️ vuol dire che trovi il feedback nelle note: correggi e rimetti Da revisionare<br>• Negli script scrivi solo il testo, senza le indicazioni tecniche di ChatGPT · idee, ganci e piano li prepari con Stratego quando la roadmap lo prevede, il primo piano lo prepariamo noi<br><br><strong>🔴 Le live di revisione con Sofia</strong><br>• Il lunedì dalle 14 alle 18 e il venerdì dalle 9 alle 13, nel tuo gruppo chat<br>• È l'unico momento in cui mandi i contenuti direttamente in chat, al massimo 2 · caricali prima su Notion · i tuoi primi contenuti portali qui<br><br><strong>📞 Le call e le date</strong><br>• Le call si prenotano da qui dopo aver fatto lezioni e attività della tappa (anche la prima con Gemma): servono per correggere e decidere, non per iniziare da zero<br>• Le call non fatte nel mese non si recuperano · c'è una call jolly per tutto il percorso<br>• Il percorso ha date fisse · se salti una settimana la recuperi nella settimana 4<br>• Una pausa per tutto il percorso, al massimo 2 settimane, per un motivo serio e chiesta per iscritto · la fine del percorso si sposta degli stessi giorni · in pausa la chat resta aperta solo per le domande, niente revisioni né call<br>• Se ti fermi più di 2 settimane rientri alla finestra del mese dopo, dalla tappa in cui eri: la prima volta è gratis, dalla seconda si paga<br><br><strong>🏁 A fine percorso</strong><br>• Ricevi il recap finale e fai la call di fine percorso con Katia<br>• La dashboard resta aperta 3 mesi dopo la fine, poi si spegne · strategia, piano e materiali restano nel tuo portale Notion · in quei 3 mesi dashboard e Notion restano da consultare: la chat e le revisioni continuano solo se scegli di proseguire con noi"
        },
        "actions": [
         {
@@ -93,6 +93,24 @@
          "ico": "ext",
          "label": "Apri il questionario",
          "url": "{{questionario_iniziale}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r0_visual",
+       "name": "Compila il questionario della visual identity",
+       "type": "Attività",
+       "callout": {
+        "icon": "🎨",
+        "body": "<strong>Entro la fine di questa settimana</strong><br>Emilia parte da qui per la tua visual identity base: palette, font e template Canva, che ti consegna entro la settimana 3 della tappa 1 · il logo per ora non è compreso"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri il questionario",
+         "url": "{{questionario_visual}}"
         }
        ],
        "feedback": true
@@ -245,24 +263,6 @@
        "feedback": true
       },
       {
-       "key": "r1_visual",
-       "name": "Compila il questionario della visual identity",
-       "type": "Attività",
-       "callout": {
-        "icon": "🎨",
-        "body": "<strong>Compilalo entro questa settimana, al massimo entro metà della prossima</strong><br>Emilia ti consegna la visual identity base con i template Canva entro la settimana 3"
-       },
-       "actions": [
-        {
-         "cls": "navy",
-         "ico": "ext",
-         "label": "Apri il questionario",
-         "url": "{{questionario_visual}}"
-        }
-       ],
-       "feedback": true
-      },
-      {
        "key": "r1_lez_strategia_di_acquisizione",
        "name": "Lezione · Strategia di acquisizione (34')",
        "type": "Video",
@@ -381,9 +381,16 @@
        "durata": "60'",
        "callout": {
         "icon": "📞",
-        "body": "<strong>La prenota Elena per te</strong>: trovi data e ora nel gruppo chat · arrivaci con lezioni ed esercizi fatti · in call c'è anche Sofia<br><br>Obiettivi:<br>• il tuo punto di partenza<br>• target e posizionamento<br>• la direzione della strategia"
+        "body": "<strong>La prenoti tu, nella prima settimana della tappa</strong>: il bottone si accende quando hai spuntato lezioni ed esercizi qui sopra · scegli tra le date che Gemma apre per le prime call · in call c'è anche Sofia<br><br>Obiettivi:<br>• il tuo punto di partenza<br>• target e posizionamento<br>• la direzione della strategia"
        },
-       "actions": [],
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Gemma",
+         "url": "{{cal_gemma_prima}}"
+        }
+       ],
        "feedback": true,
        "gate": [
         "r1_lez_strategia_di_acquisizione",
@@ -391,8 +398,7 @@
         "r1_lez_brand_tipo",
         "r1_es_canali",
         "r1_es_audit"
-       ],
-       "prenota": "elena"
+       ]
       },
       {
        "key": "r1_q_ped",
@@ -2029,7 +2035,7 @@
       {
        "style": "arrow",
        "icon": "👋🏻",
-       "body": "<strong>Benvenuta nel tuo percorso</strong><br>Hai 7 giorni dalla call di benvenuto per completare tutto quello che trovi qui sotto · il tuo portale Notion e il tuo gruppo Google Chat sono già aperti<br><br>Quando hai spuntato tutto, Elena riceve l'avviso: entro 2 giorni lavorativi prenota la tua prima call con Gemma<br>Il percorso parte il primo lunedì del mese · se l'attivazione non è chiusa entro il giovedì prima, entri il primo lunedì del mese dopo"
+       "body": "<strong>Benvenuta nel tuo percorso</strong><br>Hai 7 giorni dalla call di benvenuto per completare tutto quello che trovi qui sotto · il tuo portale Notion e il tuo gruppo Google Chat sono già aperti<br><br>Quando hai spuntato tutto, Elena riceve l'avviso · nella tappa 1, appena hai fatto lezioni ed esercizi, prenoti tu la tua prima call con Gemma<br>Il percorso parte il primo lunedì del mese · se l'attivazione non è chiusa entro il giovedì prima, entri il primo lunedì del mese dopo"
       }
      ],
      "resources": [
@@ -2078,7 +2084,7 @@
        "type": "Risorsa",
        "callout": {
         "icon": "📋",
-        "body": "<strong>Le regole che ci fanno lavorare bene insieme</strong><br>Le leggiamo insieme nella call di benvenuto con Elena · le trovi anche nel tuo portale Notion e in cima al tuo gruppo chat<br><br><strong>💬 La chat: per le domande</strong><br>• Il tuo gruppo Google Chat è l'unico canale: niente WhatsApp, niente messaggi privati · è aperto dal primo giorno<br>• Ti rispondiamo dal lunedì al venerdì, dalle 9 alle 18, entro 24 ore lavorative · a volte la prima risposta serve solo a dirti chi ti risponde e quando<br>• Il weekend siamo chiusi: se scrivi sabato o domenica ti rispondiamo lunedì · quello che arriva fuori orario lo leggiamo il giorno lavorativo dopo<br>• Ti risponde Elena: per le domande tecniche coinvolge Sofia e, se serve, Gemma<br>• Urgente vale solo se pubblichi o hai una call entro 24 ore<br><br><strong>✍🏻 Le revisioni: solo su Notion</strong><br>• Ogni contenuto è una scheda in Da revisionare: + Nuovo, titolo, video o file in Video e file, tipo e data di pubblicazione · se è un'idea o uno script scrivi il testo dentro la scheda · Sofia risponde entro 24 ore lavorative<br>• Caricalo almeno 2 giorni lavorativi prima di pubblicarlo, e se è un'idea o uno script prima di girarlo: se oggi ci mandi le idee per i video che giri domani, non facciamo in tempo a rivederle bene · quello che arriva dopo lo guardiamo appena possiamo, senza garanzia sui tempi<br>• Fino a 3 contenuti a settimana: gli altri li guardiamo la settimana dopo o in live · il controllo della versione corretta non conta<br>• Ogni contenuto ha due giri: una revisione completa e un controllo veloce della versione corretta, poi si pubblica · dal terzo invio lo vediamo in live o in call<br>• Revisionato ✅ vuol dire che puoi pubblicare · Da correggere ⚠️ vuol dire che trovi il feedback nelle note: correggi e rimetti Da revisionare<br>• Negli script scrivi solo il testo, senza le indicazioni tecniche di ChatGPT · idee, ganci e piano li prepari con Stratego quando la roadmap lo prevede, il primo piano lo prepariamo noi<br><br><strong>🔴 Le live di revisione con Sofia</strong><br>• Il lunedì dalle 14 alle 18 e il venerdì dalle 9 alle 13, nel tuo gruppo chat<br>• È l'unico momento in cui mandi i contenuti direttamente in chat, al massimo 2 · caricali prima su Notion · i tuoi primi contenuti portali qui<br><br><strong>📞 Le call e le date</strong><br>• Le call si prenotano da qui dopo aver fatto lezioni e attività della tappa (la prima con Gemma la prenota Elena per te): servono per correggere e decidere, non per iniziare da zero<br>• Le call non fatte nel mese non si recuperano · c'è una call jolly per tutto il percorso<br>• Il percorso ha date fisse · se salti una settimana la recuperi nella settimana 4<br>• Una pausa per tutto il percorso, al massimo 2 settimane, per un motivo serio e chiesta per iscritto · la fine del percorso si sposta degli stessi giorni · in pausa la chat resta aperta solo per le domande, niente revisioni né call<br>• Se ti fermi più di 2 settimane rientri alla finestra del mese dopo, dalla tappa in cui eri: la prima volta è gratis, dalla seconda si paga<br><br><strong>🏁 A fine percorso</strong><br>• Ricevi il recap finale e fai la call di fine percorso con Katia<br>• La dashboard resta aperta 3 mesi dopo la fine, poi si spegne · strategia, piano e materiali restano nel tuo portale Notion · in quei 3 mesi dashboard e Notion restano da consultare: la chat e le revisioni continuano solo se scegli di proseguire con noi"
+        "body": "<strong>Le regole che ci fanno lavorare bene insieme</strong><br>Le leggiamo insieme nella call di benvenuto con Elena · le trovi anche nel tuo portale Notion e in cima al tuo gruppo chat<br><br><strong>💬 La chat: per le domande</strong><br>• Il tuo gruppo Google Chat è l'unico canale: niente WhatsApp, niente messaggi privati · è aperto dal primo giorno<br>• Ti rispondiamo dal lunedì al venerdì, dalle 9 alle 18, entro 24 ore lavorative · a volte la prima risposta serve solo a dirti chi ti risponde e quando<br>• Il weekend siamo chiusi: se scrivi sabato o domenica ti rispondiamo lunedì · quello che arriva fuori orario lo leggiamo il giorno lavorativo dopo<br>• Ti risponde Elena: per le domande tecniche coinvolge Sofia e, se serve, Gemma<br>• Urgente vale solo se pubblichi o hai una call entro 24 ore<br><br><strong>✍🏻 Le revisioni: solo su Notion</strong><br>• Ogni contenuto è una scheda in Da revisionare: + Nuovo, titolo, video o file in Video e file, tipo e data di pubblicazione · se è un'idea o uno script scrivi il testo dentro la scheda · Sofia risponde entro 24 ore lavorative<br>• Caricalo almeno 2 giorni lavorativi prima di pubblicarlo, e se è un'idea o uno script prima di girarlo: se oggi ci mandi le idee per i video che giri domani, non facciamo in tempo a rivederle bene · quello che arriva dopo lo guardiamo appena possiamo, senza garanzia sui tempi<br>• Fino a 3 contenuti a settimana: gli altri li guardiamo la settimana dopo o in live · il controllo della versione corretta non conta<br>• Ogni contenuto ha due giri: una revisione completa e un controllo veloce della versione corretta, poi si pubblica · dal terzo invio lo vediamo in live o in call<br>• Revisionato ✅ vuol dire che puoi pubblicare · Da correggere ⚠️ vuol dire che trovi il feedback nelle note: correggi e rimetti Da revisionare<br>• Negli script scrivi solo il testo, senza le indicazioni tecniche di ChatGPT · idee, ganci e piano li prepari con Stratego quando la roadmap lo prevede, il primo piano lo prepariamo noi<br><br><strong>🔴 Le live di revisione con Sofia</strong><br>• Il lunedì dalle 14 alle 18 e il venerdì dalle 9 alle 13, nel tuo gruppo chat<br>• È l'unico momento in cui mandi i contenuti direttamente in chat, al massimo 2 · caricali prima su Notion · i tuoi primi contenuti portali qui<br><br><strong>📞 Le call e le date</strong><br>• Le call si prenotano da qui dopo aver fatto lezioni e attività della tappa (anche la prima con Gemma): servono per correggere e decidere, non per iniziare da zero<br>• Le call non fatte nel mese non si recuperano · c'è una call jolly per tutto il percorso<br>• Il percorso ha date fisse · se salti una settimana la recuperi nella settimana 4<br>• Una pausa per tutto il percorso, al massimo 2 settimane, per un motivo serio e chiesta per iscritto · la fine del percorso si sposta degli stessi giorni · in pausa la chat resta aperta solo per le domande, niente revisioni né call<br>• Se ti fermi più di 2 settimane rientri alla finestra del mese dopo, dalla tappa in cui eri: la prima volta è gratis, dalla seconda si paga<br><br><strong>🏁 A fine percorso</strong><br>• Ricevi il recap finale e fai la call di fine percorso con Katia<br>• La dashboard resta aperta 3 mesi dopo la fine, poi si spegne · strategia, piano e materiali restano nel tuo portale Notion · in quei 3 mesi dashboard e Notion restano da consultare: la chat e le revisioni continuano solo se scegli di proseguire con noi"
        },
        "actions": [
         {
@@ -2374,9 +2380,16 @@
        "durata": "60'",
        "callout": {
         "icon": "📞",
-        "body": "<strong>La prenota Elena per te</strong>: trovi data e ora nel gruppo chat · arrivaci con lezioni ed esercizi fatti · in call c'è anche Sofia<br><br>Obiettivi:<br>• la tua nicchia<br>• il tuo posizionamento da SMM<br>• i servizi su cui puntare"
+        "body": "<strong>La prenoti tu, nella prima settimana della tappa</strong>: il bottone si accende quando hai spuntato lezioni ed esercizi qui sopra · scegli tra le date che Gemma apre per le prime call · in call c'è anche Sofia<br><br>Obiettivi:<br>• la tua nicchia<br>• il tuo posizionamento da SMM<br>• i servizi su cui puntare"
        },
-       "actions": [],
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Gemma",
+         "url": "{{cal_gemma_prima}}"
+        }
+       ],
        "feedback": true,
        "gate": [
         "r1_lez_strategia_di_acquisizione",
@@ -2385,8 +2398,7 @@
         "r1_es_canali",
         "r1_es_audit",
         "r1_listino"
-       ],
-       "prenota": "elena"
+       ]
       },
       {
        "key": "r1_q_ped",
@@ -3412,7 +3424,7 @@
       {
        "style": "arrow",
        "icon": "👋🏻",
-       "body": "<strong>Benvenuta nel tuo percorso</strong><br>Hai 7 giorni dalla call di benvenuto per completare tutto quello che trovi qui sotto · il tuo portale Notion e il tuo gruppo Google Chat sono già aperti<br><br>Quando hai spuntato tutto, Elena riceve l'avviso: entro 2 giorni lavorativi prenota la tua prima call con Gemma<br>Il percorso parte il primo lunedì del mese · se l'attivazione non è chiusa entro il giovedì prima, entri il primo lunedì del mese dopo"
+       "body": "<strong>Benvenuta nel tuo percorso</strong><br>Hai 7 giorni dalla call di benvenuto per completare tutto quello che trovi qui sotto · il tuo portale Notion e il tuo gruppo Google Chat sono già aperti<br><br>Quando hai spuntato tutto, Elena riceve l'avviso · nella tappa 1, appena hai fatto lezioni ed esercizi, prenoti tu la tua prima call con Gemma<br>Il percorso parte il primo lunedì del mese · se l'attivazione non è chiusa entro il giovedì prima, entri il primo lunedì del mese dopo"
       }
      ],
      "resources": [
@@ -3461,7 +3473,7 @@
        "type": "Risorsa",
        "callout": {
         "icon": "📋",
-        "body": "<strong>Le regole che ci fanno lavorare bene insieme</strong><br>Le leggiamo insieme nella call di benvenuto con Elena · le trovi anche nel tuo portale Notion e in cima al tuo gruppo chat<br><br><strong>💬 La chat: per le domande</strong><br>• Il tuo gruppo Google Chat è l'unico canale: niente WhatsApp, niente messaggi privati · è aperto dal primo giorno<br>• Ti rispondiamo dal lunedì al venerdì, dalle 9 alle 18, entro 24 ore lavorative · a volte la prima risposta serve solo a dirti chi ti risponde e quando<br>• Il weekend siamo chiusi: se scrivi sabato o domenica ti rispondiamo lunedì · quello che arriva fuori orario lo leggiamo il giorno lavorativo dopo<br>• Ti risponde Elena: per le domande tecniche coinvolge Sofia e, se serve, Gemma<br>• Urgente vale solo se pubblichi o hai una call entro 24 ore<br><br><strong>✍🏻 Le revisioni: solo su Notion</strong><br>• Ogni contenuto è una scheda in Da revisionare: + Nuovo, titolo, video o file in Video e file, tipo e data di pubblicazione · se è un'idea o uno script scrivi il testo dentro la scheda · Sofia risponde entro 24 ore lavorative<br>• Caricalo almeno 2 giorni lavorativi prima di pubblicarlo, e se è un'idea o uno script prima di girarlo: se oggi ci mandi le idee per i video che giri domani, non facciamo in tempo a rivederle bene · quello che arriva dopo lo guardiamo appena possiamo, senza garanzia sui tempi<br>• Fino a 3 contenuti a settimana: gli altri li guardiamo la settimana dopo o in live · il controllo della versione corretta non conta<br>• Ogni contenuto ha due giri: una revisione completa e un controllo veloce della versione corretta, poi si pubblica · dal terzo invio lo vediamo in live o in call<br>• Revisionato ✅ vuol dire che puoi pubblicare · Da correggere ⚠️ vuol dire che trovi il feedback nelle note: correggi e rimetti Da revisionare<br>• Negli script scrivi solo il testo, senza le indicazioni tecniche di ChatGPT · idee, ganci e piano li prepari con Stratego quando la roadmap lo prevede, il primo piano lo prepariamo noi<br><br><strong>🔴 Le live di revisione con Sofia</strong><br>• Il lunedì dalle 14 alle 18 e il venerdì dalle 9 alle 13, nel tuo gruppo chat<br>• È l'unico momento in cui mandi i contenuti direttamente in chat, al massimo 2 · caricali prima su Notion · i tuoi primi contenuti portali qui<br><br><strong>📞 Le call e le date</strong><br>• Le call si prenotano da qui dopo aver fatto lezioni e attività della tappa (la prima con Gemma la prenota Elena per te): servono per correggere e decidere, non per iniziare da zero<br>• Le call non fatte nel mese non si recuperano · c'è una call jolly per tutto il percorso<br>• Il percorso ha date fisse · se salti una settimana la recuperi nella settimana 4<br>• Una pausa per tutto il percorso, al massimo 2 settimane, per un motivo serio e chiesta per iscritto · la fine del percorso si sposta degli stessi giorni · in pausa la chat resta aperta solo per le domande, niente revisioni né call<br>• Se ti fermi più di 2 settimane rientri alla finestra del mese dopo, dalla tappa in cui eri: la prima volta è gratis, dalla seconda si paga<br><br><strong>🏁 A fine percorso</strong><br>• Ricevi il recap finale e fai la call di fine percorso con Katia<br>• La dashboard resta aperta 3 mesi dopo la fine, poi si spegne · strategia, piano e materiali restano nel tuo portale Notion · in quei 3 mesi dashboard e Notion restano da consultare: la chat e le revisioni continuano solo se scegli di proseguire con noi"
+        "body": "<strong>Le regole che ci fanno lavorare bene insieme</strong><br>Le leggiamo insieme nella call di benvenuto con Elena · le trovi anche nel tuo portale Notion e in cima al tuo gruppo chat<br><br><strong>💬 La chat: per le domande</strong><br>• Il tuo gruppo Google Chat è l'unico canale: niente WhatsApp, niente messaggi privati · è aperto dal primo giorno<br>• Ti rispondiamo dal lunedì al venerdì, dalle 9 alle 18, entro 24 ore lavorative · a volte la prima risposta serve solo a dirti chi ti risponde e quando<br>• Il weekend siamo chiusi: se scrivi sabato o domenica ti rispondiamo lunedì · quello che arriva fuori orario lo leggiamo il giorno lavorativo dopo<br>• Ti risponde Elena: per le domande tecniche coinvolge Sofia e, se serve, Gemma<br>• Urgente vale solo se pubblichi o hai una call entro 24 ore<br><br><strong>✍🏻 Le revisioni: solo su Notion</strong><br>• Ogni contenuto è una scheda in Da revisionare: + Nuovo, titolo, video o file in Video e file, tipo e data di pubblicazione · se è un'idea o uno script scrivi il testo dentro la scheda · Sofia risponde entro 24 ore lavorative<br>• Caricalo almeno 2 giorni lavorativi prima di pubblicarlo, e se è un'idea o uno script prima di girarlo: se oggi ci mandi le idee per i video che giri domani, non facciamo in tempo a rivederle bene · quello che arriva dopo lo guardiamo appena possiamo, senza garanzia sui tempi<br>• Fino a 3 contenuti a settimana: gli altri li guardiamo la settimana dopo o in live · il controllo della versione corretta non conta<br>• Ogni contenuto ha due giri: una revisione completa e un controllo veloce della versione corretta, poi si pubblica · dal terzo invio lo vediamo in live o in call<br>• Revisionato ✅ vuol dire che puoi pubblicare · Da correggere ⚠️ vuol dire che trovi il feedback nelle note: correggi e rimetti Da revisionare<br>• Negli script scrivi solo il testo, senza le indicazioni tecniche di ChatGPT · idee, ganci e piano li prepari con Stratego quando la roadmap lo prevede, il primo piano lo prepariamo noi<br><br><strong>🔴 Le live di revisione con Sofia</strong><br>• Il lunedì dalle 14 alle 18 e il venerdì dalle 9 alle 13, nel tuo gruppo chat<br>• È l'unico momento in cui mandi i contenuti direttamente in chat, al massimo 2 · caricali prima su Notion · i tuoi primi contenuti portali qui<br><br><strong>📞 Le call e le date</strong><br>• Le call si prenotano da qui dopo aver fatto lezioni e attività della tappa (anche la prima con Gemma): servono per correggere e decidere, non per iniziare da zero<br>• Le call non fatte nel mese non si recuperano · c'è una call jolly per tutto il percorso<br>• Il percorso ha date fisse · se salti una settimana la recuperi nella settimana 4<br>• Una pausa per tutto il percorso, al massimo 2 settimane, per un motivo serio e chiesta per iscritto · la fine del percorso si sposta degli stessi giorni · in pausa la chat resta aperta solo per le domande, niente revisioni né call<br>• Se ti fermi più di 2 settimane rientri alla finestra del mese dopo, dalla tappa in cui eri: la prima volta è gratis, dalla seconda si paga<br><br><strong>🏁 A fine percorso</strong><br>• Ricevi il recap finale e fai la call di fine percorso con Katia<br>• La dashboard resta aperta 3 mesi dopo la fine, poi si spegne · strategia, piano e materiali restano nel tuo portale Notion · in quei 3 mesi dashboard e Notion restano da consultare: la chat e le revisioni continuano solo se scegli di proseguire con noi"
        },
        "actions": [
         {
@@ -3739,9 +3751,16 @@
        "durata": "60'",
        "callout": {
         "icon": "📞",
-        "body": "<strong>La prenota Elena per te</strong>: trovi data e ora nel gruppo chat · arrivaci con lezioni ed esercizi fatti · in call c'è anche Sofia<br><br>Obiettivi:<br>• la tua storia<br>• per chi sei<br>• la linea e il format che ti rendono riconoscibile"
+        "body": "<strong>La prenoti tu, nella prima settimana della tappa</strong>: il bottone si accende quando hai spuntato lezioni ed esercizi qui sopra · scegli tra le date che Gemma apre per le prime call · in call c'è anche Sofia<br><br>Obiettivi:<br>• la tua storia<br>• per chi sei<br>• la linea e il format che ti rendono riconoscibile"
        },
-       "actions": [],
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Gemma",
+         "url": "{{cal_gemma_prima}}"
+        }
+       ],
        "feedback": true,
        "gate": [
         "r1_lez_strategia_di_acquisizione",
@@ -3749,8 +3768,7 @@
         "r1_lez_personal_brand",
         "r1_es_canali",
         "r1_es_audit"
-       ],
-       "prenota": "elena"
+       ]
       },
       {
        "key": "r1_q_ped",
@@ -4787,6 +4805,7 @@
   "questionario_ped": "",
   "cal_elena": "https://calendar.app.google/b9rgioMdRRYidVNb9",
   "cal_gemma": "https://calendar.app.google/HRqjFo1rRHJ3JSng9",
+  "cal_gemma_prima": "https://calendar.app.google/HRqjFo1rRHJ3JSng9",
   "cal_sofia": "https://calendar.app.google/kXgxfBFAEGqRKzrZ7",
   "cal_mickel": "DA DARE (call di editing)",
   "cal_odaljs": "https://calendar.app.google/TimNMgpRtzKsaeuU7",
