@@ -530,7 +530,7 @@
     if (c.total && c.done >= c.total) {
       S.progress.attivazione = new Date().toISOString();
       S.pendingEvent = "attivazione";
-      toast("Hai finito la settimana di attivazione: Elena ha ricevuto l’avviso ed entro 2 giorni lavorativi apre il tuo gruppo chat e prenota la tua prima call con Gemma", 6000);
+      toast("Hai finito la settimana di attivazione: Elena ha ricevuto l’avviso ed entro 2 giorni lavorativi prenota la tua prima call con Gemma", 6000);
     }
   }
 
