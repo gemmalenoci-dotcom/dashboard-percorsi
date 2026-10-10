@@ -103,7 +103,7 @@
        "type": "Attività",
        "callout": {
         "icon": "🎨",
-        "body": "<strong>Entro la fine di questa settimana</strong><br>Emilia parte da qui per la tua visual identity base: palette, font e template Canva, che ti consegna entro la settimana 3 della tappa 1 · il logo per ora non è compreso"
+        "body": "<strong>Entro la fine di questa settimana</strong><br>Emilia parte da qui per la tua visual identity: palette, font e template Canva, che ti consegna entro la settimana 3 della tappa 1 · più sei precisa, con esempi e cose che non ti piacciono, più ci capiamo al primo colpo<br>Il logo non è compreso in questo percorso: se lo vuoi, puoi richiederlo a parte"
        },
        "actions": [
         {
@@ -595,7 +595,7 @@
       {
        "style": "info",
        "icon": "ℹ️",
-       "body": "<strong>Obiettivo</strong>: impari a fare i contenuti, e noi li correggiamo prima che escano<br><br>Settimana 1 call di editing con Mickel · per tutto il mese 3 contenuti a settimana in Da revisionare · settimana 4 piano del mese 3 con Stratego · fine mese seconda call con Gemma"
+       "body": "<strong>Obiettivo</strong>: impari a fare i contenuti, e noi li correggiamo prima che escano<br><br>Settimana 1 call di editing con Mickel · per tutto il mese 3 contenuti a settimana in Da revisionare · settimana 4 il piano del mese 3, la prima volta a mano · fine mese seconda call con Gemma"
       }
      ],
      "resources": [
@@ -904,11 +904,11 @@
       },
       {
        "key": "r2_stratego",
-       "name": "Prepara con Stratego il piano del mese 3",
+       "name": "Prepara il piano del mese 3, la prima volta a mano",
        "type": "Attività",
        "callout": {
         "icon": "🧭",
-        "body": "<strong>Settimana 4</strong><br>Entra in Stratego (il tuo dossier è già caricato), crea il piano del mese 3 e portalo su Notion entro il mercoledì · Sofia lo rivede entro venerdì"
+        "body": "<strong>Settimana 4</strong><br>Il consiglio è farlo da zero, con la tua testa e con le lezioni del modulo 6 sul piano editoriale: è così che impari la tua comunicazione<br>Se usi Stratego (il tuo dossier è già caricato) va bene, ma rileggilo e correggilo come vuoi tu: l'AI è la base, il cervello ce lo metti tu<br>Portalo su Notion entro il mercoledì · Sofia lo rivede entro venerdì"
        },
        "actions": [
         {
@@ -985,7 +985,7 @@
       {
        "style": "info",
        "icon": "ℹ️",
-       "body": "<strong>Obiettivo</strong>: storie ogni giorno, e il piano lo fai tu con Stratego"
+       "body": "<strong>Obiettivo</strong>: storie ogni giorno, e il piano lo fai tu, col metodo e con Stratego come aiuto"
       }
      ],
      "resources": [
@@ -1224,11 +1224,11 @@
       },
       {
        "key": "r3_piano",
-       "name": "Pubblica il tuo primo piano fatto con Stratego",
+       "name": "Pubblica il primo piano fatto da te",
        "type": "Attività",
        "callout": {
         "icon": "🗓️",
-        "body": "<strong>E in settimana 4 prepara quello del mese 4</strong>, su Notion entro il mercoledì"
+        "body": "<strong>E in settimana 4 prepara quello del mese 4</strong>, su Notion entro il mercoledì · ora puoi farti aiutare da Stratego, sempre rileggendolo con la tua testa"
        },
        "actions": [
         {
@@ -2583,7 +2583,7 @@
       {
        "style": "info",
        "icon": "ℹ️",
-       "body": "<strong>Obiettivo</strong>: impari a fare i contenuti, e noi li correggiamo prima che escano<br><br>Settimana 1 call di avvio con Sofia · la strategia di un tuo cliente con Stratego · 3 contenuti a settimana in Da revisionare · settimana 4 piano del mese 3 con Stratego"
+       "body": "<strong>Obiettivo</strong>: impari a fare i contenuti, e noi li correggiamo prima che escano<br><br>Settimana 1 call di avvio con Sofia · la strategia di un tuo cliente con Stratego · 3 contenuti a settimana in Da revisionare · settimana 4 il piano del mese 3, la prima volta a mano"
       }
      ],
      "resources": [
@@ -2927,11 +2927,11 @@
       },
       {
        "key": "r2_stratego",
-       "name": "Prepara con Stratego il piano del mese 3",
+       "name": "Prepara il piano del mese 3, la prima volta a mano",
        "type": "Attività",
        "callout": {
         "icon": "🧭",
-        "body": "<strong>Settimana 4</strong><br>Entra in Stratego (il tuo dossier è già caricato), crea il piano del mese 3 e portalo su Notion entro il mercoledì · Sofia lo rivede entro venerdì"
+        "body": "<strong>Settimana 4</strong><br>Il consiglio è farlo da zero, con la tua testa e con le lezioni del modulo 6 sul piano editoriale: è così che impari la tua comunicazione<br>Se usi Stratego (il tuo dossier è già caricato) va bene, ma rileggilo e correggilo come vuoi tu: l'AI è la base, il cervello ce lo metti tu<br>Portalo su Notion entro il mercoledì · Sofia lo rivede entro venerdì"
        },
        "actions": [
         {
@@ -3235,7 +3235,7 @@
       },
       {
        "key": "r3_piano",
-       "name": "Pubblica il tuo primo piano fatto con Stratego",
+       "name": "Pubblica il primo piano fatto da te",
        "type": "Attività",
        "callout": {
         "icon": "🗓️",
@@ -3959,7 +3959,7 @@
       {
        "style": "info",
        "icon": "ℹ️",
-       "body": "<strong>Obiettivo</strong>: impari a fare i contenuti, e noi li correggiamo prima che escano<br><br>Settimana 1 call di editing con Mickel · il tuo format · 3 contenuti a settimana in Da revisionare · settimana 4 piano del mese 3 con Stratego"
+       "body": "<strong>Obiettivo</strong>: impari a fare i contenuti, e noi li correggiamo prima che escano<br><br>Settimana 1 call di editing con Mickel · il tuo format · 3 contenuti a settimana in Da revisionare · settimana 4 il piano del mese 3, la prima volta a mano"
       }
      ],
      "resources": [
@@ -4286,11 +4286,11 @@
       },
       {
        "key": "r2_stratego",
-       "name": "Prepara con Stratego il piano del mese 3",
+       "name": "Prepara il piano del mese 3, la prima volta a mano",
        "type": "Attività",
        "callout": {
         "icon": "🧭",
-        "body": "<strong>Settimana 4</strong><br>Entra in Stratego (il tuo dossier è già caricato), crea il piano del mese 3 e portalo su Notion entro il mercoledì · Sofia lo rivede entro venerdì"
+        "body": "<strong>Settimana 4</strong><br>Il consiglio è farlo da zero, con la tua testa e con le lezioni del modulo 6 sul piano editoriale: è così che impari la tua comunicazione<br>Se usi Stratego (il tuo dossier è già caricato) va bene, ma rileggilo e correggilo come vuoi tu: l'AI è la base, il cervello ce lo metti tu<br>Portalo su Notion entro il mercoledì · Sofia lo rivede entro venerdì"
        },
        "actions": [
         {
@@ -4591,7 +4591,7 @@
       },
       {
        "key": "r3_piano",
-       "name": "Pubblica il tuo primo piano fatto con Stratego",
+       "name": "Pubblica il primo piano fatto da te",
        "type": "Attività",
        "callout": {
         "icon": "🗓️",
