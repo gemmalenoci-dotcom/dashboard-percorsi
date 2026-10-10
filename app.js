@@ -148,9 +148,33 @@
     return { done: p.done || {}, fb: p.fb || {}, notes: p.notes || {}, attivazione: p.attivazione || null, v: 1 };
   }
 
+  // Le modifiche fatte per lei su Notion («Modifiche al percorso, per cliente»): aggiungi o togli
+  var TIPO_MOD = { "Lezione": "Video", "Attività": "Attività", "Risorsa": "Risorsa", "Call": "Meeting" };
+  function chiaveNome(n) { return cleanName(n).replace(/\s*\(\d+['’]\)\s*$/, "").trim().toLowerCase(); }
+  function applyModifiche(p, mods) {
+    (mods || []).forEach(function (x) {
+      var dove = x.tappa ? p.modules.filter(function (m) { return m.id === x.tappa; }) : p.modules;
+      if (x.azione === "Togli") {
+        var k = chiaveNome(x.nome);
+        dove.forEach(function (m) { m.resources = m.resources.filter(function (r) { return chiaveNome(r.name) !== k; }); });
+      } else if (x.azione === "Aggiungi" && x.tappa && dove.length) {
+        var tipo = TIPO_MOD[x.tipo] || "Attività";
+        var r = {
+          key: "m_" + x.id, name: tipo === "Video" ? "Lezione · " + x.nome : x.nome, type: tipo, feedback: true,
+          callout: x.descrizione ? { icon: "✨", body: esc(x.descrizione).replace(/\n/g, "<br>") } : null,
+          actions: x.link ? [{ cls: "navy", ico: tipo === "Video" ? "play" : (tipo === "Meeting" ? "cal" : "ext"), label: tipo === "Video" ? "Vai alla lezione" : (tipo === "Meeting" ? "Prenota la call" : "Apri"), url: x.link }] : []
+        };
+        if (x.facoltativa) r.facoltativa = true;
+        dove[0].resources.push(r);
+      }
+    });
+  }
+
   function prepare() {
-    S.percorso = S.data.percorsi[S.client.percorso];
-    if (!S.percorso) throw new Error("percorso");
+    var base = S.data.percorsi[S.client.percorso];
+    if (!base) throw new Error("percorso");
+    S.percorso = JSON.parse(JSON.stringify(base));
+    applyModifiche(S.percorso, S.client.modifiche);
     S.progress = normalizeProgress(S.progress);
     S.resIndex = {};
     S.percorso.modules.forEach(function (m) {
@@ -177,9 +201,24 @@
     });
     sch.start = { opens: null, closes: first ? first.opens : null };
     sch.fine = { opens: last ? addDays(last.opens, 21) : null };
+    // pausa: tutte le date dall'inizio della pausa in poi slittano degli stessi giorni
+    var pz = pausa();
+    if (pz) {
+      var sposta = function (d) { return d && d >= pz.dal ? addDays(d, pz.giorni) : d; };
+      Object.keys(sch).forEach(function (k) { if (sch[k].opens) sch[k].opens = sposta(sch[k].opens); if (sch[k].closes) sch[k].closes = sposta(sch[k].closes); });
+    }
     return sch;
   }
 
+  function pausa() {
+    var p = S.client.pausa, dal = p && parseDate(p.dal), al = p && parseDate(p.al);
+    if (!dal || !al || al < dal) return null;
+    return { dal: dal, al: al, giorni: Math.round((al - dal) / 864e5) + 1, adesso: S.today >= dal && S.today <= al };
+  }
+  function pausaNote() {
+    var pz = pausa();
+    return pz && pz.adesso ? '<p class="lock-note pause-note">⏸ Il tuo percorso è in pausa fino a ' + fmt(pz.al) + ' · le date delle tappe si sono spostate degli stessi giorni · in chat puoi scriverci per le domande</p>' : "";
+  }
   function modById(id) { return S.percorso.modules.filter(function (m) { return m.id === id; })[0] || null; }
   function required(m) { return m.resources.filter(function (r) { return !r.facoltativa; }); }
   function counts(m) {
@@ -372,6 +411,7 @@
       '<p class="path-sub path-tag">' + esc(p.tipologia) + ' · ' + esc(p.mesi) + ' mesi' + (start ? ' · dal ' + fmtShort(start) : "") + '</p>' +
       '<p class="kicker">Ciao' + (nome ? " " + esc(nome) : "") + ' 👋🏻</p>' +
       '<h1 class="path-title">' + (parts[1] ? '<span class="da">' + esc(parts[0]) + '</span> <span class="a">' + accent(parts[1]) + '</span>' : '<span class="da">' + accent(parts[0]) + '</span>') + '</h1>' +
+      pausaNote() +
       progressBlock(tot.done, tot.total, true) +
       '<a class="now' + (stc.key === "futura" ? " is-next" : "") + '" href="#/tappa/' + esc(cur.id) + '"><span class="now-dot"></span><span><small>' + (stc.key === "futura" ? "Prossima tappa · " + esc(stc.label.toLowerCase()) : "Adesso") + '</small>' +
       '<strong>' + esc(cur.title) + '</strong></span><span class="chev" aria-hidden="true">›</span></a>' +
