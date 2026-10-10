@@ -201,6 +201,14 @@
     });
     sch.start = { opens: null, closes: first ? first.opens : null };
     sch.fine = { opens: last ? addDays(last.opens, 21) : null };
+    // feste del team: dalla data di inizio della chiusura in poi tutte le date slittano dei giorni di chiusura
+    chiusure().forEach(function (ch) {
+      if (ch.dal < start) return;
+      Object.keys(sch).forEach(function (k) {
+        if (sch[k].opens && sch[k].opens >= ch.dal) sch[k].opens = addDays(sch[k].opens, ch.giorni);
+        if (sch[k].closes && sch[k].closes >= ch.dal) sch[k].closes = addDays(sch[k].closes, ch.giorni);
+      });
+    });
     // pausa: tutte le date dall'inizio della pausa in poi slittano degli stessi giorni
     var pz = pausa();
     if (pz) {
@@ -214,6 +222,18 @@
     var p = S.client.pausa, dal = p && parseDate(p.dal), al = p && parseDate(p.al);
     if (!dal || !al || al < dal) return null;
     return { dal: dal, al: al, giorni: Math.round((al - dal) / 864e5) + 1, adesso: S.today >= dal && S.today <= al };
+  }
+  function chiusure() {
+    return (S.data.chiusure || []).map(function (c) {
+      var dal = parseDate(c.dal), al = parseDate(c.al);
+      return dal && al && al >= dal ? { nome: c.nome, dal: dal, al: al, giorni: Math.round((al - dal) / 864e5) + 1 } : null;
+    }).filter(Boolean).sort(function (a, b) { return a.dal - b.dal; });
+  }
+  function chiusuraNote() {
+    var ch = chiusure().filter(function (c) { return S.today >= addDays(c.dal, -14) && S.today <= c.al; })[0];
+    if (!ch) return "";
+    var ora = S.today >= ch.dal, natale = /natale/i.test(ch.nome || ""), ico = natale ? "🎄" : "🌴", per = natale ? "per le feste" : "per la pausa estiva";
+    return '<p class="lock-note pause-note">' + ico + " " + (ora ? "Ci stiamo prendendo una pausa " + per + " fino a " + fmt(ch.al) : "Dal " + fmtShort(ch.dal) + " al " + fmtShort(ch.al) + " ci prendiamo una pausa " + per) + " · le date delle tue tappe sono già spostate degli stessi giorni, così non perdi niente</p>";
   }
   function pausaNote() {
     var pz = pausa();
@@ -411,7 +431,7 @@
       '<p class="path-sub path-tag">' + esc(p.tipologia) + ' · ' + esc(p.mesi) + ' mesi' + (start ? ' · dal ' + fmtShort(start) : "") + '</p>' +
       '<p class="kicker">Ciao' + (nome ? " " + esc(nome) : "") + ' 👋🏻</p>' +
       '<h1 class="path-title">' + (parts[1] ? '<span class="da">' + esc(parts[0]) + '</span> <span class="a">' + accent(parts[1]) + '</span>' : '<span class="da">' + accent(parts[0]) + '</span>') + '</h1>' +
-      pausaNote() +
+      pausaNote() + chiusuraNote() +
       progressBlock(tot.done, tot.total, true) +
       '<a class="now' + (stc.key === "futura" ? " is-next" : "") + '" href="#/tappa/' + esc(cur.id) + '"><span class="now-dot"></span><span><small>' + (stc.key === "futura" ? "Prossima tappa · " + esc(stc.label.toLowerCase()) : "Adesso") + '</small>' +
       '<strong>' + esc(cur.title) + '</strong></span><span class="chev" aria-hidden="true">›</span></a>' +
