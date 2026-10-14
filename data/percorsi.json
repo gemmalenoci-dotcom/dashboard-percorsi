@@ -2245,7 +2245,7 @@
       {
        "style": "info",
        "icon": "ℹ️",
-       "body": "<strong>Obiettivo</strong>: capisci come funzionano le piattaforme, mentre noi costruiamo la tua strategia, il tuo primo piano<br><br>Settimana 1 lezioni, esercizi e prima call con Gemma · settimana 2 leggi e approvi strategia e piano · settimana 3 profilo e contenuti obbligatori · settimana 4 pubblichi"
+       "body": "<strong>Obiettivo</strong>: capisci come funzionano le piattaforme, mentre noi costruiamo la tua strategia, il tuo primo piano<br><br>Settimana 1 lezioni, esercizi e prima call con Gemma · settimana 2 leggi e approvi strategia e piano · settimana 3 profilo · settimana 4 pubblichi"
       }
      ],
      "resources": [
@@ -2450,7 +2450,7 @@
        "durata": "30'",
        "callout": {
         "icon": "📞",
-        "body": "<strong>Strategia e primo piano letti insieme</strong><br>E i contenuti obbligatori da fare questo mese"
+        "body": "<strong>Strategia e primo piano letti insieme</strong>"
        },
        "actions": [
         {
@@ -2472,7 +2472,7 @@
        "type": "Risorsa",
        "callout": {
         "icon": "🗓️",
-        "body": "<strong>12 contenuti, 3 a settimana, con le reference</strong><br>Questo mese fai i contenuti obbligatori · il mese prossimo pubblichi tutto il piano"
+        "body": "<strong>12 contenuti, 3 a settimana, con le reference</strong><br>Il mese prossimo pubblichi tutto il piano"
        },
        "actions": [
         {
@@ -2514,30 +2514,6 @@
        "feedback": true
       },
       {
-       "key": "r1_obbligatori",
-       "name": "Registra i contenuti obbligatori e mandali in revisione",
-       "type": "Attività",
-       "callout": {
-        "icon": "🎬",
-        "body": "<strong>Settimana 3</strong><br>Sono i contenuti con la ⭐ nel tuo piano editoriale: li trovi tutti nella vista «⭐ Da fare per forza» e vanno fatti prima della call di editing con Mickel<br>Una scheda del piano editoriale per contenuto, con tipo e data di pubblicazione · il video lo carichi nella tua cartella Drive e ne incolli il link in Link contenuto · poi Revisione team su Da revisionare, almeno 2 giorni lavorativi prima di pubblicare · Sofia risponde entro 24 ore lavorative · i primi portali alla live con Sofia, il lunedì dalle 14 alle 18 o il venerdì dalle 9 alle 13"
-       },
-       "actions": [
-        {
-         "cls": "navy",
-         "ico": "ext",
-         "label": "Apri il piano editoriale",
-         "url": "{{piano_editoriale}}"
-        },
-        {
-         "cls": "navy",
-         "ico": "ext",
-         "label": "Apri Da revisionare",
-         "url": "{{da_revisionare}}"
-        }
-       ],
-       "feedback": true
-      },
-      {
        "key": "r1_pubblica",
        "name": "Pubblica i tuoi primi contenuti",
        "type": "Attività",
@@ -2568,7 +2544,7 @@
        ],
        "feedback": true,
        "gate": [
-        "r1_obbligatori"
+        "r1_pubblica"
        ]
       }
      ]
