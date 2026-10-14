@@ -96,7 +96,7 @@
     function call(action, payload, keepalive, tentativo) {
       tentativo = tentativo || 1;
       var ctrl = !keepalive && window.AbortController ? new AbortController() : null;
-      var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 12000) : null;
+      var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, /^(me|admin_|team_login)/.test(action) ? 25000 : 12000) : null;
       return fetch(CFG.apiUrl, {
         method: "POST",
         headers: { "Content-Type": "text/plain;charset=utf-8" },
@@ -117,7 +117,8 @@
       login: function (email) { return call("login", { email: email, url: location.origin + location.pathname }); },
       me: function (token) { return call("me", { token: token }); },
       save: function (token, progress, summary, keepalive) { return call("save", { token: token, progress: progress, summary: summary }, keepalive); },
-      adminLista: function (token) { return call("admin_lista", { token: token }); },
+      teamLogin: function (email, password) { return call("team_login", { email: email, password: password }); },
+      adminLista: function (token, fresh) { return call("admin_lista", { token: token, fresh: !!fresh }); },
       adminCliente: function (token, email) { return call("admin_cliente", { token: token, email: email }); }
     };
   }
@@ -453,18 +454,30 @@
     if (!m) return viewHome();
     var st = state(m), c = counts(m), sc = S.sched[m.id] || {}, locked = !!st.locked || !!sc.prima;
     var next = m.nextId ? modById(m.nextId) : null;
+    var nascosta = !!st.locked && !DEMO && !S.viewAs;
     return topBar() + '<main class="wrap">' +
       '<a class="back" href="#/">‹ Tutte le tappe</a>' +
       '<header class="mod-head st-' + st.key + '"><span class="mod-label">' + esc(m.label) + '</span><div>' +
       '<span class="badge">' + esc(st.label) + '</span><h1>' + esc(m.title) + '</h1>' + datesLine(m, sc) + '</div></header>' +
-      (m.callouts || []).map(calloutHTML).join("") +
-      (st.locked ? '<p class="lock-note">Si apre ' + fmt(sc.opens) + ': intanto puoi vedere cosa ti aspetta</p>' : "") +
+      (nascosta ? nascostaHTML(m, sc) : (m.callouts || []).map(calloutHTML).join("")) +
+      (st.locked && !nascosta ? '<p class="lock-note">Si apre ' + fmt(sc.opens) + ': intanto puoi vedere cosa ti aspetta</p>' : "") +
       (sc.prima ? '<p class="lock-note">Questa tappa l’hai già fatta nel percorso un mese</p>' : "") +
-      progressBlock(c.done, c.total, false) +
-      '<ul class="res-list' + (locked ? " is-locked" : "") + '">' + m.resources.map(function (r) { return resHTML(r, locked); }).join("") + '</ul>' +
+      (nascosta ? "" : progressBlock(c.done, c.total, false) +
+      '<ul class="res-list' + (locked ? " is-locked" : "") + '">' + m.resources.map(function (r) { return resHTML(r, locked); }).join("") + '</ul>') +
       (locked ? "" : noteBox(m)) +
       (next ? '<div class="next-mod"><a class="btn btn-ghost" href="#/tappa/' + esc(next.id) + '">' + esc(next.title) + ' ›</a></div>' : "") +
       foot() + '</main>';
+  }
+
+  // tappa non ancora aperta, vista da una cliente: solo la data e quanti passaggi ci sono
+  function nascostaHTML(m, sc) {
+    var req = required(m), n = function (t) { return req.filter(function (r) { return r.type === t; }).length; };
+    var parti = [];
+    if (n("Video")) parti.push(n("Video") + (n("Video") === 1 ? " lezione" : " lezioni"));
+    if (n("Attività")) parti.push(n("Attività") + (n("Attività") === 1 ? " attività" : " attività"));
+    if (n("Meeting")) parti.push(n("Meeting") + (n("Meeting") === 1 ? " call" : " call"));
+    return '<p class="lock-note">Si apre ' + fmt(sc.opens) + (parti.length ? ' · dentro ci sono ' + parti.join(", ").replace(/, ([^,]*)$/, " e $1") : "") + '</p>' +
+      '<p class="path-sub">Intanto concentrati sulla tappa in corso: i contenuti di questa compaiono qui quando si apre</p>';
   }
 
   function viewRules() {
@@ -499,7 +512,9 @@
       '<h1>Il tuo <em>percorso</em> Unlike</h1>' +
       '<p>Scrivi la tua email, la stessa dell’iscrizione: ti mandiamo il link per entrare</p>' +
       '<form data-act="login" novalidate><div class="field"><label for="em">Email</label>' +
-      '<input id="em" name="email" type="email" autocomplete="email" inputmode="email" required placeholder="nome@email.it"></div>' +
+      '<input id="em" name="email" type="email" autocomplete="username email" inputmode="email" required placeholder="nome@email.it"></div>' +
+      '<div class="field" id="pwf" hidden><label for="pw">Password del team</label>' +
+      '<input id="pw" name="password" type="password" autocomplete="current-password" placeholder="Password"><p class="pw-hint">Lasciala vuota per ricevere il link via email</p></div>' +
       '<button class="btn btn-accent" type="submit">Mandami il link</button></form>' +
       (msg ? '<p class="msg ' + esc(msg.type) + '">' + esc(msg.text) + '</p>' : "") +
       demo + '</div></main>';
@@ -529,6 +544,17 @@
   function renderLogin(msg) {
     S.client = null;
     app.innerHTML = viewLogin(msg);
+    setTimeout(aggiornaLogin, 300);
+  }
+  // la password compare solo se l'email è del team: per le clienti il modulo resta com'è
+  function emailTeam(v) { v = String(v || "").trim().toLowerCase(); return /@unlikeacademy\.it$/.test(v) && v.indexOf("+") < 0; }
+  function aggiornaLogin() {
+    var em = document.getElementById("em"), pwf = document.getElementById("pwf"), pw = document.getElementById("pw");
+    var btn = document.querySelector('form[data-act="login"] button');
+    if (!em || !pwf) return;
+    var team = emailTeam(em.value);
+    pwf.hidden = !team;
+    if (btn && !btn.disabled) btn.textContent = team && pw && pw.value ? "Entra" : "Mandami il link";
   }
 
   // ---------- pannello del team ----------
@@ -550,12 +576,16 @@
   }
   function giorniDa(iso) { var d = parseDate(iso); return d ? Math.round((startOfDay(S.today) - d) / 864e5) : null; }
 
-  function openTeam() {
+  function teamCache() { if (S.team && S.lista) store("dp_teamcache", { token: S.token, team: S.team, lista: S.lista }); }
+
+  function openTeam(forza) {
     S.viewAs = null; S.client = null; vaStore(null);
     if (route().indexOf("#/team") !== 0) history.replaceState(null, "", location.pathname + location.search + "#/team");
+    if (!forza && S.lista) { render(); return Promise.resolve(); }
     if (!S.lista) app.innerHTML = '<div class="boot">Un attimo, carico l’elenco delle clienti</div>';
-    return api.adminLista(S.token).then(function (j) {
+    return api.adminLista(S.token, true).then(function (j) {
       S.lista = j.clienti || [];
+      teamCache();
       render();
     }).catch(function (err) {
       var msg = err && err.code === "vietato" ? "Questa email non è nel gruppo del team" : "Non riesco a caricare l’elenco: riprova tra un attimo";
@@ -578,7 +608,7 @@
       render();
     }).catch(function (err) {
       toast((err && err.message) || "Non riesco ad aprirla: riprova", 5000);
-      return openTeam();
+      return openTeam(!S.lista);
     });
   }
 
@@ -728,6 +758,18 @@
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { renderLogin({ type: "err", text: "Controlla l’email: sembra scritta male" }); return; }
     if (DEMO) { renderLogin({ type: "ok", text: "Nella versione di prova il link non parte: apri uno dei percorsi qui sotto" }); return; }
     var btn = form.querySelector("button");
+    var pw = form.password ? String(form.password.value || "") : "";
+    if (pw && emailTeam(email)) {
+      btn.disabled = true; btn.textContent = "Un attimo";
+      api.teamLogin(email, pw).then(function (j) {
+        store("dp_token", j.token); S.token = j.token;
+        history.replaceState(null, "", location.pathname + location.search + "#/team");
+        enter();
+      }).catch(function (err) {
+        renderLogin({ type: "err", text: err && err.server ? err.message : "Qualcosa non è andato: riprova tra poco" });
+      });
+      return;
+    }
     btn.disabled = true; btn.textContent = "Un attimo";
     setTimeout(function () { if (btn.isConnected && btn.disabled) btn.textContent = "Ancora qualche secondo"; }, 6000);
     api.login(email).then(function () {
@@ -746,6 +788,12 @@
     tentativo = tentativo || 1;
     var cache = !DEMO && tentativo === 1 ? store("dp_cache") : null;
     var daCache = false;
+    var tc = !DEMO && tentativo === 1 ? store("dp_teamcache") : null;
+    if (tc && tc.token === S.token && tc.lista && tc.team && !vaStore()) {
+      S.team = tc.team; S.lista = tc.lista; S.client = null; S.viewAs = null; daCache = true;
+      if (route().indexOf("#/team") !== 0) history.replaceState(null, "", location.pathname + location.search + "#/team");
+      render();
+    }
     if (cache && cache.token === S.token && cache.client) {
       try {
         S.client = cache.client;
@@ -767,10 +815,13 @@
     }
     return api.me(S.token).then(function (j) {
       if (j.team) {
-        S.team = j; S.client = null; S.viewAs = null; S.edited = false;
+        S.team = { email: j.email, nome: j.nome }; S.client = null; S.viewAs = null; S.edited = false;
+        if (j.clienti) S.lista = j.clienti;
+        teamCache();
         var ultima = vaStore();
         if (ultima && route().indexOf("#/team") !== 0) return openClient(ultima);
-        return openTeam();
+        if (S.lista) { S.lastRoute = null; if (route().indexOf("#/team") !== 0) history.replaceState(null, "", location.pathname + location.search + "#/team"); render(); return; }
+        return openTeam(true);
       }
       var prima = JSON.stringify([S.client, S.progress]);
       S.client = j.client;
@@ -814,7 +865,7 @@
     store("dp_cache", null);
     S.token = null;
     S.client = null;
-    S.team = null; S.viewAs = null; S.lista = null; vaStore(null);
+    S.team = null; S.viewAs = null; S.lista = null; vaStore(null); store("dp_teamcache", null);
     S.open = {};
     history.replaceState(null, "", location.pathname + location.search);
     renderLogin();
@@ -830,7 +881,7 @@
     else if (act === "demo") { e.preventDefault(); startDemo(t.getAttribute("data-p")); }
     else if (act === "logout") { e.preventDefault(); logout(); }
     else if (act === "vedi") { e.preventDefault(); openClient(t.getAttribute("data-email")); }
-    else if (act === "ricarica") { e.preventDefault(); openTeam(); }
+    else if (act === "ricarica") { e.preventDefault(); openTeam(true); }
   });
   document.addEventListener("change", function (e) {
     var t = e.target, act = t.getAttribute && t.getAttribute("data-act");
@@ -843,6 +894,7 @@
   });
   document.addEventListener("input", function (e) {
     var t = e.target, act = t.getAttribute && t.getAttribute("data-act");
+    if (t.id === "em" || t.id === "pw") { aggiornaLogin(); return; }
     if (act === "q") { S.filtro.q = t.value; renderTeamRows(); return; }
     if (S.viewAs) return;
     if (act === "fb") { S.progress.fb[t.getAttribute("data-key")] = t.value; queueSave(t.id); }
