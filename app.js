@@ -13,7 +13,8 @@
   var S = {
     data: null, client: null, percorso: null, progress: null, token: null,
     today: null, sched: {}, resIndex: {}, open: {}, saveTimer: null,
-    pendingEvent: null, lastRoute: null
+    pendingEvent: null, lastRoute: null,
+    team: null, viewAs: null, lista: null, filtro: { q: "", p: "", st: "attive" }
   };
 
   var TYPE_LABEL = { "Video": "Lezione", "Attività": "Attività", "Risorsa": "Risorsa", "Meeting": "Call" };
@@ -115,7 +116,9 @@
     return {
       login: function (email) { return call("login", { email: email, url: location.origin + location.pathname }); },
       me: function (token) { return call("me", { token: token }); },
-      save: function (token, progress, summary, keepalive) { return call("save", { token: token, progress: progress, summary: summary }, keepalive); }
+      save: function (token, progress, summary, keepalive) { return call("save", { token: token, progress: progress, summary: summary }, keepalive); },
+      adminLista: function (token) { return call("admin_lista", { token: token }); },
+      adminCliente: function (token, email) { return call("admin_cliente", { token: token, email: email }); }
     };
   }
 
@@ -157,6 +160,10 @@
       if (x.azione === "Togli") {
         var k = chiaveNome(x.nome);
         dove.forEach(function (m) { m.resources = m.resources.filter(function (r) { return chiaveNome(r.name) !== k; }); });
+        // tolta la call con Mickel: sparisce anche la frase che la annuncia nell'introduzione della tappa
+        if (k.indexOf("mickel") >= 0) p.modules.forEach(function (m) {
+          (m.callouts || []).forEach(function (c) { c.body = String(c.body || "").replace(/Settimana 1 call di editing con Mickel( · )?/g, ""); });
+        });
       } else if (x.azione === "Aggiungi" && x.tappa && dove.length) {
         var tipo = TIPO_MOD[x.tipo] || "Attività";
         var r = {
@@ -470,6 +477,7 @@
   }
 
   function viewNotes() {
+    if (S.viewAs) return viewNotesTeam();
     var mods = S.percorso.modules.filter(function (m) { var st = state(m); return !st.locked && st.key !== "prima"; });
     return topBar() + '<main class="wrap"><a class="back" href="#/">‹ Il tuo percorso</a>' +
       '<h1 class="page-title">Le tue <em>note</em></h1>' +
@@ -501,13 +509,20 @@
   function route() { return location.hash || "#/"; }
 
   function render() {
+    if (S.team && (!S.viewAs || route().indexOf("#/team") === 0)) {
+      S.viewAs = null; S.client = null; vaStore(null);
+      app.innerHTML = viewTeam();
+      renderTeamRows();
+      return;
+    }
     if (!S.client) return;
     var h = route(), m = /^#\/tappa\/([\w-]+)/.exec(h), html;
     if (m) html = viewModule(m[1]);
     else if (h.indexOf("#/regole") === 0) html = viewRules();
     else if (h.indexOf("#/note") === 0) html = viewNotes();
     else html = viewHome();
-    app.innerHTML = demoBanner() + html;
+    app.innerHTML = teamBanner() + demoBanner() + html;
+    if (S.viewAs) Array.prototype.forEach.call(app.querySelectorAll("textarea"), function (t) { t.readOnly = true; });
     if (S.lastRoute !== h) { window.scrollTo(0, 0); S.lastRoute = h; }
   }
 
@@ -516,10 +531,130 @@
     app.innerHTML = viewLogin(msg);
   }
 
+  // ---------- pannello del team ----------
+  // Chi ha l'email nel gruppo del team entra con lo stesso link delle clienti e vede l'elenco: ogni riga apre la dashboard
+  // della cliente com'è per lei, in sola lettura, con avanzamento, note e feedback
+  var NOTION_MODIFICHE = "https://app.notion.com/p/ecb7454e597b45bc8a8bfbbee4d87288";
+  function vaStore(v) {
+    try {
+      if (arguments.length === 0) return sessionStorage.getItem("dp_viewas");
+      if (v === null) sessionStorage.removeItem("dp_viewas"); else sessionStorage.setItem("dp_viewas", v);
+    } catch (e) {}
+    return null;
+  }
+  function ago(iso) {
+    var d = parseDate(iso);
+    if (!d) return "mai";
+    var n = Math.round((startOfDay(S.today) - d) / 864e5);
+    return n <= 0 ? "oggi" : n === 1 ? "ieri" : n + " giorni fa";
+  }
+  function giorniDa(iso) { var d = parseDate(iso); return d ? Math.round((startOfDay(S.today) - d) / 864e5) : null; }
+
+  function openTeam() {
+    S.viewAs = null; S.client = null; vaStore(null);
+    if (route().indexOf("#/team") !== 0) history.replaceState(null, "", location.pathname + location.search + "#/team");
+    if (!S.lista) app.innerHTML = '<div class="boot">Un attimo, carico l’elenco delle clienti</div>';
+    return api.adminLista(S.token).then(function (j) {
+      S.lista = j.clienti || [];
+      render();
+    }).catch(function (err) {
+      var msg = err && err.code === "vietato" ? "Questa email non è nel gruppo del team" : "Non riesco a caricare l’elenco: riprova tra un attimo";
+      app.innerHTML = '<div class="boot">' + esc(msg) + '<br><br><button type="button" class="btn btn-ghost" data-act="ricarica">Riprova</button> <button type="button" class="btn btn-ghost" data-act="logout">Esci</button></div>';
+    });
+  }
+
+  function openClient(email) {
+    email = String(email || "").trim().toLowerCase();
+    if (!email) { toast("Manca l’email nella riga Progetti: aggiungila su Notion", 4000); return Promise.resolve(); }
+    app.innerHTML = '<div class="boot">Un attimo, apro la dashboard di ' + esc(email) + '</div>';
+    return api.adminCliente(S.token, email).then(function (j) {
+      S.client = j.client;
+      S.progress = j.progress;
+      S.viewAs = { email: email, info: (S.lista || []).filter(function (c) { return c.email === email; })[0] || null };
+      S.open = {}; S.lastRoute = null;
+      vaStore(email);
+      prepare();
+      if (route().indexOf("#/team") === 0) history.replaceState(null, "", location.pathname + location.search + "#/");
+      render();
+    }).catch(function (err) {
+      toast((err && err.message) || "Non riesco ad aprirla: riprova", 5000);
+      return openTeam();
+    });
+  }
+
+  function viewTeam() {
+    var opz = Object.keys(S.data.percorsi).map(function (k) { return '<option value="' + esc(k) + '"' + (S.filtro.p === k ? " selected" : "") + '>' + esc(S.data.percorsi[k].tipologia) + '</option>'; }).join("");
+    return '<header class="top"><div class="top-in"><a class="brand" href="#/team"><img src="assets/logo-unlike-academy.webp" alt="Unlike Academy" width="768" height="158"><span>Pannello team</span></a>' +
+      '<nav class="top-nav"><a class="chip" href="' + NOTION_MODIFICHE + '" target="_blank" rel="noopener">' + ICON.note + '<span class="t-long">Modifiche ai percorsi</span></a>' +
+      '<button class="chip" type="button" data-act="ricarica">Aggiorna</button></nav></div></header>' +
+      '<main class="team-wrap"><h1 class="page-title">Le <em>clienti</em></h1>' +
+      '<p class="path-sub">Apri una riga per vedere la dashboard com’è per lei: tappe, avanzamento, note e feedback · si guarda soltanto, non si cambia niente da qui</p>' +
+      '<div class="team-tools">' +
+      '<label class="sr" for="tq">Cerca</label><input id="tq" type="search" data-act="q" placeholder="Cerca per nome o email" value="' + esc(S.filtro.q) + '">' +
+      '<label class="sr" for="tp">Percorso</label><select id="tp" data-act="fp"><option value="">Tutti i percorsi</option>' + opz + '</select>' +
+      '<label class="sr" for="tst">Stato</label><select id="tst" data-act="fst"><option value="attive"' + (S.filtro.st === "attive" ? " selected" : "") + '>Non terminate</option><option value="tutte"' + (S.filtro.st === "tutte" ? " selected" : "") + '>Tutte</option></select></div>' +
+      '<div id="team-rows" class="team-list" aria-live="polite"></div>' +
+      '<footer class="foot">' + esc(S.team.email) + ' · <button type="button" data-act="logout">Esci</button></footer></main>';
+  }
+
+  function renderTeamRows() {
+    var box = document.getElementById("team-rows");
+    if (!box) return;
+    var f = S.filtro, q = f.q.trim().toLowerCase();
+    var righe = (S.lista || []).filter(function (c) {
+      if (f.p && c.percorso !== f.p) return false;
+      if (f.st === "attive" && /terminat/i.test(c.stato)) return false;
+      return !q || (c.cliente + " " + c.email).toLowerCase().indexOf(q) >= 0;
+    }).sort(function (a, b) { return String(b.data_inizio).localeCompare(String(a.data_inizio)); });
+    if (!righe.length) { box.innerHTML = '<p class="team-empty">Nessuna cliente con questi filtri</p>'; return; }
+    box.innerHTML = righe.map(function (c) {
+      var p = S.data.percorsi[c.percorso] || {}, gg = giorniDa(c.ultimo_accesso), attiva = /corso/i.test(c.stato);
+      var flag = !c.email ? '<span class="tflag warn">manca l’email in Progetti</span>'
+        : !c.ultimo_accesso ? '<span class="tflag">non è ancora entrata</span>'
+        : (attiva && gg !== null && gg >= 10 ? '<span class="tflag warn">ferma da ' + gg + ' giorni</span>' : "");
+      var inizio = parseDate(c.data_inizio), fine = parseDate(c.data_fine);
+      return '<button type="button" class="team-row" data-act="vedi" data-email="' + esc(c.email) + '"' + (c.email ? "" : " disabled") + '>' +
+        '<span class="t-name"><b>' + esc(c.cliente) + '</b><small>' + esc(c.email || "senza email") + '</small></span>' +
+        '<span class="t-per"><b>' + esc(p.tipologia || c.tipologia) + '</b><small>' + (inizio ? fmtShort(inizio) : "") + (fine ? " → " + fmtShort(fine) : "") + '</small></span>' +
+        '<span class="t-st"><span class="badge">' + esc(c.stato || "—") + '</span>' + flag + '</span>' +
+        '<span class="t-prog"><small>' + esc(c.tappa || "non iniziata") + '</small><span class="bar small"><i style="width:' + (c.avanzamento || 0) + '%"></i></span><small>' + (c.avanzamento || 0) + '%</small></span>' +
+        '<span class="t-acc"><small>ultimo accesso</small><b>' + esc(ago(c.ultimo_accesso)) + '</b>' + (c.note ? '<small class="t-note">' + c.note + (c.note === 1 ? " nota o feedback" : " note e feedback") + '</small>' : "") + '</span></button>';
+    }).join("");
+  }
+
+  function teamBanner() {
+    if (!S.viewAs) return "";
+    var i = S.viewAs.info, nome = S.client.cliente || S.viewAs.email;
+    var notion = S.client.notion_progetti_id ? "https://app.notion.com/p/" + String(S.client.notion_progetti_id).replace(/-/g, "") : "";
+    return '<div class="demo-banner team-banner"><span class="demo-tag">Vista team</span><span class="sep" aria-hidden="true"> · </span><span>stai guardando <b>' + esc(nome) + '</b>, in sola lettura' +
+      (i ? ' · ultimo accesso ' + esc(ago(i.ultimo_accesso)) + (i.attivazione ? ' · attivazione finita il ' + esc(fmtShort(parseDate(i.attivazione))) : " · attivazione non ancora finita") : "") + '</span>' +
+      '<span class="sep" aria-hidden="true"> · </span><a href="#/team">‹ tutte le clienti</a>' +
+      (notion ? '<span class="sep" aria-hidden="true"> · </span><a href="' + esc(notion) + '" target="_blank" rel="noopener">riga su Notion</a>' : "") +
+      '<span class="sep" aria-hidden="true"> · </span><a href="' + NOTION_MODIFICHE + '" target="_blank" rel="noopener">modifica il percorso</a></div>';
+  }
+
+  function viewNotesTeam() {
+    var nome = S.client.nome || String(S.client.cliente || "").split(" ")[0], tot = 0;
+    var blocchi = S.percorso.modules.map(function (m) {
+      var n = String(S.progress.notes[m.id] || "").trim();
+      var fbs = m.resources.filter(function (r) { return String(S.progress.fb[r.key] || "").trim(); });
+      if (!n && !fbs.length) return "";
+      tot += (n ? 1 : 0) + fbs.length;
+      var a = function (t) { return esc(t).replace(/\n/g, "<br>"); };
+      return '<section class="note-team"><h3>' + esc(m.title) + '</h3>' +
+        (n ? '<p><b>Le sue note</b><br>' + a(n) + '</p>' : "") +
+        fbs.map(function (r) { return '<p><b>Feedback su «' + esc(cleanName(r.name)) + '»</b><br>' + a(S.progress.fb[r.key]) + '</p>'; }).join("") + '</section>';
+    }).join("");
+    return topBar() + '<main class="wrap"><a class="back" href="#/">‹ La sua dashboard</a>' +
+      '<h1 class="page-title">Note di <em>' + esc(nome) + '</em></h1>' +
+      '<p class="path-sub">' + (tot ? "Quello che ha scritto nelle note delle tappe e nei feedback sulle singole parti" : "Non ha ancora scritto note né feedback") + '</p>' +
+      '<div class="notes-list">' + blocchi + '</div>' + foot() + '</main>';
+  }
+
   // ---------- azioni ----------
   function toggleDone(key) {
     var x = S.resIndex[key];
-    if (!x) return;
+    if (!x || S.viewAs) return;
     var st = state(x.m);
     if (st.locked || st.key === "prima") return;
     if (S.progress.done[key]) delete S.progress.done[key];
@@ -560,6 +695,7 @@
   }
 
   function queueSave(fieldId) {
+    if (S.viewAs) return;
     S.edited = true;
     saveCache();
     clearTimeout(S.saveTimer);
@@ -567,7 +703,7 @@
   }
 
   function save(fieldId, keepalive) {
-    if (!S.client) return Promise.resolve();
+    if (!S.client || S.viewAs) return Promise.resolve();
     var ev = S.pendingEvent;
     S.pendingEvent = null;
     var sum = summary();
@@ -603,7 +739,7 @@
 
   // Copia locale dell'ultimo percorso aperto: la pagina si apre subito, il server aggiorna dietro
   function saveCache() {
-    if (!DEMO && S.client) store("dp_cache", { token: S.token, client: S.client, progress: S.progress });
+    if (!DEMO && S.client && !S.viewAs) store("dp_cache", { token: S.token, client: S.client, progress: S.progress });
   }
 
   function enter(tentativo) {
@@ -630,6 +766,12 @@
       }
     }
     return api.me(S.token).then(function (j) {
+      if (j.team) {
+        S.team = j; S.client = null; S.viewAs = null; S.edited = false;
+        var ultima = vaStore();
+        if (ultima && route().indexOf("#/team") !== 0) return openClient(ultima);
+        return openTeam();
+      }
       var prima = JSON.stringify([S.client, S.progress]);
       S.client = j.client;
       // se nel frattempo la cliente ha spuntato o scritto qualcosa, vince quello che ha sul telefono
@@ -672,6 +814,7 @@
     store("dp_cache", null);
     S.token = null;
     S.client = null;
+    S.team = null; S.viewAs = null; S.lista = null; vaStore(null);
     S.open = {};
     history.replaceState(null, "", location.pathname + location.search);
     renderLogin();
@@ -686,6 +829,13 @@
     else if (act === "toggle") { e.preventDefault(); toggleOpen(t.getAttribute("data-key")); }
     else if (act === "demo") { e.preventDefault(); startDemo(t.getAttribute("data-p")); }
     else if (act === "logout") { e.preventDefault(); logout(); }
+    else if (act === "vedi") { e.preventDefault(); openClient(t.getAttribute("data-email")); }
+    else if (act === "ricarica") { e.preventDefault(); openTeam(); }
+  });
+  document.addEventListener("change", function (e) {
+    var t = e.target, act = t.getAttribute && t.getAttribute("data-act");
+    if (act === "fp") { S.filtro.p = t.value; renderTeamRows(); }
+    else if (act === "fst") { S.filtro.st = t.value; renderTeamRows(); }
   });
   document.addEventListener("submit", function (e) {
     var f = e.target;
@@ -693,6 +843,8 @@
   });
   document.addEventListener("input", function (e) {
     var t = e.target, act = t.getAttribute && t.getAttribute("data-act");
+    if (act === "q") { S.filtro.q = t.value; renderTeamRows(); return; }
+    if (S.viewAs) return;
     if (act === "fb") { S.progress.fb[t.getAttribute("data-key")] = t.value; queueSave(t.id); }
     else if (act === "note") { S.progress.notes[t.getAttribute("data-mod")] = t.value; queueSave(t.id); }
   });
