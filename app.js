@@ -30,7 +30,9 @@
     check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
     rules: '<svg ' + SVG + '><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg>',
     note: '<svg ' + SVG + '><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></svg>',
-    portal: '<svg ' + SVG + '><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>'
+    portal: '<svg ' + SVG + '><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>',
+    eye: '<svg ' + SVG + '><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>',
+    eyeOff: '<svg ' + SVG + '><path d="M3 3l18 18"/><path d="M10.6 6.1A10 10 0 0 1 12 6c6.4 0 10 6 10 6a17 17 0 0 1-3.2 3.9M6.4 7.6A17 17 0 0 0 2 12s3.6 6 10 6a9.7 9.7 0 0 0 4-.9"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>'
   };
 
   // Link delle pagine dei tre template Notion, solo per la versione di prova
@@ -514,7 +516,9 @@
       '<form data-act="login" novalidate><div class="field"><label for="em">Email</label>' +
       '<input id="em" name="email" type="email" autocomplete="username email" inputmode="email" required placeholder="nome@email.it"></div>' +
       '<div class="field" id="pwf" hidden><label for="pw">Password del team</label>' +
-      '<input id="pw" name="password" type="password" autocomplete="current-password" placeholder="Password"><p class="pw-hint">Lasciala vuota per ricevere il link via email</p></div>' +
+      '<div class="pw-wrap"><input id="pw" name="password" type="password" autocomplete="current-password" placeholder="Password" autocapitalize="none" autocorrect="off" spellcheck="false">' +
+      '<button class="pw-eye" type="button" data-act="occhio" aria-label="Mostra la password" aria-pressed="false">' + ICON.eye + '</button></div>' +
+      '<p class="pw-hint">Lasciala vuota per ricevere il link via email</p></div>' +
       '<button class="btn btn-accent" type="submit">Mandami il link</button></form>' +
       (msg ? '<p class="msg ' + esc(msg.type) + '">' + esc(msg.text) + '</p>' : "") +
       demo + '</div></main>';
@@ -880,6 +884,13 @@
     else if (act === "toggle") { e.preventDefault(); toggleOpen(t.getAttribute("data-key")); }
     else if (act === "demo") { e.preventDefault(); startDemo(t.getAttribute("data-p")); }
     else if (act === "logout") { e.preventDefault(); logout(); }
+    else if (act === "occhio") {
+      e.preventDefault();
+      var inp = document.getElementById("pw"), mostra = inp && inp.type === "password";
+      if (inp) { inp.type = mostra ? "text" : "password"; inp.focus(); }
+      t.setAttribute("aria-pressed", String(!!mostra)); t.setAttribute("aria-label", mostra ? "Nascondi la password" : "Mostra la password");
+      t.innerHTML = mostra ? ICON.eyeOff : ICON.eye;
+    }
     else if (act === "vedi") { e.preventDefault(); openClient(t.getAttribute("data-email")); }
     else if (act === "ricarica") { e.preventDefault(); openTeam(true); }
   });
