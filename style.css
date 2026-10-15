@@ -74,13 +74,13 @@ em { font-style: italic; }
 .wrap { max-width: 780px; margin: 0 auto; padding: 0 16px 64px; }
 
 /* la parola perno nei titoli: Playfair corsivo fucsia, come sulla landing */
-.path-title em, .page-title em, .login-card h1 em {
+.path-title em, .page-title em, .login-card h1 em, .welcome h2 em {
   font-family: var(--serif); font-style: italic; font-weight: 700; letter-spacing: -.035em; color: var(--fucsia);
   padding-right: .04em;
 }
 
 /* etichetta-timbro: la base comune */
-.badge, .path-tag, .sec-title, .now small, .demo-tag, .demo-box h2 {
+.badge, .path-tag, .sec-title, .now small, .welcome small, .demo-tag, .demo-box h2 {
   display: inline-block; font-family: var(--sans); font-weight: 800; font-size: 11.5px; line-height: 1;
   letter-spacing: .12em; text-transform: uppercase; border-radius: 4px; padding: 7px 10px 6px;
   rotate: -1.6deg; box-shadow: var(--timbro);
@@ -168,6 +168,16 @@ em { font-style: italic; }
 .now.is-next { background: var(--grana) center / cover, var(--blu-campo); background-blend-mode: multiply, normal; box-shadow: var(--rilievo-f); }
 .now.is-next small { color: var(--blu); }
 .now.is-next .chev { color: var(--blu); }
+
+/* il video di benvenuto: la prima cosa da fare, sparisce per sempre con «Ho guardato il video» */
+.welcome { margin: 22px 0 0; padding: 20px 18px 22px; background: var(--surface); border-radius: var(--radius); box-shadow: var(--rilievo); }
+.welcome small { background: var(--fucsia); color: #fff; box-shadow: 2px 2px 0 rgba(34, 29, 32, .22); }
+.welcome h2 { margin: 14px 0 6px; font-weight: 900; font-size: clamp(25px, 6.4vw, 34px); line-height: 1; letter-spacing: -.05em; text-wrap: balance; }
+.welcome h2 em { font-size: 1.04em; line-height: .9; }
+.welcome p { margin: 0 0 16px; color: var(--gray); font-size: 15px; }
+.video { position: relative; height: 0; padding-bottom: 56.25%; border-radius: var(--radius-s); overflow: hidden; background: var(--ink-dk); box-shadow: var(--ombra-s); }
+.video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+.welcome .btn { width: 100%; margin-top: 18px; }
 
 /* ---------- elenco tappe ---------- */
 .sec-title { margin: 40px 0 18px; background: var(--blu); color: #fff; }
@@ -408,6 +418,11 @@ textarea:focus { outline: none; border-color: var(--fucsia); background: #fff; }
   .hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); column-gap: 26px; align-items: stretch; }
   .hero > .path-tag, .hero > .kicker, .hero > .path-title { grid-column: 1 / -1; justify-self: start; }
   .hero > .progress, .hero > .now { margin-top: 30px; }
+  /* il video di benvenuto occupa tutta la riga: testo e bottone a sinistra, video a destra */
+  .hero > .welcome { grid-column: 1 / -1; margin-top: 30px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); grid-template-rows: 1fr auto; grid-template-areas: "txt vid" "btn vid"; column-gap: 26px; }
+  .welcome-txt { grid-area: txt; }
+  .welcome .video { grid-area: vid; align-self: center; }
+  .welcome .btn { grid-area: btn; align-self: end; margin-top: 18px; }
   .hero .progress { display: flex; flex-direction: column; justify-content: center; }
   .mods { grid-template-columns: 1fr 1fr; gap: 18px; }
   .mod-card:nth-child(even):not(.st-in_corso):not(.st-futura) { rotate: .35deg; }

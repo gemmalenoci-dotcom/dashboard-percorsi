@@ -151,7 +151,7 @@
 
   function normalizeProgress(p) {
     p = p || {};
-    return { done: p.done || {}, fb: p.fb || {}, notes: p.notes || {}, attivazione: p.attivazione || null, v: 1 };
+    return { done: p.done || {}, fb: p.fb || {}, notes: p.notes || {}, attivazione: p.attivazione || null, benvenuto: p.benvenuto || null, v: 1 };
   }
 
   // Le modifiche fatte per lei su Notion («Modifiche al percorso, per cliente»): aggiungi o togli
@@ -431,6 +431,27 @@
     return "";
   }
 
+  // Il video di benvenuto (Loom): compare appena si apre la dashboard e sparisce per sempre quando la cliente clicca «Ho guardato il video»
+  // si salva nel progresso (progress.benvenuto) · la vista del team non lo mostra · con ?video=1 si rivede a scopo di prova, senza salvare
+  var VIDEO_BENVENUTO = "https://www.loom.com/embed/f221ec4afe46496ca4f32fae54512da9";
+  function videoBenvenuto() {
+    if (S.viewAs || S.videoVisto) return "";
+    if (S.progress.benvenuto && !qs.has("video")) return "";
+    return '<section class="welcome" aria-labelledby="wlc-t">' +
+      '<div class="welcome-txt"><small>Prima cosa da fare</small>' +
+      '<h2 id="wlc-t">Guarda il video di <em>benvenuto</em></h2>' +
+      '<p>Ti fa vedere come muoverti qui dentro e da dove partire</p></div>' +
+      '<div class="video"><iframe src="' + VIDEO_BENVENUTO + '" title="Video di benvenuto" frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div>' +
+      '<button class="btn btn-accent" type="button" data-act="guardato">' + ICON.check + 'Ho guardato il video</button>' +
+      '</section>';
+  }
+  function videoGuardato() {
+    if (S.viewAs) return;
+    S.videoVisto = true;
+    if (!qs.has("video")) { S.progress.benvenuto = new Date().toISOString(); queueSave(); }
+    render();
+  }
+
   // ---------- pagine ----------
   function viewHome() {
     var p = S.percorso, tot = totals(), cur = currentModule(), stc = state(cur), parts = splitTitle(p.nome);
@@ -441,7 +462,7 @@
       '<p class="path-sub path-tag">' + esc(p.tipologia) + ' · ' + esc(p.mesi) + ' mesi' + (start ? ' · dal ' + fmtShort(start) : "") + '</p>' +
       '<p class="kicker">Ciao' + (nome ? " " + esc(nome) : "") + ' 👋🏻</p>' +
       '<h1 class="path-title">' + (parts[1] ? '<span class="da">' + esc(parts[0]) + '</span> <span class="a">' + accent(parts[1]) + '</span>' : '<span class="da">' + accent(parts[0]) + '</span>') + '</h1>' +
-      pausaNote() + chiusuraNote() +
+      videoBenvenuto() + pausaNote() + chiusuraNote() +
       progressBlock(tot.done, tot.total, true) +
       '<a class="now' + (stc.key === "futura" ? " is-next" : "") + '" href="#/tappa/' + esc(cur.id) + '"><span class="now-dot"></span><span><small>' + (stc.key === "futura" ? "Prossima tappa · " + esc(stc.label.toLowerCase()) : "Adesso") + '</small>' +
       '<strong>' + esc(cur.title) + '</strong></span><span class="chev" aria-hidden="true">›</span></a>' +
@@ -882,6 +903,7 @@
     var act = t.getAttribute("data-act");
     if (act === "done") { e.preventDefault(); toggleDone(t.getAttribute("data-key")); }
     else if (act === "toggle") { e.preventDefault(); toggleOpen(t.getAttribute("data-key")); }
+    else if (act === "guardato") { e.preventDefault(); videoGuardato(); }
     else if (act === "demo") { e.preventDefault(); startDemo(t.getAttribute("data-p")); }
     else if (act === "logout") { e.preventDefault(); logout(); }
     else if (act === "occhio") {
