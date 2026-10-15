@@ -771,20 +771,32 @@
        "feedback": true
       },
       {
-       "key": "r2_lez_capcut_nozioni_di_base",
-       "name": "Lezione · CapCut: nozioni di base (12')",
+       "key": "r2_lez_capcut_mickel",
+       "name": "Lezione · Corso CapCut di Mickel: modulo 1 (22')",
        "type": "Video",
-       "minuti": 12,
+       "minuti": 22,
        "callout": {
         "icon": "▶️",
-        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong><br><br><em>Prima della call con Mickel</em>"
+        "body": "<strong>Guarda il modulo 1 nella versione che usi, telefono o PC, poi spunta Fatto</strong><br>Cinque lezioni brevi: installi CapCut, tagli, aggiungi testi e musica, esporti senza perdere qualità · parti dal benvenuto di Mickel<br><br><em>Prima della call con Mickel</em>"
        },
        "actions": [
         {
          "cls": "navy",
          "ico": "play",
-         "label": "Vai alla lezione",
-         "url": "https://club.unlikeacademy.it/c/bonus-canva-capcut/sections/993195/lessons/3767979"
+         "label": "Benvenuto (1')",
+         "url": "https://club.unlikeacademy.it/c/corso-capcut-mickel/sections/1208219/lessons/4647132"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Modulo 1 da telefono (22')",
+         "url": "https://club.unlikeacademy.it/c/corso-capcut-mickel/sections/1208220/lessons/4647133"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Modulo 1 da PC (17')",
+         "url": "https://club.unlikeacademy.it/c/corso-capcut-mickel/sections/1208221/lessons/4647138"
         }
        ],
        "feedback": true
@@ -797,7 +809,7 @@
        "durata": "60'",
        "callout": {
         "icon": "📞",
-        "body": "<strong>Settimana 1 · girare e montare</strong><br>B-roll, green screen, luce, audio e ritmo · prenotala dopo la lezione CapCut"
+        "body": "<strong>Settimana 1 · girare e montare</strong><br>B-roll, green screen, luce, audio e ritmo · prenotala dopo il modulo 1 del corso CapCut"
        },
        "actions": [
         {
@@ -809,7 +821,7 @@
        ],
        "feedback": true,
        "gate": [
-        "r2_lez_capcut_nozioni_di_base"
+        "r2_lez_capcut_mickel"
        ]
       },
       {
@@ -851,6 +863,12 @@
          "ico": "play",
          "label": "Esempio di piano editoriale (4')",
          "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046684"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Corso CapCut di Mickel: moduli 2 e 3",
+         "url": "https://club.unlikeacademy.it/c/corso-capcut-mickel"
         }
        ],
        "feedback": false
@@ -2848,8 +2866,8 @@
         {
          "cls": "navy",
          "ico": "play",
-         "label": "CapCut: nozioni di base (12')",
-         "url": "https://club.unlikeacademy.it/c/bonus-canva-capcut/sections/993195/lessons/3767979"
+         "label": "Corso CapCut di Mickel",
+         "url": "https://club.unlikeacademy.it/c/corso-capcut-mickel"
         }
        ],
        "feedback": false
@@ -4111,20 +4129,32 @@
        "feedback": true
       },
       {
-       "key": "r2_lez_capcut_nozioni_di_base",
-       "name": "Lezione · CapCut: nozioni di base (12')",
+       "key": "r2_lez_capcut_mickel",
+       "name": "Lezione · Corso CapCut di Mickel: modulo 1 (22')",
        "type": "Video",
-       "minuti": 12,
+       "minuti": 22,
        "callout": {
         "icon": "▶️",
-        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong><br><br><em>Prima della call con Mickel</em>"
+        "body": "<strong>Guarda il modulo 1 nella versione che usi, telefono o PC, poi spunta Fatto</strong><br>Cinque lezioni brevi: installi CapCut, tagli, aggiungi testi e musica, esporti senza perdere qualità · parti dal benvenuto di Mickel<br><br><em>Prima della call con Mickel</em>"
        },
        "actions": [
         {
          "cls": "navy",
          "ico": "play",
-         "label": "Vai alla lezione",
-         "url": "https://club.unlikeacademy.it/c/bonus-canva-capcut/sections/993195/lessons/3767979"
+         "label": "Benvenuto (1')",
+         "url": "https://club.unlikeacademy.it/c/corso-capcut-mickel/sections/1208219/lessons/4647132"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Modulo 1 da telefono (22')",
+         "url": "https://club.unlikeacademy.it/c/corso-capcut-mickel/sections/1208220/lessons/4647133"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Modulo 1 da PC (17')",
+         "url": "https://club.unlikeacademy.it/c/corso-capcut-mickel/sections/1208221/lessons/4647138"
         }
        ],
        "feedback": true
@@ -4137,7 +4167,7 @@
        "durata": "60'",
        "callout": {
         "icon": "📞",
-        "body": "<strong>Settimana 1 · girare e montare</strong><br>B-roll, green screen, luce, audio e ritmo · prenotala dopo la lezione CapCut"
+        "body": "<strong>Settimana 1 · girare e montare</strong><br>B-roll, green screen, luce, audio e ritmo · prenotala dopo il modulo 1 del corso CapCut"
        },
        "actions": [
         {
@@ -4149,7 +4179,7 @@
        ],
        "feedback": true,
        "gate": [
-        "r2_lez_capcut_nozioni_di_base"
+        "r2_lez_capcut_mickel"
        ]
       },
       {
@@ -4191,6 +4221,12 @@
          "ico": "play",
          "label": "Esempio di piano editoriale (4')",
          "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063328/lessons/4046684"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Corso CapCut di Mickel: moduli 2 e 3",
+         "url": "https://club.unlikeacademy.it/c/corso-capcut-mickel"
         }
        ],
        "feedback": false
