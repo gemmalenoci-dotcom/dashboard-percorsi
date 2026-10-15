@@ -1435,37 +1435,6 @@
        "feedback": true
       },
       {
-       "key": "r3_call_gemma",
-       "name": "Terza call con Gemma",
-       "type": "Meeting",
-       "chi": "Gemma",
-       "durata": "60'",
-       "callout": {
-        "icon": "📞",
-        "body": "<strong>Storie, reel e target</strong><br>Prenotala dopo lezioni e inventario delle storie"
-       },
-       "actions": [
-        {
-         "cls": "gold",
-         "ico": "cal",
-         "label": "Prenota la call con Gemma",
-         "url": "{{cal_gemma}}"
-        }
-       ],
-       "feedback": true,
-       "gate": [
-        "r3_lez_formati_tecnici",
-        "r3_lez_format_di_contenuto",
-        "r3_lez_script_e_caption",
-        "r3_lez_come_utilizzare_lo_storytell",
-        "r3_lez_vendere_tramite_le_storie",
-        "r3_lez_storie_in_evidenza",
-        "r3_lez_reels_segnali_watch_time_e_r",
-        "r3_lez_strategia_di_viralita",
-        "r3_storie"
-       ]
-      },
-      {
        "key": "r3_call_sofia_fine",
        "name": "Call di fine mese con Sofia",
        "type": "Meeting",
@@ -1524,6 +1493,37 @@
        ],
        "feedback": true,
        "gate": []
+      },
+      {
+       "key": "r4_call_gemma_3",
+       "name": "Terza call con Gemma",
+       "type": "Meeting",
+       "chi": "Gemma",
+       "durata": "60'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Settimana 2 · storie, reel e target</strong><br>Prenotala dopo lezioni e inventario delle storie della tappa 3"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Gemma",
+         "url": "{{cal_gemma}}"
+        }
+       ],
+       "feedback": true,
+       "gate": [
+        "r3_lez_formati_tecnici",
+        "r3_lez_format_di_contenuto",
+        "r3_lez_script_e_caption",
+        "r3_lez_come_utilizzare_lo_storytell",
+        "r3_lez_vendere_tramite_le_storie",
+        "r3_lez_storie_in_evidenza",
+        "r3_lez_reels_segnali_watch_time_e_r",
+        "r3_lez_strategia_di_viralita",
+        "r3_storie"
+       ]
       },
       {
        "key": "r4_lez_la_psicologia_dell_acquisto",
@@ -1740,38 +1740,6 @@
        "feedback": true
       },
       {
-       "key": "r4_call_gemma",
-       "name": "Quarta call con Gemma: offerta e funnel",
-       "type": "Meeting",
-       "chi": "Gemma",
-       "durata": "60'",
-       "callout": {
-        "icon": "📞",
-        "body": "<strong>Offerta, funnel, lead magnet e acquisizione</strong><br>Prenotala dopo lezioni e form dell'offerta"
-       },
-       "actions": [
-        {
-         "cls": "gold",
-         "ico": "cal",
-         "label": "Prenota la call con Gemma",
-         "url": "{{cal_gemma}}"
-        }
-       ],
-       "feedback": true,
-       "gate": [
-        "r4_lez_la_psicologia_dell_acquisto",
-        "r4_lez_il_social_media_funnel",
-        "r4_lez_da_traffico_controllato_a_po",
-        "r4_lez_ottimizzazione_profilo",
-        "r4_lez_profilo_e_bio_instagram",
-        "r4_lez_profilo_tiktok",
-        "r4_lez_touch_point_e_lead_magnet",
-        "r4_lez_link_in_bio",
-        "r4_lez_dalla_chat_alla_consulenza",
-        "r4_offerta"
-       ]
-      },
-      {
        "key": "r4_funnel",
        "name": "Lead magnet, ManyChat e messaggio di primo contatto",
        "type": "Attività",
@@ -1883,6 +1851,38 @@
        ],
        "feedback": true,
        "gate": []
+      },
+      {
+       "key": "r5_call_gemma_4",
+       "name": "Quarta call con Gemma: offerta e funnel",
+       "type": "Meeting",
+       "chi": "Gemma",
+       "durata": "60'",
+       "callout": {
+        "icon": "📞",
+        "body": "<strong>Offerta, funnel, lead magnet e acquisizione</strong><br>È l'ultima call con Gemma · prenotala dopo lezioni e form dell'offerta della tappa 4"
+       },
+       "actions": [
+        {
+         "cls": "gold",
+         "ico": "cal",
+         "label": "Prenota la call con Gemma",
+         "url": "{{cal_gemma}}"
+        }
+       ],
+       "feedback": true,
+       "gate": [
+        "r4_lez_la_psicologia_dell_acquisto",
+        "r4_lez_il_social_media_funnel",
+        "r4_lez_da_traffico_controllato_a_po",
+        "r4_lez_ottimizzazione_profilo",
+        "r4_lez_profilo_e_bio_instagram",
+        "r4_lez_profilo_tiktok",
+        "r4_lez_touch_point_e_lead_magnet",
+        "r4_lez_link_in_bio",
+        "r4_lez_dalla_chat_alla_consulenza",
+        "r4_offerta"
+       ]
       },
       {
        "key": "r5_lez_mercato_digitale_l_intellige",
