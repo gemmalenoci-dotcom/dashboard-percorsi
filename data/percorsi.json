@@ -240,7 +240,7 @@
       {
        "style": "info",
        "icon": "ℹ️",
-       "body": "<strong>Obiettivo</strong>: capisci come funzionano le piattaforme, mentre noi costruiamo la tua strategia, il tuo primo piano e la tua identità visiva<br><br>Settimana 1 lezioni, esercizi e prima call con Gemma · settimana 2 leggi e approvi strategia e piano · settimana 3 profilo e contenuti obbligatori · settimana 4 pubblichi"
+       "body": "<strong>Obiettivo</strong>: sblocchi la testa e capisci come funzionano le piattaforme, mentre noi costruiamo la tua strategia, il tuo primo piano e la tua identità visiva<br><br>Settimana 1 mindset, lezioni, esercizi e prima call con Gemma · settimana 2 leggi e approvi strategia e piano · settimana 3 profilo e contenuti obbligatori · settimana 4 pubblichi<br><br>Le attività vanno fatte in ordine, dall'alto verso il basso: ognuna prepara la successiva · finché non ricevi il tuo piano editoriale non mandarci contenuti da correggere: studia le lezioni e fai gli esercizi, così quando arriva il piano sei pronta"
       }
      ],
      "resources": [
@@ -258,6 +258,116 @@
          "ico": "ext",
          "label": "Apri il portale",
          "url": "{{portale}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_lez_le_10_paure_sui_social",
+       "name": "Lezione · Le 10 paure sui social (53')",
+       "type": "Video",
+       "minuti": 53,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063323/lessons/4046650"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_lez_costruisci_il_tuo_carisma",
+       "name": "Lezione · Costruisci il tuo carisma (31')",
+       "type": "Video",
+       "minuti": 31,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063323/lessons/4046660"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_es_paure",
+       "name": "Esercizio 1 · Le tue paure e il tuo impegno",
+       "type": "Attività",
+       "callout": {
+        "icon": "🧊",
+        "body": "<strong>Le 3 paure che ti bloccano, quanto ti è costato non pubblicare e il tuo standard minimo per i prossimi 30 giorni</strong><br>Dopo le due lezioni di mindset · 30 minuti<br><br>La scheda «Esercizio 1» è nel tuo portale, in Risorse ed esercizi: scrivi lì"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Risorse ed esercizi",
+         "url": "{{esercizi}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_es_modelli",
+       "name": "Esercizio 2 · I tuoi 5 modelli di riferimento",
+       "type": "Attività",
+       "callout": {
+        "icon": "🔍",
+        "body": "<strong>Studia 5 profili che ti colpiscono: tono, formati, autenticità e come trasmettono carisma</strong><br>Copi la struttura, mai la personalità · 40 minuti<br><br>La scheda «Esercizio 2» è nel tuo portale, in Risorse ed esercizi: scrivi lì"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Risorse ed esercizi",
+         "url": "{{esercizi}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_es_audit",
+       "name": "Esercizio 3 · I tuoi ultimi 9 contenuti",
+       "type": "Attività",
+       "callout": {
+        "icon": "🔎",
+        "body": "<strong>Per ognuno: acquisizione o viralità, CTA, messaggi e richieste</strong><br>Ripensa alla lezione sull'acquisizione della settimana di attivazione · 30 minuti<br><br>La scheda «Esercizio 3» è nel tuo portale, in Risorse ed esercizi: scrivi lì"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Risorse ed esercizi",
+         "url": "{{esercizi}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_es_brand",
+       "name": "Esercizio 4 · Il centro del tuo brand",
+       "type": "Attività",
+       "callout": {
+        "icon": "🧭",
+        "body": "<strong>Ikigai, il tuo perché, la frase che ti presenta, archetipo e valori</strong><br>Ripensa alla lezione sul posizionamento della settimana di attivazione · è il foglio più importante prima della call con Gemma · 45 minuti<br><br>La scheda «Esercizio 4» è nel tuo portale, in Risorse ed esercizi: scrivi lì"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Risorse ed esercizi",
+         "url": "{{esercizi}}"
         }
        ],
        "feedback": true
@@ -301,6 +411,24 @@
        "feedback": true
       },
       {
+       "key": "r1_es_profilo_tipo",
+       "name": "Esercizio 5 · Che profilo vuoi essere",
+       "type": "Attività",
+       "callout": {
+        "icon": "🪞",
+        "body": "<strong>Obiettivo, persona da raggiungere e CTA: decidi che profilo vuoi essere</strong><br>Dopo la lezione sui profili professionali · 15 minuti<br><br>La scheda «Esercizio 5» è nel tuo portale, in Risorse ed esercizi: scrivi lì"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Risorse ed esercizi",
+         "url": "{{esercizi}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
        "key": "r1_lez_brand_tipo",
        "name": "Lezione · Il brand del tuo tipo",
        "type": "Video",
@@ -338,40 +466,89 @@
        "feedback": true
       },
       {
-       "key": "r1_es_canali",
-       "name": "Esercizio · la mappa dei tuoi 3 canali",
+       "key": "r1_es_percezioni",
+       "name": "Esercizio 6 · Come vuoi essere percepita",
        "type": "Attività",
        "callout": {
-        "icon": "📝",
-        "body": "<strong>Dove ti trovano oggi i clienti, e dove li vuoi tra 6 mesi</strong><br>Ricerca, social, AI · scrivilo nella pagina Esercizi del portale"
+        "icon": "👀",
+        "body": "<strong>3 aggettivi sì, 3 aggettivi no e i tuoi 3 pilastri</strong><br>Dopo la lezione sul brand del tuo tipo · 20 minuti<br><br>La scheda «Esercizio 6» è nel tuo portale, in Risorse ed esercizi: scrivi lì"
        },
        "actions": [
         {
          "cls": "navy",
          "ico": "ext",
-         "label": "Apri Esercizi",
+         "label": "Apri Risorse ed esercizi",
          "url": "{{esercizi}}"
         }
        ],
        "feedback": true
       },
       {
-       "key": "r1_es_audit",
-       "name": "Esercizio · l'audit degli ultimi 9 post",
-       "type": "Attività",
+       "key": "r1_facoltative",
+       "name": "Lezioni consigliate, se vuoi approfondire",
+       "type": "Risorsa",
+       "facoltativa": true,
        "callout": {
-        "icon": "📝",
-        "body": "<strong>Per ognuno: acquisizione o viralità?</strong><br>Scrivilo nella pagina Esercizi del portale"
+        "icon": "📚",
+        "body": "<strong>Non sono obbligatorie</strong><br>Altro mindset e un anticipo di strategia: la strategia la facciamo insieme nella tappa 2, ma se vuoi arrivarci preparata parti da qui"
        },
        "actions": [
         {
          "cls": "navy",
-         "ico": "ext",
-         "label": "Apri Esercizi",
-         "url": "{{esercizi}}"
+         "ico": "play",
+         "label": "Mindset: Pattern Recognition (19')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063323/lessons/4046601"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Mindset: Feedback Loop (20')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063323/lessons/4046621"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Mindset: il RAS, il filtro del cervello (25')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063323/lessons/4046638"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Il mercato digitale e gli algoritmi social (21')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063324/lessons/4046609"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Strategia di viralità (38')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063325/lessons/4046654"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Da traffico controllato a posseduto (24')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063325/lessons/4046662"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Obiettivi SMART (22')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063327/lessons/4046642"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Competitor e analisi strategica (23')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063327/lessons/4046655"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "La tua dichiarazione strategica (21')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063327/lessons/4046663"
         }
        ],
-       "feedback": true
+       "feedback": false
       },
       {
        "key": "r1_call_gemma",
@@ -393,11 +570,17 @@
        ],
        "feedback": true,
        "gate": [
+        "r1_lez_le_10_paure_sui_social",
+        "r1_lez_costruisci_il_tuo_carisma",
+        "r1_es_paure",
+        "r1_es_modelli",
+        "r1_es_audit",
+        "r1_es_brand",
         "r1_lez_strategia_di_acquisizione",
         "r1_lez_profili_professionali_vs_inf",
+        "r1_es_profilo_tipo",
         "r1_lez_brand_tipo",
-        "r1_es_canali",
-        "r1_es_audit"
+        "r1_es_percezioni"
        ]
       },
       {
@@ -480,11 +663,11 @@
       },
       {
        "key": "r1_profilo",
-       "name": "Sistema bio e profilo",
+       "name": "Sistema bio, foto profilo e nome utente",
        "type": "Attività",
        "callout": {
         "icon": "📝",
-        "body": "<strong>Settimana 3</strong><br>Segui le indicazioni di Ottimizzazione profili nella tua strategia"
+        "body": "<strong>Settimana 3 · per ora solo bio, foto profilo e nome utente</strong><br>Segui le indicazioni di Ottimizzazione profili nella tua strategia · storie in evidenza e post fissati li sistemiamo insieme strada facendo"
        },
        "actions": [
         {
@@ -512,17 +695,6 @@
          "url": "{{visual_identity}}"
         }
        ],
-       "feedback": true
-      },
-      {
-       "key": "r1_cartelle",
-       "name": "Riordina le tue cartelle",
-       "type": "Attività",
-       "callout": {
-        "icon": "🗂️",
-        "body": "<strong>Col metodo che ti ha mostrato Gemma</strong><br>Così ritrovi in un attimo foto, video e materiali"
-       },
-       "actions": [],
        "feedback": true
       },
       {
@@ -879,7 +1051,7 @@
        "type": "Attività",
        "callout": {
         "icon": "👥",
-        "body": "<strong>Dopo la lezione sul target</strong><br>Compila la scheda: chi è, cosa la tiene sveglia, cosa desidera, come parla · da qui nascono le tue idee di contenuto"
+        "body": "<strong>Dopo la lezione sul target</strong><br>Compila la scheda: chi è, cosa la tiene sveglia, cosa desidera, come parla · da qui nascono le tue idee di contenuto<br><br>È la scheda «Studia il tuo target» del tuo portale, in Risorse ed esercizi"
        },
        "actions": [
         {
@@ -2261,7 +2433,7 @@
       {
        "style": "info",
        "icon": "ℹ️",
-       "body": "<strong>Obiettivo</strong>: capisci come funzionano le piattaforme, mentre noi costruiamo la tua strategia, il tuo primo piano<br><br>Settimana 1 lezioni, esercizi e prima call con Gemma · settimana 2 leggi e approvi strategia e piano · settimana 3 profilo · settimana 4 pubblichi"
+       "body": "<strong>Obiettivo</strong>: sblocchi la testa e capisci come funzionano le piattaforme, mentre noi costruiamo la tua strategia, il tuo primo piano<br><br>Settimana 1 mindset, lezioni, esercizi e prima call con Gemma · settimana 2 leggi e approvi strategia e piano · settimana 3 profilo · settimana 4 pubblichi<br><br>Le attività vanno fatte in ordine, dall'alto verso il basso: ognuna prepara la successiva · finché non ricevi il tuo piano editoriale non mandarci contenuti da correggere: studia le lezioni e fai gli esercizi, così quando arriva il piano sei pronta"
       }
      ],
      "resources": [
@@ -2279,6 +2451,116 @@
          "ico": "ext",
          "label": "Apri il portale",
          "url": "{{portale}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_lez_le_10_paure_sui_social",
+       "name": "Lezione · Le 10 paure sui social (53')",
+       "type": "Video",
+       "minuti": 53,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063323/lessons/4046650"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_lez_costruisci_il_tuo_carisma",
+       "name": "Lezione · Costruisci il tuo carisma (31')",
+       "type": "Video",
+       "minuti": 31,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063323/lessons/4046660"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_es_paure",
+       "name": "Esercizio 1 · Le tue paure e il tuo impegno",
+       "type": "Attività",
+       "callout": {
+        "icon": "🧊",
+        "body": "<strong>Le 3 paure che ti bloccano, quanto ti è costato non pubblicare e il tuo standard minimo per i prossimi 30 giorni</strong><br>Dopo le due lezioni di mindset · 30 minuti<br><br>La scheda «Esercizio 1» è nel tuo portale, in Risorse ed esercizi: scrivi lì"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Risorse ed esercizi",
+         "url": "{{esercizi}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_es_modelli",
+       "name": "Esercizio 2 · I tuoi 5 modelli di riferimento",
+       "type": "Attività",
+       "callout": {
+        "icon": "🔍",
+        "body": "<strong>Studia 5 profili che ti colpiscono: tono, formati, autenticità e come trasmettono carisma</strong><br>Copi la struttura, mai la personalità · 40 minuti<br><br>La scheda «Esercizio 2» è nel tuo portale, in Risorse ed esercizi: scrivi lì"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Risorse ed esercizi",
+         "url": "{{esercizi}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_es_audit",
+       "name": "Esercizio 3 · I tuoi ultimi 9 contenuti",
+       "type": "Attività",
+       "callout": {
+        "icon": "🔎",
+        "body": "<strong>Per ognuno: acquisizione o viralità, CTA, messaggi e richieste</strong><br>Ripensa alla lezione sull'acquisizione della settimana di attivazione · 30 minuti<br><br>La scheda «Esercizio 3» è nel tuo portale, in Risorse ed esercizi: scrivi lì"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Risorse ed esercizi",
+         "url": "{{esercizi}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_es_brand",
+       "name": "Esercizio 4 · Il centro del tuo brand",
+       "type": "Attività",
+       "callout": {
+        "icon": "🧭",
+        "body": "<strong>Ikigai, il tuo perché, la frase che ti presenta, archetipo e valori</strong><br>Ripensa alla lezione sul posizionamento della settimana di attivazione · è il foglio più importante prima della call con Gemma · 45 minuti<br><br>La scheda «Esercizio 4» è nel tuo portale, in Risorse ed esercizi: scrivi lì"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Risorse ed esercizi",
+         "url": "{{esercizi}}"
         }
        ],
        "feedback": true
@@ -2322,6 +2604,24 @@
        "feedback": true
       },
       {
+       "key": "r1_es_profilo_tipo",
+       "name": "Esercizio 5 · Che profilo vuoi essere",
+       "type": "Attività",
+       "callout": {
+        "icon": "🪞",
+        "body": "<strong>Obiettivo, persona da raggiungere e CTA: decidi che profilo vuoi essere</strong><br>Dopo la lezione sui profili professionali · 15 minuti<br><br>La scheda «Esercizio 5» è nel tuo portale, in Risorse ed esercizi: scrivi lì"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Risorse ed esercizi",
+         "url": "{{esercizi}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
        "key": "r1_lez_personal_brand",
        "name": "Lezione · Personal brand (61')",
        "type": "Video",
@@ -2341,36 +2641,18 @@
        "feedback": true
       },
       {
-       "key": "r1_es_canali",
-       "name": "Esercizio · la mappa dei tuoi 3 canali",
+       "key": "r1_es_percezioni",
+       "name": "Esercizio 6 · Come vuoi essere percepita",
        "type": "Attività",
        "callout": {
-        "icon": "📝",
-        "body": "<strong>Dove ti trovano oggi i clienti, e dove li vuoi tra 6 mesi</strong><br>Ricerca, social, AI · scrivilo nella pagina Esercizi del portale"
+        "icon": "👀",
+        "body": "<strong>3 aggettivi sì, 3 aggettivi no e i tuoi 3 pilastri</strong><br>Dopo la lezione sul personal brand · 20 minuti<br><br>La scheda «Esercizio 6» è nel tuo portale, in Risorse ed esercizi: scrivi lì"
        },
        "actions": [
         {
          "cls": "navy",
          "ico": "ext",
-         "label": "Apri Esercizi",
-         "url": "{{esercizi}}"
-        }
-       ],
-       "feedback": true
-      },
-      {
-       "key": "r1_es_audit",
-       "name": "Esercizio · l'audit degli ultimi 9 post",
-       "type": "Attività",
-       "callout": {
-        "icon": "📝",
-        "body": "<strong>Per ognuno: acquisizione o viralità?</strong><br>Scrivilo nella pagina Esercizi del portale"
-       },
-       "actions": [
-        {
-         "cls": "navy",
-         "ico": "ext",
-         "label": "Apri Esercizi",
+         "label": "Apri Risorse ed esercizi",
          "url": "{{esercizi}}"
         }
        ],
@@ -2378,21 +2660,88 @@
       },
       {
        "key": "r1_listino",
-       "name": "Esercizio · il tuo listino di oggi",
+       "name": "Esercizio 7 · Il tuo listino di oggi",
        "type": "Attività",
        "callout": {
-        "icon": "📝",
-        "body": "<strong>Servizi, prezzi e clienti che segui oggi</strong><br>Ci serve per la call di orientamento"
+        "icon": "🧾",
+        "body": "<strong>Servizi, prezzi e clienti che segui oggi</strong><br>Ci serve per la call di orientamento · 20 minuti<br><br>La scheda «Esercizio 7» è nel tuo portale, in Risorse ed esercizi: scrivi lì"
        },
        "actions": [
         {
          "cls": "navy",
          "ico": "ext",
-         "label": "Apri Esercizi",
+         "label": "Apri Risorse ed esercizi",
          "url": "{{esercizi}}"
         }
        ],
        "feedback": true
+      },
+      {
+       "key": "r1_facoltative",
+       "name": "Lezioni consigliate, se vuoi approfondire",
+       "type": "Risorsa",
+       "facoltativa": true,
+       "callout": {
+        "icon": "📚",
+        "body": "<strong>Non sono obbligatorie</strong><br>Altro mindset e un anticipo di strategia: la strategia la facciamo insieme nella tappa 2, ma se vuoi arrivarci preparata parti da qui"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Mindset: Pattern Recognition (19')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063323/lessons/4046601"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Mindset: Feedback Loop (20')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063323/lessons/4046621"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Mindset: il RAS, il filtro del cervello (25')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063323/lessons/4046638"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Il mercato digitale e gli algoritmi social (21')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063324/lessons/4046609"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Strategia di viralità (38')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063325/lessons/4046654"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Da traffico controllato a posseduto (24')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063325/lessons/4046662"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Obiettivi SMART (22')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063327/lessons/4046642"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Competitor e analisi strategica (23')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063327/lessons/4046655"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "La tua dichiarazione strategica (21')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063327/lessons/4046663"
+        }
+       ],
+       "feedback": false
       },
       {
        "key": "r1_call_gemma",
@@ -2414,11 +2763,17 @@
        ],
        "feedback": true,
        "gate": [
+        "r1_lez_le_10_paure_sui_social",
+        "r1_lez_costruisci_il_tuo_carisma",
+        "r1_es_paure",
+        "r1_es_modelli",
+        "r1_es_audit",
+        "r1_es_brand",
         "r1_lez_strategia_di_acquisizione",
         "r1_lez_profili_professionali_vs_inf",
+        "r1_es_profilo_tipo",
         "r1_lez_personal_brand",
-        "r1_es_canali",
-        "r1_es_audit",
+        "r1_es_percezioni",
         "r1_listino"
        ]
       },
@@ -2502,11 +2857,11 @@
       },
       {
        "key": "r1_profilo",
-       "name": "Sistema bio e profilo",
+       "name": "Sistema bio, foto profilo e nome utente",
        "type": "Attività",
        "callout": {
         "icon": "📝",
-        "body": "<strong>Settimana 3</strong><br>Segui le indicazioni di Ottimizzazione profili nella tua strategia"
+        "body": "<strong>Settimana 3 · per ora solo bio, foto profilo e nome utente</strong><br>Segui le indicazioni di Ottimizzazione profili nella tua strategia · storie in evidenza e post fissati li sistemiamo insieme strada facendo"
        },
        "actions": [
         {
@@ -2516,17 +2871,6 @@
          "url": "{{ottimizzazione_profili}}"
         }
        ],
-       "feedback": true
-      },
-      {
-       "key": "r1_cartelle",
-       "name": "Riordina le tue cartelle",
-       "type": "Attività",
-       "callout": {
-        "icon": "🗂️",
-        "body": "<strong>Col metodo che ti ha mostrato Gemma</strong><br>Così ritrovi in un attimo foto, video e materiali"
-       },
-       "actions": [],
        "feedback": true
       },
       {
@@ -2876,7 +3220,7 @@
        "type": "Attività",
        "callout": {
         "icon": "👥",
-        "body": "<strong>Dopo la lezione sul target</strong><br>Compila la scheda: chi è, cosa la tiene sveglia, cosa desidera, come parla · da qui nascono le tue idee di contenuto"
+        "body": "<strong>Dopo la lezione sul target</strong><br>Compila la scheda: chi è, cosa la tiene sveglia, cosa desidera, come parla · da qui nascono le tue idee di contenuto<br><br>È la scheda «Studia il tuo target» del tuo portale, in Risorse ed esercizi"
        },
        "actions": [
         {
@@ -3632,7 +3976,7 @@
       {
        "style": "info",
        "icon": "ℹ️",
-       "body": "<strong>Obiettivo</strong>: capisci come funzionano le piattaforme, mentre noi costruiamo la tua strategia, il tuo primo piano<br><br>Settimana 1 lezioni, esercizi e prima call con Gemma · settimana 2 leggi e approvi strategia e piano · settimana 3 profilo e contenuti obbligatori · settimana 4 pubblichi"
+       "body": "<strong>Obiettivo</strong>: sblocchi la testa e capisci come funzionano le piattaforme, mentre noi costruiamo la tua strategia, il tuo primo piano<br><br>Settimana 1 mindset, lezioni, esercizi e prima call con Gemma · settimana 2 leggi e approvi strategia e piano · settimana 3 profilo e contenuti obbligatori · settimana 4 pubblichi<br><br>Le attività vanno fatte in ordine, dall'alto verso il basso: ognuna prepara la successiva · finché non ricevi il tuo piano editoriale non mandarci contenuti da correggere: studia le lezioni e fai gli esercizi, così quando arriva il piano sei pronta"
       }
      ],
      "resources": [
@@ -3650,6 +3994,116 @@
          "ico": "ext",
          "label": "Apri il portale",
          "url": "{{portale}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_lez_le_10_paure_sui_social",
+       "name": "Lezione · Le 10 paure sui social (53')",
+       "type": "Video",
+       "minuti": 53,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063323/lessons/4046650"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_lez_costruisci_il_tuo_carisma",
+       "name": "Lezione · Costruisci il tuo carisma (31')",
+       "type": "Video",
+       "minuti": 31,
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Guarda la lezione e poi spunta Fatto</strong>"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Vai alla lezione",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063323/lessons/4046660"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_es_paure",
+       "name": "Esercizio 1 · Le tue paure e il tuo impegno",
+       "type": "Attività",
+       "callout": {
+        "icon": "🧊",
+        "body": "<strong>Le 3 paure che ti bloccano, quanto ti è costato non pubblicare e il tuo standard minimo per i prossimi 30 giorni</strong><br>Dopo le due lezioni di mindset · 30 minuti<br><br>La scheda «Esercizio 1» è nel tuo portale, in Risorse ed esercizi: scrivi lì"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Risorse ed esercizi",
+         "url": "{{esercizi}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_es_modelli",
+       "name": "Esercizio 2 · I tuoi 5 modelli di riferimento",
+       "type": "Attività",
+       "callout": {
+        "icon": "🔍",
+        "body": "<strong>Studia 5 profili che ti colpiscono: tono, formati, autenticità e come trasmettono carisma</strong><br>Copi la struttura, mai la personalità · 40 minuti<br><br>La scheda «Esercizio 2» è nel tuo portale, in Risorse ed esercizi: scrivi lì"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Risorse ed esercizi",
+         "url": "{{esercizi}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_es_audit",
+       "name": "Esercizio 3 · I tuoi ultimi 9 contenuti",
+       "type": "Attività",
+       "callout": {
+        "icon": "🔎",
+        "body": "<strong>Per ognuno: acquisizione o viralità, CTA, messaggi e richieste</strong><br>Ripensa alla lezione sull'acquisizione della settimana di attivazione · 30 minuti<br><br>La scheda «Esercizio 3» è nel tuo portale, in Risorse ed esercizi: scrivi lì"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Risorse ed esercizi",
+         "url": "{{esercizi}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r1_es_brand",
+       "name": "Esercizio 4 · Il centro del tuo brand",
+       "type": "Attività",
+       "callout": {
+        "icon": "🧭",
+        "body": "<strong>Ikigai, il tuo perché, la frase che ti presenta, archetipo e valori</strong><br>Ripensa alla lezione sul posizionamento della settimana di attivazione · è il foglio più importante prima della call con Gemma · 45 minuti<br><br>La scheda «Esercizio 4» è nel tuo portale, in Risorse ed esercizi: scrivi lì"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Risorse ed esercizi",
+         "url": "{{esercizi}}"
         }
        ],
        "feedback": true
@@ -3693,6 +4147,24 @@
        "feedback": true
       },
       {
+       "key": "r1_es_profilo_tipo",
+       "name": "Esercizio 5 · Che profilo vuoi essere",
+       "type": "Attività",
+       "callout": {
+        "icon": "🪞",
+        "body": "<strong>Obiettivo, persona da raggiungere e CTA: decidi che profilo vuoi essere</strong><br>Dopo la lezione sui profili professionali · 15 minuti<br><br>La scheda «Esercizio 5» è nel tuo portale, in Risorse ed esercizi: scrivi lì"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Risorse ed esercizi",
+         "url": "{{esercizi}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
        "key": "r1_lez_personal_brand",
        "name": "Lezione · Personal brand (61')",
        "type": "Video",
@@ -3712,40 +4184,89 @@
        "feedback": true
       },
       {
-       "key": "r1_es_canali",
-       "name": "Esercizio · la mappa dei tuoi 3 canali",
+       "key": "r1_es_percezioni",
+       "name": "Esercizio 6 · Come vuoi essere percepita",
        "type": "Attività",
        "callout": {
-        "icon": "📝",
-        "body": "<strong>Dove ti trovano oggi i clienti, e dove li vuoi tra 6 mesi</strong><br>Ricerca, social, AI · scrivilo nella pagina Esercizi del portale"
+        "icon": "👀",
+        "body": "<strong>3 aggettivi sì, 3 aggettivi no e i tuoi 3 pilastri</strong><br>Dopo la lezione sul personal brand · 20 minuti<br><br>La scheda «Esercizio 6» è nel tuo portale, in Risorse ed esercizi: scrivi lì"
        },
        "actions": [
         {
          "cls": "navy",
          "ico": "ext",
-         "label": "Apri Esercizi",
+         "label": "Apri Risorse ed esercizi",
          "url": "{{esercizi}}"
         }
        ],
        "feedback": true
       },
       {
-       "key": "r1_es_audit",
-       "name": "Esercizio · l'audit degli ultimi 9 post",
-       "type": "Attività",
+       "key": "r1_facoltative",
+       "name": "Lezioni consigliate, se vuoi approfondire",
+       "type": "Risorsa",
+       "facoltativa": true,
        "callout": {
-        "icon": "📝",
-        "body": "<strong>Per ognuno: acquisizione o viralità?</strong><br>Scrivilo nella pagina Esercizi del portale"
+        "icon": "📚",
+        "body": "<strong>Non sono obbligatorie</strong><br>Altro mindset e un anticipo di strategia: la strategia la facciamo insieme nella tappa 2, ma se vuoi arrivarci preparata parti da qui"
        },
        "actions": [
         {
          "cls": "navy",
-         "ico": "ext",
-         "label": "Apri Esercizi",
-         "url": "{{esercizi}}"
+         "ico": "play",
+         "label": "Mindset: Pattern Recognition (19')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063323/lessons/4046601"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Mindset: Feedback Loop (20')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063323/lessons/4046621"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Mindset: il RAS, il filtro del cervello (25')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063323/lessons/4046638"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Il mercato digitale e gli algoritmi social (21')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063324/lessons/4046609"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Strategia di viralità (38')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063325/lessons/4046654"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Da traffico controllato a posseduto (24')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063325/lessons/4046662"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Obiettivi SMART (22')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063327/lessons/4046642"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Competitor e analisi strategica (23')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063327/lessons/4046655"
+        },
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "La tua dichiarazione strategica (21')",
+         "url": "https://club.unlikeacademy.it/c/all-access-c12465/sections/1063327/lessons/4046663"
         }
        ],
-       "feedback": true
+       "feedback": false
       },
       {
        "key": "r1_call_gemma",
@@ -3767,11 +4288,17 @@
        ],
        "feedback": true,
        "gate": [
+        "r1_lez_le_10_paure_sui_social",
+        "r1_lez_costruisci_il_tuo_carisma",
+        "r1_es_paure",
+        "r1_es_modelli",
+        "r1_es_audit",
+        "r1_es_brand",
         "r1_lez_strategia_di_acquisizione",
         "r1_lez_profili_professionali_vs_inf",
+        "r1_es_profilo_tipo",
         "r1_lez_personal_brand",
-        "r1_es_canali",
-        "r1_es_audit"
+        "r1_es_percezioni"
        ]
       },
       {
@@ -3854,11 +4381,11 @@
       },
       {
        "key": "r1_profilo",
-       "name": "Sistema bio e profilo",
+       "name": "Sistema bio, foto profilo e nome utente",
        "type": "Attività",
        "callout": {
         "icon": "📝",
-        "body": "<strong>Settimana 3</strong><br>Segui le indicazioni di Ottimizzazione profili nella tua strategia"
+        "body": "<strong>Settimana 3 · per ora solo bio, foto profilo e nome utente</strong><br>Segui le indicazioni di Ottimizzazione profili nella tua strategia · storie in evidenza e post fissati li sistemiamo insieme strada facendo"
        },
        "actions": [
         {
@@ -3868,17 +4395,6 @@
          "url": "{{ottimizzazione_profili}}"
         }
        ],
-       "feedback": true
-      },
-      {
-       "key": "r1_cartelle",
-       "name": "Riordina le tue cartelle",
-       "type": "Attività",
-       "callout": {
-        "icon": "🗂️",
-        "body": "<strong>Col metodo che ti ha mostrato Gemma</strong><br>Così ritrovi in un attimo foto, video e materiali"
-       },
-       "actions": [],
        "feedback": true
       },
       {
@@ -4235,7 +4751,7 @@
        "type": "Attività",
        "callout": {
         "icon": "👥",
-        "body": "<strong>Dopo la lezione sul target</strong><br>Compila la scheda: chi è, cosa la tiene sveglia, cosa desidera, come parla · da qui nascono le tue idee di contenuto"
+        "body": "<strong>Dopo la lezione sul target</strong><br>Compila la scheda: chi è, cosa la tiene sveglia, cosa desidera, come parla · da qui nascono le tue idee di contenuto<br><br>È la scheda «Studia il tuo target» del tuo portale, in Risorse ed esercizi"
        },
        "actions": [
         {
@@ -4253,13 +4769,13 @@
        "type": "Attività",
        "callout": {
         "icon": "🧩",
-        "body": "<strong>Provalo a costruire</strong>: un'idea che torna ogni settimana, sempre riconoscibile · scrivilo nella pagina Esercizi"
+        "body": "<strong>Provalo a costruire</strong>: un'idea che torna ogni settimana, sempre riconoscibile · scrivilo nella scheda «Il tuo format» del tuo portale, in Risorse ed esercizi"
        },
        "actions": [
         {
          "cls": "navy",
          "ico": "ext",
-         "label": "Apri Esercizi",
+         "label": "Apri Risorse ed esercizi",
          "url": "{{esercizi}}"
         }
        ],
@@ -4816,8 +5332,8 @@
   "ottimizzazione_profili": "database Profili ottimizzati dentro STRATEGIA COMPLETA",
   "piano_editoriale": "database Piano Editoriale della cliente",
   "da_revisionare": "pagina DA REVISIONARE del menù (il piano editoriale filtrato su Revisione team)",
-  "esercizi": "pagina ESERCIZI, dentro RISORSE ED ESERCIZI",
-  "target": "pagina Studia il tuo target, dentro ESERCIZI",
+  "esercizi": "pagina RISORSE ED ESERCIZI del menù (dal 15/10 una scheda per esercizio)",
+  "target": "scheda STUDIA IL TUO TARGET, in RISORSE ED ESERCIZI",
   "stories_telling": "pagina STORIES-TELLING, dentro RISORSE ED ESERCIZI",
   "visual_identity": "pagina VISUAL IDENTITY del menù (solo Professionista)",
   "offerta_funnel": "pagina OFFERTA E FUNNEL del menù (solo Professionista)",
