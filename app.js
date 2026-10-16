@@ -168,6 +168,10 @@
         if (k.indexOf("mickel") >= 0) p.modules.forEach(function (m) {
           (m.callouts || []).forEach(function (c) { c.body = String(c.body || "").replace(/Settimana 1 call di editing con Mickel( · )?/g, ""); });
         });
+      } else if (x.azione === "Già fatta") {
+        // 16/10: una voce che la cliente ha già fatto prima di entrare (per esempio la prima call con Gemma) arriva già spuntata
+        var kf = chiaveNome(x.nome);
+        dove.forEach(function (m) { m.resources.forEach(function (r) { if (chiaveNome(r.name) === kf) (p._giaFatte = p._giaFatte || []).push(r.key); }); });
       } else if (x.azione === "Aggiungi" && x.tappa && dove.length) {
         var tipo = TIPO_MOD[x.tipo] || "Attività";
         var r = {
@@ -187,6 +191,7 @@
     S.percorso = JSON.parse(JSON.stringify(base));
     applyModifiche(S.percorso, S.client.modifiche);
     S.progress = normalizeProgress(S.progress);
+    (S.percorso._giaFatte || []).forEach(function (k) { if (!S.progress.done[k]) S.progress.done[k] = "già fatta"; });
     S.resIndex = {};
     S.percorso.modules.forEach(function (m) {
       m.resources.forEach(function (r) { S.resIndex[r.key] = { r: r, m: m }; });
