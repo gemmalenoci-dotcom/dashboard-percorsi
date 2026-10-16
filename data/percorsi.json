@@ -80,6 +80,42 @@
        "feedback": true
       },
       {
+       "key": "r0_guida_portale",
+       "name": "Guarda la guida al tuo portale Notion",
+       "type": "Attività",
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Prima di iniziare a usare il portale</strong><br>Ti mostro dove sta tutto: strategia, piano editoriale, esercizi e revisioni"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Guarda il video",
+         "url": "https://www.loom.com/share/c11e1584bc0c401c9ab6adde28513597"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r0_guida_revisioni",
+       "name": "Guarda come caricare e condividere i contenuti da rivedere",
+       "type": "Attività",
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Video su Drive e caroselli su Canva</strong><br>Come si carica un contenuto, come si condivide il link e come si compila la scheda in Da revisionare: se il link è privato non riusciamo ad aprirlo"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Guarda il video",
+         "url": "https://www.loom.com/share/36d7f849f6394353937e93b828f99807"
+        }
+       ],
+       "feedback": true
+      },
+      {
        "key": "r0_questionario",
        "name": "Compila il questionario iniziale",
        "type": "Attività",
@@ -2291,6 +2327,42 @@
        "feedback": true
       },
       {
+       "key": "r0_guida_portale",
+       "name": "Guarda la guida al tuo portale Notion",
+       "type": "Attività",
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Prima di iniziare a usare il portale</strong><br>Ti mostro dove sta tutto: strategia, piano editoriale, esercizi e revisioni"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Guarda il video",
+         "url": "https://www.loom.com/share/c11e1584bc0c401c9ab6adde28513597"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r0_guida_revisioni",
+       "name": "Guarda come caricare e condividere i contenuti da rivedere",
+       "type": "Attività",
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Video su Drive e caroselli su Canva</strong><br>Come si carica un contenuto, come si condivide il link e come si compila la scheda in Da revisionare: se il link è privato non riusciamo ad aprirlo"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Guarda il video",
+         "url": "https://www.loom.com/share/36d7f849f6394353937e93b828f99807"
+        }
+       ],
+       "feedback": true
+      },
+      {
        "key": "r0_questionario",
        "name": "Compila il questionario iniziale",
        "type": "Attività",
@@ -3829,6 +3901,42 @@
          "ico": "ext",
          "label": "Apri le regole complete",
          "url": "{{regole}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r0_guida_portale",
+       "name": "Guarda la guida al tuo portale Notion",
+       "type": "Attività",
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Prima di iniziare a usare il portale</strong><br>Ti mostro dove sta tutto: strategia, piano editoriale, esercizi e revisioni"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Guarda il video",
+         "url": "https://www.loom.com/share/c11e1584bc0c401c9ab6adde28513597"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r0_guida_revisioni",
+       "name": "Guarda come caricare e condividere i contenuti da rivedere",
+       "type": "Attività",
+       "callout": {
+        "icon": "▶️",
+        "body": "<strong>Video su Drive e caroselli su Canva</strong><br>Come si carica un contenuto, come si condivide il link e come si compila la scheda in Da revisionare: se il link è privato non riusciamo ad aprirlo"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Guarda il video",
+         "url": "https://www.loom.com/share/36d7f849f6394353937e93b828f99807"
         }
        ],
        "feedback": true
