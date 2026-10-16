@@ -304,7 +304,16 @@
   }
 
   // I link tra doppie graffe arrivano dalla cliente o da link_fissi · se mancano il bottone resta "in arrivo"
+  // 16/10: il portale Notion (e ogni sua pagina) si apre con la tappa 1: nella settimana di attivazione i bottoni restano «in arrivo»
+  var PORTALE_KEYS = { portale: 1, regole: 1, strategia: 1, ottimizzazione_profili: 1, piano_editoriale: 1, da_revisionare: 1, esercizi: 1, target: 1, stories_telling: 1, visual_identity: 1, offerta_funnel: 1, kit: 1, fine_percorso: 1 };
+  function portaleAperto() {
+    if (DEMO) return !/[?&]portale=chiuso/.test(location.search); // nella prova, ?portale=chiuso fa vedere la settimana di attivazione
+    if (!S.sched) return true;
+    var s1 = S.sched.step1;
+    return !s1 || !!s1.prima || !s1.opens || S.today >= s1.opens;
+  }
   function linkValue(k) {
+    if (PORTALE_KEYS[k] && !portaleAperto()) return null;
     var v = (S.client.link || {})[k];
     if (v == null || v === "") v = (S.data.link_fissi || {})[k];
     if (!v || /^DA DARE/i.test(v) || v.charAt(0) === "<") return null;
