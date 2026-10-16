@@ -276,10 +276,10 @@ em { font-style: italic; }
 .res-list.is-locked .res { background: rgba(250, 249, 246, .6); border: 2px dashed #D6D0C7; box-shadow: none; }
 .res-list.is-locked .res.is-open { border-color: var(--gray-lt); }
 .res-list.is-locked .res-name { color: var(--gray); }
-.res-list.is-locked .t-meeting .res-type { background: var(--gray); }
+.res-list.is-locked .t-meeting .res-type { background: var(--gray); color: #fff; }
 .res-list.is-locked .t-video .res-type { color: var(--gray); }
 .res-list.is-locked .res.is-open .chev { color: var(--gray); }
-.res-row { display: flex; align-items: center; gap: 4px; padding: 6px 8px 6px 6px; }
+.res-row { display: flex; align-items: center; gap: 4px; padding: 6px 8px 6px 12px; }
 .chk {
   flex: 0 0 auto; width: 48px; height: 48px; display: grid; place-items: center;
   border: 0; background: transparent; cursor: pointer; border-radius: 12px; padding: 0;
@@ -301,15 +301,25 @@ em { font-style: italic; }
   border: 0; background: transparent; text-align: left; cursor: pointer; padding: 9px 6px; min-height: 48px;
 }
 .res-texts { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 3px; }
-.res-type { font-size: 10.5px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--gray); line-height: 1.3; }
+.res-type { display: inline-block; font-size: 10.5px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--tc, var(--gray)); background: var(--tc-bg, transparent); border-radius: 999px; padding: 3px 9px 2px; line-height: 1.3; }
 .res-name { font-weight: 700; font-size: 15.5px; line-height: 1.28; letter-spacing: -.015em; color: var(--ink); }
 .is-done .res-name { color: var(--gray); text-decoration: line-through; text-decoration-color: rgba(205, 36, 113, .55); text-decoration-thickness: 2px; }
 .res-meta { font-size: 13px; font-weight: 600; color: var(--gray); }
 .res-meta .opt { color: var(--blu); font-weight: 800; }
 .res .chev { transition: transform .25s var(--ease), color .2s; padding-right: 4px; }
 .res.is-open .chev { transform: rotate(90deg); color: var(--blu); }
-.t-meeting .res-type { display: inline-block; background: var(--fucsia); color: #fff; border-radius: 3px; padding: 4px 7px 3px; rotate: -2deg; margin: 1px 0 3px; box-shadow: 2px 2px 0 rgba(59, 54, 56, .14); }
-.t-video .res-type { color: var(--blu); }
+/* 16/10: ogni tipo ha il suo colore, così lezione, attività, risorsa e call si distinguono a colpo d'occhio */
+.res { position: relative; --tc: var(--gray); --tc-bg: var(--off); }
+.res::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--tc); transition: opacity .2s; }
+.t-video { --tc: var(--blu); --tc-bg: var(--azzurro); }
+.t-attivita { --tc: var(--fucsia); --tc-bg: var(--pink-bg); }
+.t-risorsa { --tc: #5B38C4; --tc-bg: #EFEBFA; }
+.t-meeting { --tc: var(--ink); --tc-bg: var(--ink); }
+.t-meeting .res-type { color: #fff; border-radius: 4px; padding: 4px 8px 3px; rotate: -2deg; margin: 1px 0 3px; box-shadow: 2px 2px 0 rgba(59, 54, 56, .14); }
+.is-done.res::before { opacity: .35; }
+.is-done .res-type { opacity: .6; }
+.res-list.is-locked .res::before { background: var(--gray-lt); }
+.res-list.is-locked .res-type { background: var(--off); color: var(--gray); }
 .is-done.t-meeting .res-type { background: var(--gray-lt); }
 
 .res-body { padding: 2px 18px 18px 60px; font-size: 15px; color: var(--body); }
