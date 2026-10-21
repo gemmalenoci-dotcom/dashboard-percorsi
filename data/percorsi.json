@@ -103,7 +103,7 @@
        "type": "Attività",
        "callout": {
         "icon": "🎨",
-        "body": "<strong>Entro la fine di questa settimana</strong><br>Emilia parte da qui per la tua visual identity: palette, font e template Canva, che ti consegna entro la settimana 3 della tappa 1 · più sei precisa, con esempi e cose che non ti piacciono, più ci capiamo al primo colpo<br>Il logo non è compreso in questo percorso: se lo vuoi, puoi richiederlo a parte"
+        "body": "<strong>Entro la fine di questa settimana</strong><br>Emilia parte da qui per la tua visual identity: palette, font e template Canva, che ti consegna entro la settimana 3 della tappa 1 · inserisci almeno 3 reference o contenuti che ti piacciono, più sei precisa, con esempi e cose che non ti piacciono, più ci capiamo al primo colpo<br>Il logo non è compreso in questo percorso: se lo vuoi, puoi richiederlo a parte"
        },
        "actions": [
         {
@@ -5396,6 +5396,7 @@
   "target": "scheda STUDIA IL TUO TARGET, in RISORSE ED ESERCIZI",
   "stories_telling": "pagina STORIES-TELLING, dentro RISORSE ED ESERCIZI",
   "visual_identity": "pagina VISUAL IDENTITY del menù (solo Professionista)",
+ "questionario_visual": "scheda Questionario visual dentro la pagina VISUAL IDENTITY (solo Professionista, fatta da Emilia nel template) · se non si trova resta il link fisso di link_fissi",
   "offerta_funnel": "pagina OFFERTA E FUNNEL del menù (solo Professionista)",
   "kit": "pagina KIT SMM (SMM) o MEDIA KIT O OFFERTA (Personal brand) del menù",
   "fine_percorso": "pagina FINE PERCORSO del menù (dentro anche il prima e dopo con gli screenshot salvati da Elena)",
