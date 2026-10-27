@@ -206,6 +206,9 @@
     var gia = c.tappe_gia_fatte || [];
     var start = parseDate(c.data_inizio) || S.today;
     var y = start.getFullYear(), mo = start.getMonth(), i = 0, first = null, last = null;
+    // partenza anticipata (26/10): se l'inizio cade nei 7 giorni prima del primo lunedì del mese dopo, i mesi si contano da quel mese, così la tappa 1 non dura una settimana
+    var prossimo = firstMonday(y, mo + 1);
+    if (prossimo > start && prossimo - start <= 7 * 864e5) mo += 1;
     mods.forEach(function (m) {
       if (!m.mese) return;
       if (gia.indexOf(m.id) >= 0) { sch[m.id] = { prima: true }; return; }
