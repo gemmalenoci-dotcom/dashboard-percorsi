@@ -687,7 +687,7 @@
        "type": "Attività",
        "callout": {
         "icon": "📝",
-        "body": "<strong>Settimana 3 · per ora solo bio, foto profilo e nome utente</strong><br>Segui le indicazioni di Ottimizzazione profili nella tua strategia · storie in evidenza e post fissati li sistemiamo insieme strada facendo"
+        "body": "<strong>Settimana 3 · per ora solo bio, foto profilo e nome utente</strong><br>Segui le indicazioni di Ottimizzazione profili nella tua strategia · i post fissati li sistemi nella tappa 2 e le storie in evidenza nella tappa 3"
        },
        "actions": [
         {
@@ -787,7 +787,7 @@
       {
        "style": "info",
        "icon": "ℹ️",
-       "body": "<strong>Obiettivo</strong>: impari a fare i contenuti, e noi li correggiamo prima che escano<br><br>Settimana 1 call di editing con Mickel · per tutto il mese almeno 4 contenuti a settimana in Da revisionare · settimana 4 il piano del mese 3, la prima volta a mano"
+       "body": "<strong>Obiettivo</strong>: impari a fare i contenuti, e noi li correggiamo prima che escano<br><br>Settimana 1 call di editing con Mickel · per tutto il mese almeno 4 contenuti a settimana in Da revisionare · sistemi i post fissati · settimana 4 il piano del mese 3, la prima volta a mano"
       }
      ],
      "resources": [
@@ -1097,6 +1097,24 @@
          "ico": "ext",
          "label": "Apri Da revisionare",
          "url": "{{da_revisionare}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_fissati",
+       "name": "Sistema i post fissati",
+       "type": "Attività",
+       "callout": {
+        "icon": "📌",
+        "body": "<strong>Sono la prima cosa che si vede nella griglia del tuo profilo</strong><br>Scegli tre contenuti tra i primi che pubblichi e fissali: uno che ti presenta, uno che fa da prova, uno che spiega cosa fai · gli esempi per il tuo profilo sono nella sezione Post in evidenza di Ottimizzazione profili, nella tua strategia"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Ottimizzazione profili",
+         "url": "{{ottimizzazione_profili}}"
         }
        ],
        "feedback": true
@@ -1415,6 +1433,24 @@
          "ico": "ext",
          "label": "Apri la guida",
          "url": "{{stories_telling}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r3_evidenza",
+       "name": "Sistema le storie in evidenza",
+       "type": "Attività",
+       "callout": {
+        "icon": "⭐",
+        "body": "<strong>La vetrina permanente del tuo profilo</strong><br>Dopo la lezione sulle storie in evidenza, crea quelle indicate nella sezione Storie in evidenza di Ottimizzazione profili, nella tua strategia, con le copertine tutte nello stesso stile · se vuoi una revisione, carica lo screenshot in Da revisionare"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Ottimizzazione profili",
+         "url": "{{ottimizzazione_profili}}"
         }
        ],
        "feedback": true
@@ -2100,24 +2136,6 @@
        "feedback": true
       },
       {
-       "key": "r5_prima_dopo",
-       "name": "Prima e dopo",
-       "type": "Attività",
-       "callout": {
-        "icon": "📸",
-        "body": "<strong>Elena ha salvato gli screenshot dei tuoi profili all'inizio e alla fine</strong><br>Guardali in Fine percorso e segnati cosa è cambiato"
-       },
-       "actions": [
-        {
-         "cls": "navy",
-         "ico": "ext",
-         "label": "Apri Fine percorso",
-         "url": "{{fine_percorso}}"
-        }
-       ],
-       "feedback": true
-      },
-      {
        "key": "r5_piano_3_mesi",
        "name": "Il tuo piano dei prossimi 3 mesi",
        "type": "Attività",
@@ -2155,7 +2173,7 @@
        ],
        "feedback": true,
        "gate": [
-        "r5_prima_dopo"
+        "r5_piano_3_mesi"
        ]
       }
      ]
@@ -2901,7 +2919,7 @@
        "type": "Attività",
        "callout": {
         "icon": "📝",
-        "body": "<strong>Settimana 3 · per ora solo bio, foto profilo e nome utente</strong><br>Segui le indicazioni di Ottimizzazione profili nella tua strategia · storie in evidenza e post fissati li sistemiamo insieme strada facendo"
+        "body": "<strong>Settimana 3 · per ora solo bio, foto profilo e nome utente</strong><br>Segui le indicazioni di Ottimizzazione profili nella tua strategia · i post fissati li sistemi nella tappa 2 e le storie in evidenza nella tappa 3"
        },
        "actions": [
         {
@@ -2959,7 +2977,7 @@
       {
        "style": "info",
        "icon": "ℹ️",
-       "body": "<strong>Obiettivo</strong>: impari a fare i contenuti, e noi li correggiamo prima che escano<br><br>Settimana 1 call di avvio con Sofia · la strategia di un tuo cliente con Stratego · almeno 4 contenuti a settimana in Da revisionare · settimana 4 il piano del mese 3, la prima volta a mano"
+       "body": "<strong>Obiettivo</strong>: impari a fare i contenuti, e noi li correggiamo prima che escano<br><br>Settimana 1 call di avvio con Sofia · la strategia di un tuo cliente con Stratego · almeno 4 contenuti a settimana in Da revisionare · sistemi i post fissati · settimana 4 il piano del mese 3, la prima volta a mano"
       }
      ],
      "resources": [
@@ -3291,6 +3309,24 @@
        "feedback": true
       },
       {
+       "key": "r2_fissati",
+       "name": "Sistema i post fissati",
+       "type": "Attività",
+       "callout": {
+        "icon": "📌",
+        "body": "<strong>Sono la prima cosa che si vede nella griglia del tuo profilo</strong><br>Scegli tre contenuti tra i primi che pubblichi e fissali: uno che ti presenta, uno che fa da prova, uno che spiega cosa fai · gli esempi per il tuo profilo sono nella sezione Post in evidenza di Ottimizzazione profili, nella tua strategia"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Ottimizzazione profili",
+         "url": "{{ottimizzazione_profili}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
        "key": "r2_girare",
        "name": "Gira e monta da sola",
        "type": "Attività",
@@ -3610,6 +3646,24 @@
        "feedback": true
       },
       {
+       "key": "r3_evidenza",
+       "name": "Sistema le storie in evidenza",
+       "type": "Attività",
+       "callout": {
+        "icon": "⭐",
+        "body": "<strong>La vetrina permanente del tuo profilo</strong><br>Dopo la lezione sulle storie in evidenza, crea quelle indicate nella sezione Storie in evidenza di Ottimizzazione profili, nella tua strategia, con le copertine tutte nello stesso stile · se vuoi una revisione, carica lo screenshot in Da revisionare"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Ottimizzazione profili",
+         "url": "{{ottimizzazione_profili}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
        "key": "r3_piano",
        "name": "Pubblica il primo piano fatto da te",
        "type": "Attività",
@@ -3663,24 +3717,6 @@
        "feedback": true
       },
       {
-       "key": "r3_prima_dopo",
-       "name": "Prima e dopo",
-       "type": "Attività",
-       "callout": {
-        "icon": "📸",
-        "body": "<strong>Elena ha salvato gli screenshot dei tuoi profili all'inizio e alla fine</strong><br>Guardali in Fine percorso e segnati cosa è cambiato"
-       },
-       "actions": [
-        {
-         "cls": "navy",
-         "ico": "ext",
-         "label": "Apri Fine percorso",
-         "url": "{{fine_percorso}}"
-        }
-       ],
-       "feedback": true
-      },
-      {
        "key": "r3_piano_3_mesi",
        "name": "Il tuo piano dei prossimi 3 mesi",
        "type": "Attività",
@@ -3718,7 +3754,7 @@
        ],
        "feedback": true,
        "gate": [
-        "r3_prima_dopo"
+        "r3_piano_3_mesi"
        ]
       }
      ]
@@ -4445,7 +4481,7 @@
        "type": "Attività",
        "callout": {
         "icon": "📝",
-        "body": "<strong>Settimana 3 · per ora solo bio, foto profilo e nome utente</strong><br>Segui le indicazioni di Ottimizzazione profili nella tua strategia · storie in evidenza e post fissati li sistemiamo insieme strada facendo"
+        "body": "<strong>Settimana 3 · per ora solo bio, foto profilo e nome utente</strong><br>Segui le indicazioni di Ottimizzazione profili nella tua strategia · i post fissati li sistemi nella tappa 2 e le storie in evidenza nella tappa 3"
        },
        "actions": [
         {
@@ -4527,7 +4563,7 @@
       {
        "style": "info",
        "icon": "ℹ️",
-       "body": "<strong>Obiettivo</strong>: impari a fare i contenuti, e noi li correggiamo prima che escano<br><br>Settimana 1 call di editing con Mickel · il tuo format · almeno 4 contenuti a settimana in Da revisionare · settimana 4 il piano del mese 3, la prima volta a mano"
+       "body": "<strong>Obiettivo</strong>: impari a fare i contenuti, e noi li correggiamo prima che escano<br><br>Settimana 1 call di editing con Mickel · il tuo format · almeno 4 contenuti a settimana in Da revisionare · sistemi i post fissati · settimana 4 il piano del mese 3, la prima volta a mano"
       }
      ],
      "resources": [
@@ -4829,9 +4865,15 @@
        "type": "Attività",
        "callout": {
         "icon": "🧩",
-        "body": "<strong>Provalo a costruire</strong>: un'idea che torna ogni settimana, sempre riconoscibile · scrivilo nella scheda «Il tuo format» del tuo portale, in Risorse ed esercizi"
+        "body": "<strong>Provalo a costruire</strong>: un'idea che torna ogni settimana, sempre riconoscibile · scrivilo nella scheda «Il tuo format» del tuo portale, in Risorse ed esercizi<br><br><strong>Consigliata prima di iniziare</strong>: la live «Costruisci il tuo format», con i 4 pilastri di un format riconoscibile e il metodo in 8 step · circa 1h30, replay nel Club"
        },
        "actions": [
+        {
+         "cls": "navy",
+         "ico": "play",
+         "label": "Guarda la live consigliata",
+         "url": "https://club.unlikeacademy.it/c/dirette/costruisci-il-tuo-format-live-con-veronica-1c6ff9"
+        },
         {
          "cls": "navy",
          "ico": "ext",
@@ -4855,6 +4897,24 @@
          "ico": "ext",
          "label": "Apri Da revisionare",
          "url": "{{da_revisionare}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
+       "key": "r2_fissati",
+       "name": "Sistema i post fissati",
+       "type": "Attività",
+       "callout": {
+        "icon": "📌",
+        "body": "<strong>Sono la prima cosa che si vede nella griglia del tuo profilo</strong><br>Scegli tre contenuti tra i primi che pubblichi e fissali: uno che ti presenta, uno che fa da prova, uno che spiega cosa fai · gli esempi per il tuo profilo sono nella sezione Post in evidenza di Ottimizzazione profili, nella tua strategia"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Ottimizzazione profili",
+         "url": "{{ottimizzazione_profili}}"
         }
        ],
        "feedback": true
@@ -5176,6 +5236,24 @@
        "feedback": true
       },
       {
+       "key": "r3_evidenza",
+       "name": "Sistema le storie in evidenza",
+       "type": "Attività",
+       "callout": {
+        "icon": "⭐",
+        "body": "<strong>La vetrina permanente del tuo profilo</strong><br>Dopo la lezione sulle storie in evidenza, crea quelle indicate nella sezione Storie in evidenza di Ottimizzazione profili, nella tua strategia, con le copertine tutte nello stesso stile · se vuoi una revisione, carica lo screenshot in Da revisionare"
+       },
+       "actions": [
+        {
+         "cls": "navy",
+         "ico": "ext",
+         "label": "Apri Ottimizzazione profili",
+         "url": "{{ottimizzazione_profili}}"
+        }
+       ],
+       "feedback": true
+      },
+      {
        "key": "r3_piano",
        "name": "Pubblica il primo piano fatto da te",
        "type": "Attività",
@@ -5250,24 +5328,6 @@
        ]
       },
       {
-       "key": "r3_prima_dopo",
-       "name": "Prima e dopo",
-       "type": "Attività",
-       "callout": {
-        "icon": "📸",
-        "body": "<strong>Elena ha salvato gli screenshot dei tuoi profili all'inizio e alla fine</strong><br>Guardali in Fine percorso e segnati cosa è cambiato"
-       },
-       "actions": [
-        {
-         "cls": "navy",
-         "ico": "ext",
-         "label": "Apri Fine percorso",
-         "url": "{{fine_percorso}}"
-        }
-       ],
-       "feedback": true
-      },
-      {
        "key": "r3_piano_3_mesi",
        "name": "Il tuo piano dei prossimi 3 mesi",
        "type": "Attività",
@@ -5305,7 +5365,7 @@
        ],
        "feedback": true,
        "gate": [
-        "r3_prima_dopo"
+        "r3_piano_3_mesi"
        ]
       }
      ]
@@ -5396,10 +5456,10 @@
   "target": "scheda STUDIA IL TUO TARGET, in RISORSE ED ESERCIZI",
   "stories_telling": "pagina STORIES-TELLING, dentro RISORSE ED ESERCIZI",
   "visual_identity": "pagina VISUAL IDENTITY del menù (solo Professionista)",
- "questionario_visual": "scheda Questionario visual dentro la pagina VISUAL IDENTITY (solo Professionista, fatta da Emilia nel template) · se non si trova resta il link fisso di link_fissi",
+  "questionario_visual": "scheda Questionario visual dentro la pagina VISUAL IDENTITY (solo Professionista, fatta da Emilia nel template) · se non si trova resta il link fisso di link_fissi",
   "offerta_funnel": "pagina OFFERTA E FUNNEL del menù (solo Professionista)",
   "kit": "pagina KIT SMM (SMM) o MEDIA KIT O OFFERTA (Personal brand) del menù",
-  "fine_percorso": "pagina FINE PERCORSO del menù (dentro anche il prima e dopo con gli screenshot salvati da Elena)",
+  "fine_percorso": "pagina FINE PERCORSO del menù",
   "chat": "gruppo Google Chat della cliente",
   "stratego": "accesso a Stratego (arriva dopo la consegna della strategia, non nella settimana di attivazione)"
  },
